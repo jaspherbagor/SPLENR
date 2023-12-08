@@ -10,9 +10,15 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     const JOB_SEEKER = 'seeker';
+
     public function createSeeker()
     {
         return view('user.seeker-register');
+    }
+
+    public function createEmployer()
+    {
+        return view('user.employer-register');
     }
 
     public function storeSeeker(SeekerRegistrationRequest $request)
