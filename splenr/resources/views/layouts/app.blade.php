@@ -23,15 +23,27 @@
               <li class="nav-item me-3">
                 <a class="nav-link fw-semibold" href="#">JOB LISTINGS</a>
               </li>
+              @if(!Auth::check())
               <li class="nav-item me-3">
-                <a class="nav-link fw-semibold" href="#">JOB SEEKER</a>
+                <a class="nav-link fw-semibold" href="{{ route('create.seeker') }}">JOB SEEKER</a>
               </li>
               <li class="nav-item me-3">
                 <a class="nav-link fw-semibold" href="#">EMPLOYER</a>
               </li>
+              @endif
+
+              <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf</form>
             </ul>
             <div class="ms-auto me-4">
+              @if(Auth::check())
+              <button class="btn btn-secondary fw-semibold" id="logout">LOGOUT</button>
+              @endif
+
+              @if(!Auth::check())
+              <a href="{{ route('login') }}">
                 <button class="btn btn-secondary fw-semibold">LOGIN</button>
+              </a>
+              @endif
             </div>
           </div>
         </div>

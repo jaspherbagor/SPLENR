@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card shadow-lg">
                 <div class="card-header">Login</div>
-                <form action="" method="post">@csrf
+                <form action="{{ route('login.post') }}" method="post">@csrf
                     <div class="card-body">
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -26,6 +26,7 @@
                         <br>
                         <div class="form-group text-center">
                             <button class="btn btn-primary" type="submit">Login</button>
+                        </div>
                     </div>
                 </form>
             </div>
