@@ -28,7 +28,7 @@
                 <a class="nav-link fw-semibold" href="{{ route('create.seeker') }}">JOB SEEKER</a>
               </li>
               <li class="nav-item me-3">
-                <a class="nav-link fw-semibold" href="#">EMPLOYER</a>
+                <a class="nav-link fw-semibold" href="{{ route('create.employer') }}">EMPLOYER</a>
               </li>
               @endif
 
