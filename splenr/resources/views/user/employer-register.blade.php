@@ -12,7 +12,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">Employer Registration</div>
-                <form action="#" method="post">@csrf
+                <form action="{{ route('store.employer') }}" method="post">@csrf
                     <div class="card-body">
                         <div class="form-group">
                             <label for="name">Company Name</label>
