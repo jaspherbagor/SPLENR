@@ -24,7 +24,7 @@ Route::get('/', function () {
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
  
-    return redirect('/home');
+    return redirect('/login');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::get('/register/seeker', [UserController::class, 'createSeeker'])->name('create.seeker');
