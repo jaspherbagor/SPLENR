@@ -3,7 +3,6 @@
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
-use App\Http\Middleware\isEmployer;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -20,7 +19,7 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
  
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {

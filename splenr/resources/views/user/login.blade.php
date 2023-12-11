@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container px-4 py-5">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-5">
         <div class="col-md-8">
             @include('message')
             <div class="card shadow-lg">

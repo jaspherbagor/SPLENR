@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container px-4 py-5">
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-md-6">
             <h1>Looking for an employee?</h1>
             <h3>Please create an account</h3>
