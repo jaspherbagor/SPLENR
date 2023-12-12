@@ -54,7 +54,7 @@
         color:var(--text-color-light)!important
       }
 
-      .navbar-toggler-icon {
+      .navbar-toggler {
         border: none
       }
     </style>
