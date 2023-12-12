@@ -69,6 +69,7 @@
         border: 2px solid var(--primary-color);
         border-radius: 10px;
         box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        background: var(--navbar-bg)
     }
 
     .card-img-top {
@@ -110,7 +111,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid px-4 pt-5 text-center d-flex align-items-center justify-content-center">
+<div class="container-fluid px-4 mty-5 pt-5 text-center d-flex align-items-center justify-content-center">
     <div class="row d-flex align-items-center justify-content-center text-center">
         <div class="description-box col-lg-3 col-md-3 col-sm-6 text-center d-flex mb-4  p-2">
             <div class="col-md-6 d-flex align-items-center justify-content-center">
@@ -176,7 +177,7 @@
 </div>
 
 <div class="container-fluid px-4 py-5">
-    <h2 class="fw-bolder text-center mb-5">OUR TRUSTED <span>COMPANY</span></h2>
+    <h2 class="fw-bolder text-center my-5">OUR TRUSTED <span>COMPANY</span></h2>
     <div class="row">
         <div class="col-lg-2 col-md-2 col-sm-4 col-6 d-flex align-items-center justify-center">
             <img src="{{ asset('image/WESTCO corporation.png') }}" alt="WESTCO" class="company-img img-fluid">
@@ -199,7 +200,7 @@
     </div>
 </div>
 <div class="container-fluid px-4 py-5">
-    <h2 class="fw-bolder mb-5 text-center">TRENDING JOB <span>POSITIONS</span></h2>
+    <h2 class="fw-bolder my-5 text-center">TRENDING JOB <span>POSITIONS</span></h2>
     <div class="row px-2">
         <div class="category col-lg-3 col-md-3 col-sm-6 col-12 mb-4">
             <div class="d-flex align-items-center justify-content-center">
