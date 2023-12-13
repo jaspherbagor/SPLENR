@@ -38,7 +38,7 @@
     }
 
     .register-container {
-        background: url('https://thumbs.dreamstime.com/b/working-electrician-work-dark-room-286250148.jpg');
+        background: url('{{ asset('image/seeker-register-background.png') }}');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -62,7 +62,7 @@
 
     .form-container {
         border-radius:10px;
-        background: rgba(250, 250, 250, 0.7);
+        background: rgba(250, 250, 250, 0.5);
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         width: 400px
     }
@@ -144,6 +144,9 @@
                 <div class="text-center mt-2 mb-2">
                     <button class="btn fs-5 fw-semibold px-3 py-2 register-btn" type="submit" id="btnRegister">Register</button>
                 </div>
+                <div className="text-center mt-4">
+                    <p className="text-white">Already have an account? <a href="{{ route('login') }}" className="text-decoration-none login-link">Login instead.</a></p>
+                </div>
             </form>
         </div>
         
@@ -187,7 +190,9 @@
     
     if(password.value !== confirmPassword.value) {
         passwordValidation.innerText="Passwords do not match!";
-    } else {
+    }else if(password.value ==="" && confirmPassword.value === "") {
+        passwordValidation.innerText="No Passwords Inputted!";
+    }else {
         var formData = new FormData(form)
         var button = event.target
         button.disabled = true;

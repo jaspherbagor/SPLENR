@@ -38,7 +38,7 @@
     }
 
     .login-container {
-        background: url('https://pikwizard.com/pw/small/5948fecc85303db729b673b4f22b5dc6.jpg');
+        background: url('{{ asset('image/login-background.png') }}');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -62,7 +62,7 @@
 
     .form-container {
         border-radius:10px;
-        background: rgba(220, 220, 220, 0.7);
+        background: rgba(250, 250, 250, 0.5);
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         width: 350px
     }
@@ -107,6 +107,10 @@
             </div>
             <div class="text-center mt-2 mb-2">
                 <button class="btn fs-5 fw-semibold px-3 py-2 login-btn" type="submit" id="login">LOGIN</button>
+            </div>
+
+            <div className="text-center mt-4">
+                <p className="text-white">Don't have an account yet? Register as a <a href="{{ route('create.seeker') }}" className="text-decoration-none register-link">Job Seeker</a> or an <a href="{{ route('create.employer') }}" className="text-decoration-none register-link">Employer.</a> </p>
             </div>
         </form>
         

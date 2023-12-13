@@ -74,16 +74,22 @@
                 <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="/"><i class="bi bi-house-door fs-5"></i> HOME</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-semibold text-black fs-6" href="#"><i class="bi bi-briefcase fs-5"></i> JOB LISTINGS</a>
+                <a class="nav-link fw-semibold text-black fs-6" href="#"><i class="bi bi-briefcase fs-5"></i> JOBS</a>
               </li>
-              @if(!Auth::check())
+              <li class="nav-item me-4">
+                <a class="nav-link fw-semibold text-black fs-6" href="#"><i class="bi bi-file-earmark-text fs-5"></i> RESOURCES</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link fw-semibold text-black fs-6" href="#"><i class="bi bi-telephone fs-5"></i> CONTACT</a>
+              </li>
+              {{-- @if(!Auth::check())
               <li class="nav-item me-4">
                 <a class="nav-link fw-semibold text-black fs-6" href="{{ route('create.seeker') }}"><i class="bi bi-person fs-5"></i> JOB SEEKER</a>
               </li>
               <li class="nav-item me-4">
                 <a class="nav-link fw-semibold text-black fs-6" href="{{ route('create.employer') }}"><i class="bi bi-building fs-5"></i> EMPLOYER</a>
               </li>
-              @endif
+              @endif --}}
 
               <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf</form>
             </ul>

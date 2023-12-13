@@ -38,7 +38,7 @@
     }
 
     .register-container {
-        background: url('https://images.pexels.com/photos/236089/pexels-photo-236089.jpeg');
+        background: url('{{ asset('image/employer-register-background.png') }}');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -62,7 +62,7 @@
 
     .form-container {
         border-radius:10px;
-        background: rgba(200, 200, 200, 0.9);
+        background: rgba(250, 250, 250, 0.5);
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         width: 400px
     }
@@ -70,13 +70,13 @@
     .register-btn {
         background:var(--primary-color);
         border: 2px solid var(--text-color-dark)
-      }
+    }
 
-      .register-btn:hover{
-        background:var(--text-color-dark);
-        border: 2px solid var(--primary-color);
-        color:var(--text-color-light)!important
-      }
+    .register-btn:hover{
+    background:var(--text-color-dark);
+    border: 2px solid var(--primary-color);
+    color:var(--text-color-light)!important
+    }
     
 </style>
 <div class="register-container container-fluid d-flex align-items-center justify-content-center px-2 py-5 mt-5">
@@ -144,6 +144,9 @@
                 <div class="text-center mt-2 mb-2">
                     <button class="btn fs-5 fw-semibold px-3 py-2 register-btn" type="submit" id="btnRegister">Register</button>
                 </div>
+                <div className="text-center mt-4">
+                    <p className="text-white">Already have an account? <a href="{{ route('login') }}" className="text-decoration-none login-link">Login instead.</a></p>
+                </div>
             </form>
         </div>
         
@@ -187,11 +190,10 @@
     
     if(password.value !== confirmPassword.value) {
         passwordValidation.innerText="Passwords do not match!";
-    } else if {
-        (password.value ==="" && confirmPassword.value === "") {
+    } else if(password.value ==="" && confirmPassword.value === "") {
         passwordValidation.innerText="No Passwords Inputted!";
     }else {
-        var formData = new FormData(form)
+        var formData = new FormData(form);
         var button = event.target
         button.disabled = true;
         button.innerHTML = 'Sending email.... '
@@ -208,103 +210,21 @@
             throw new Error('Error')
         }
     }).then(data => {
-        button.innerHTML = 'Register'
+        button.innerHTML = 'Register';
         button.disabled = false
         messageDiv.innerHTML = '<div class="alert alert-success">Registration was successful.Please check your email to verify it</div>'
-        formContainer.style.display = 'none'
+        formContainer.style.display = 'none';
     }).catch(error => {
         button.innerHTML = 'Register'
         button.disabled = false
         messageDiv.innerHTML = '<div class="alert alert-danger">Something went wrong. Please try again</div>'    
     })
+
     }
     
 })
-   
+
 </script>
-{{-- <div class="container px-4 py-5">
-    <div class="row mt-5">
-        <div class="col-md-6">
-            <h1>Looking for an employee?</h1>
-            <h3>Please create an account</h3>
-            <img src="{{ asset('image/register.png') }}" class="w-25">
-        </div>
-        <div class="col-md-6">
-            <div id="message"></div>
-            <div class="card"  id="card">
-                <div class="card-header">Employer Registration</div>
-                <form action="#" method="post" id="registrationForm">@csrf
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="name">Company Name</label>
-                            <input type="text" name="name" class="form-control" required>
-                            @if($errors->has('name'))
-                            <span class="text-danger">{{ $errors->first('name') }}</span>
-                            @endif
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" class="form-control" required>
-                            @if($errors->has('email'))
-                            <span class="text-danger">{{ $errors->first('email') }}</span>
-                            @endif
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" class="form-control" required>
-                            @if($errors->has('password'))
-                            <span class="text-danger">{{ $errors->first('password') }}</span>
-                            @endif
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <button class="btn btn-primary" id="btnRegister">Register</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
-<script>
-    var url = "{{route('store.employer')}}";
-    document.getElementById("btnRegister").addEventListener("click", function(event) {
-    var form = document.getElementById("registrationForm");
-    var card = document.getElementById("card");
-    var messageDiv = document.getElementById('message')
-    messageDiv.innerHTML = ''
-    var formData = new FormData(form)
-
-    var button = event.target
-    button.disabled = true;
-    button.innerHTML = 'Sending email.... '
-
-    fetch(url, {
-        method: "POST",
-        headers:{
-            'X-CSRF-TOKEN': '{{csrf_token()}}'
-        },
-        body: formData
-    }).then(response => {
-        if(response.ok) {
-            return response.json();
-        }else{
-            throw new Error('Error')
-        }
-    }).then(data=> {
-        button.innerHTML = 'Register'
-        button.disabled = false
-        messageDiv.innerHTML = '<div class="alert alert-success">Registration was successful.Please check your email to verify it</div>'
-        card.style.display = 'none'
-    }).catch(error => {
-        button.innerHTML = 'Register'
-        button.disabled = false
-        messageDiv.innerHTML = '<div class="alert alert-danger">Something went wrong. Please try again</div>'
-       
-    })
-
-
-})
-</script> --}}
 
 @endsection
