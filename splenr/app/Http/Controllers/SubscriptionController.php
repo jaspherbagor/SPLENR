@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Middleware\donotAllowUserToMakePayment;
+use App\Http\Middleware\doNotAllowUserToMakePayment;
 use App\Http\Middleware\isEmployer;
 use App\Mail\PurchaseMail;
 use App\Models\User;
@@ -21,7 +21,7 @@ class SubscriptionController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['auth', isEmployer::class]);
+        $this->middleware(['auth', isEmployer::class, doNotAllowUserToMakePayment::class]);
     }
 
     public function subscribe()
@@ -100,7 +100,7 @@ class SubscriptionController extends Controller
             }
 
         } catch(\Exception $e) {
-
+            return response()->json($e);
         }
 
         
@@ -124,7 +124,7 @@ class SubscriptionController extends Controller
         // }
 
 
-    return redirect()->route('dashboard')->with('success','Payment was successfully processed');
+    return redirect()->route('dashboard')->with('success','Payment was processed successfully!');
     }
 
     public function cancel()
