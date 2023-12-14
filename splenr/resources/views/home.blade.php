@@ -202,6 +202,7 @@
 <div class="container-fluid px-4 py-5">
     <h2 class="fw-bolder my-5 text-center">TRENDING JOB <span>POSITIONS</span></h2>
     <div class="row px-2">
+        
         <div class="category col-lg-3 col-md-3 col-sm-6 col-12 mb-4">
             <div class="d-flex align-items-center justify-content-center">
                 <div class="card" style="width: 18rem;">
@@ -219,11 +220,28 @@
             <div class="d-flex align-items-center justify-content-center">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                      <h5 class="card-title fw-semibold">Master Electrician</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
+                        <div class="row">
+                            <div class="col-md-2 d-flex align-items-center justify-content-center">
+                                <div class="col-12">
+                                    <img src="https://seeklogo.com/images/W/wesco-logo-DC72F9E3B2-seeklogo.com.png" alt="" class="img-fluid w-100 h-100">
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="col-12">
+                                    <p class="card-title fw-semibold">Master Electrician</p>
+                                </div>
+                                <div class="col-12">
+                                    <h6 class="card-subtitle mb-2 text-secondary">WESTCO Electrical and Equipment Corporation</h6>
+                                </div>
+                            </div>
+                        </div>
+                                           
+                      <p class="card-text">Deadline: <span class="fw-semibold">N/A</span></p>
+                      <p class="card-text">Salary: <span class="fw-semibold">₱16K - ₱18K a month</span></p>
+                      <p class="card-text">Location: <span class="fw-semibold">Paranaque City</span></p>
+                      <div class="d-flex align-items-center justify-content-center">
+                        <a href="#" class="btn btn-success card-link apply-now-btn">Apply Now <i class="bi bi-arrow-right"></i></a>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -232,11 +250,28 @@
             <div class="d-flex align-items-center justify-content-center">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                      <h5 class="card-title fw-semibold">Maintenance Electrician</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
+                        <div class="row">
+                            <div class="col-md-2 d-flex align-items-center justify-content-center">
+                                <div class="col-12">
+                                    <img src="https://seeklogo.com/images/W/wesco-logo-DC72F9E3B2-seeklogo.com.png" alt="" class="img-fluid w-100 h-100">
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="col-12">
+                                    <p class="card-title fw-semibold">Maintenance Electrician</p>
+                                </div>
+                                <div class="col-12">
+                                    <h6 class="card-subtitle mb-2 text-secondary">WESTCO Electrical and Equipment Corporation</h6>
+                                </div>
+                            </div>
+                        </div>
+                                           
+                      <p class="card-text">Deadline: <span class="fw-semibold">N/A</span></p>
+                      <p class="card-text">Salary: <span class="fw-semibold">₱16K – ₱18K a month</span></p> 
+                      <p class="card-text">Location: <span class="fw-semibold">Paranaque City</span></p>
+                      <div class="d-flex align-items-center justify-content-center">
+                        <a href="#" class="btn btn-success card-link apply-now-btn">Apply Now <i class="bi bi-arrow-right"></i></a>
+                      </div>
                     </div>
                 </div>
             </div>

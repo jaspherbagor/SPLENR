@@ -66,6 +66,10 @@
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         width: 350px
     }
+
+    .register-link:hover {
+        color: green
+    }
     
 </style>
 <div class="login-container container-fluid d-flex align-items-center justify-content-center px-2 py-5 mt-5">
@@ -109,8 +113,8 @@
                 <button class="btn fs-5 fw-semibold px-3 py-2 login-btn" type="submit" id="login">LOGIN</button>
             </div>
 
-            <div className="text-center mt-4">
-                <p className="text-white">Don't have an account yet? Register as a <a href="{{ route('create.seeker') }}" className="text-decoration-none register-link">Job Seeker</a> or an <a href="{{ route('create.employer') }}" className="text-decoration-none register-link">Employer.</a> </p>
+            <div class="text-center mt-4">
+                <p class="text-black">Don't have an account yet? Register as a <a href="{{ route('create.seeker') }}" class="text-decoration-none register-link fw-semibold">Job Seeker</a> or an <a href="{{ route('create.employer') }}" class="text-decoration-none register-link fw-semibold">Employer.</a> </p>
             </div>
         </form>
         

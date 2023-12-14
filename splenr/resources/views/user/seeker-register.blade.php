@@ -70,13 +70,17 @@
     .register-btn {
         background:var(--primary-color);
         border: 2px solid var(--text-color-dark)
-      }
+    }
 
-      .register-btn:hover{
-        background:var(--text-color-dark);
-        border: 2px solid var(--primary-color);
-        color:var(--text-color-light)!important
-      }
+    .register-btn:hover{
+    background:var(--text-color-dark);
+    border: 2px solid var(--primary-color);
+    color:var(--text-color-light)!important
+    }
+
+    .login-link:hover {
+        color: green
+    }
     
 </style>
 <div class="register-container container-fluid d-flex align-items-center justify-content-center px-2 py-5 mt-5">
@@ -144,8 +148,8 @@
                 <div class="text-center mt-2 mb-2">
                     <button class="btn fs-5 fw-semibold px-3 py-2 register-btn" type="submit" id="btnRegister">Register</button>
                 </div>
-                <div className="text-center mt-4">
-                    <p className="text-white">Already have an account? <a href="{{ route('login') }}" className="text-decoration-none login-link">Login instead.</a></p>
+                <div class="text-center mt-4">
+                    <p class="text-black">Already have an account? <a href="{{ route('login') }}" class="text-decoration-none login-link fw-semibold">Login instead.</a></p>
                 </div>
             </form>
         </div>

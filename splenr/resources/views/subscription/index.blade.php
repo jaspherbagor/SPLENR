@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <div class="container px-4 py-5">
-        <div class="row">
+    <div class="container px-4 py-5 mt-5">
+        <div class="row mt-5">
             <div class="col-md-4">
                 <div class="card mb-2" style="width: 18rem;">
                     <div class="card-body">
