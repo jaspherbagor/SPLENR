@@ -1,6 +1,8 @@
-<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+<nav class="sb-topnav navbar navbar-expand navbar-light bg-white">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand ps-3" href="index.html">
+        <img src="{{ asset('image/SPLENR-LOGO.svg') }}" alt="">
+    </a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
@@ -16,7 +18,7 @@
             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#!">Settings</a></li>
-                <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                <li><a class="dropdown-item" href="{{ route('subscribe') }}">Subscription</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
                     <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf
@@ -27,6 +29,49 @@
         </li>
     </ul>
 </nav>
+
+<style>
+    * {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+        list-style:none;
+        text-decoration: none;
+        border:none;
+        outline:none;
+        scroll-behavior: smooth;
+        font-family:var(--font-family);
+        word-wrap: break-word;
+    }
+    html, body {
+        width:100%;
+        overflow-x:hidden
+    }
+    :root {
+        --primary-color: #fdd100;
+        --navbar-bg: #F5F4F2;
+        --text-color-light: #ffffff;
+        --text-color-dark: #202020;
+        --font-family: sans-serif;
+    }
+    .nav-link {
+      font-family: sans-serif
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color)!important
+    }
+    .navbar {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      background: var(--navbar-bg);
+      z-index:1000
+    }
+
+
+    .navbar-toggler {
+      border: none
+    }
+  </style>
 
 <script>
     let logout = document.getElementById('logout');
