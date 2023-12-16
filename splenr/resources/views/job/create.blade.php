@@ -5,7 +5,7 @@
 <div class="container mt-3 justify-content-center px-4">
     <div class="row justify-content-center">
         <div class="col-md-8 my-5">
-            <h2 class="fw-bolder mb-5">Post A Job</h2>
+            <h2 class="fw-bolder mb-5">Post a Job</h2>
             <form action="#" method="POST">@csrf
                 <div class="form-group mb-4">
                     <label for="title">Title</label>
