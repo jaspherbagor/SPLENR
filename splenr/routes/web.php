@@ -55,3 +55,4 @@ Route::get('payment/success', [SubscriptionController::class, 'paymentSuccess'])
 Route::get('payment/cancel', [SubscriptionController::class, 'cancel'])->name('payment.cancel');
 
 Route::get('job/create', [PostJobController::class, 'create'])->name('job.create')->middleware(isPremiumUser::class);
+
