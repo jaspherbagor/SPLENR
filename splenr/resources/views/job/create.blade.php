@@ -8,6 +8,10 @@
             <h2 class="fw-bolder mb-5">Post a Job</h2>
             <form action="#" method="POST">@csrf
                 <div class="form-group mb-4">
+                    <label for="feature_image">Feature Image</label>
+                    <input type="file" name="feature_image" id="feature_image" class="form-control">
+                </div>
+                <div class="form-group mb-4">
                     <label for="title">Title</label>
                     <input type="text" name="title" id="title" class="form-control">
                 </div>
@@ -45,7 +49,7 @@
                 </div>
                 <div class="form-group mb-4">
                     <label for="title">Application Closing Date</label>
-                    <input type="date" name="date" id="date" class="form-control">
+                    <input type="text" name="date" id="datepicker" class="form-control">
                 </div>
 
                 <button type="submit" class="btn btn-success">Post a Job</button>
