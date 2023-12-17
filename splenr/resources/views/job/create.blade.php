@@ -4,24 +4,36 @@
 
 <div class="container mt-3 justify-content-center px-4">
     <div class="row justify-content-center">
-        <div class="col-md-9 my-5">
-            <h2 class="fw-bolder mb-5">Post a Job</h2>
-            <form action="#" method="POST">@csrf
+        <div class="col-md-9 my-4">
+            <h2 class="fw-bolder mb-3">Post a Job</h2>
+            <form action="{{ route('job.store') }}" method="POST">@csrf
                 <div class="form-group mb-4">
                     <label for="feature_image">Feature Image</label>
                     <input type="file" name="feature_image" id="feature_image" class="form-control">
+                    @if($errors->has('feature_image'))
+                        <div class="text-danger fw-semibold">{{ $errors->first('feature_image') }}</div>
+                    @endif
                 </div>
                 <div class="form-group mb-4">
                     <label for="title">Title</label>
                     <input type="text" name="title" id="title" class="form-control">
+                    @if($errors->has('title'))
+                        <div class="text-danger fw-semibold">{{ $errors->first('title') }}</div>
+                    @endif
                 </div>
                 <div class="form-group mb-4">
                     <label for="description">Description</label>
                     <textarea type="text" name="description" id="description" class="form-control summernote"></textarea>
+                    @if($errors->has('description'))
+                        <div class="text-danger fw-semibold">{{ $errors->first('description') }}</div>
+                    @endif
                 </div>
                 <div class="form-group mb-4">
-                    <label for="description">Roles and Responsibility</label>
-                    <textarea type="text" name="roles" id="description" class="form-control summernote"></textarea>
+                    <label for="roles">Roles and Responsibility</label>
+                    <textarea type="text" name="roles" id="roles" class="form-control summernote"></textarea>
+                    @if($errors->has('roles'))
+                        <div class="text-danger fw-semibold">{{ $errors->first('roles') }}</div>
+                    @endif
                 </div>
                 <div class="form-group mb-4">
                     <label for="job_type" class="mb-2">Job Types</label>
@@ -41,15 +53,23 @@
                         <input class="form-check-input" type="radio" name="job_type" id="Contract" value="Contract">
                         <label for="Contract" class="form-check-label">Contract</label>
                     </div>
-    
+                    @if($errors->has('job_type'))
+                        <div class="text-danger fw-semibold">{{ $errors->first('job_type') }}</div>
+                    @endif
                 </div>
                 <div class="form-group mb-4">
                     <label for="address">Address</label>
                     <input type="text" name="address" id="address" class="form-control">
+                    @if($errors->has('address'))
+                        <div class="text-danger fw-semibold">{{ $errors->first('address') }}</div>
+                    @endif
                 </div>
                 <div class="form-group mb-4">
                     <label for="date">Application Closing Date</label>
                     <input type="text" name="date" id="datepicker" class="form-control">
+                    @if($errors->has('date'))
+                        <div class="text-danger fw-semibold">{{ $errors->first('date') }}</div>
+                    @endif
                 </div>
 
                 <button type="submit" class="btn btn-success">Post a Job</button>
