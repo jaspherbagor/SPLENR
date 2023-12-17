@@ -4,7 +4,7 @@
 
 <div class="container mt-3 justify-content-center px-4">
     <div class="row justify-content-center">
-        <div class="col-md-8 my-5">
+        <div class="col-md-9 my-5">
             <h2 class="fw-bolder mb-5">Post a Job</h2>
             <form action="#" method="POST">@csrf
                 <div class="form-group mb-4">
@@ -17,11 +17,11 @@
                 </div>
                 <div class="form-group mb-4">
                     <label for="description">Description</label>
-                    <textarea type="text" name="description" id="description" class="form-control"></textarea>
+                    <textarea type="text" name="description" id="description" class="form-control summernote"></textarea>
                 </div>
                 <div class="form-group mb-4">
                     <label for="description">Roles and Responsibility</label>
-                    <textarea type="text" name="roles" id="description" class="form-control"></textarea>
+                    <textarea type="text" name="roles" id="description" class="form-control summernote"></textarea>
                 </div>
                 <div class="form-group mb-4">
                     <label for="job_type" class="mb-2">Job Types</label>

@@ -26,5 +26,6 @@
 <script>
 $( function() {
     $( "#datepicker" ).datepicker();
+    $('.summernote').summernote();
 } );
 </script>
