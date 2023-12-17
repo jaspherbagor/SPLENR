@@ -1,6 +1,6 @@
 <nav class="sb-topnav navbar navbar-expand navbar-light bg-white">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="index.html">
+    <a class="navbar-brand ps-3" href="{{ route('dashboard') }}">
         <img src="{{ asset('image/SPLENR-LOGO.svg') }}" alt="logo">
     </a>
     <!-- Sidebar Toggle-->
@@ -20,9 +20,9 @@
                 <li><a class="dropdown-item" href="#!">Settings</a></li>
                 <li><a class="dropdown-item" href="{{ route('subscribe') }}">Subscription</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li>
-                    <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf
-                        <button type="submit" class="dropdown-item" id="logout">Logout</button>
+                <li class="p-0">
+                    <form id="form-logout" action="{{ route('logout') }}" method="post" class="p-0 m-0">@csrf
+                        <button type="submit" class="dropdown-item py-0" id="logout">Logout</button>
                     </form>
                 </li>
             </ul>

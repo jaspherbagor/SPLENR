@@ -48,7 +48,7 @@
                     <input type="text" name="address" id="address" class="form-control">
                 </div>
                 <div class="form-group mb-4">
-                    <label for="title">Application Closing Date</label>
+                    <label for="date">Application Closing Date</label>
                     <input type="text" name="date" id="datepicker" class="form-control">
                 </div>
 
