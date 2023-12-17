@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-9 my-4">
             <h2 class="fw-bolder mb-3">Post a Job</h2>
-            <form action="{{ route('job.store') }}" method="POST">@csrf
+            <form action="{{ route('job.store') }}" method="POST" enctype="multipart/form-data">@csrf
                 <div class="form-group mb-4">
                     <label for="feature_image">Feature Image</label>
                     <input type="file" name="feature_image" id="feature_image" class="form-control">
