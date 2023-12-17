@@ -65,6 +65,13 @@
                     @endif
                 </div>
                 <div class="form-group mb-4">
+                    <label for="salary">Salary</label>
+                    <input type="text" name="salary" id="salary" class="form-control">
+                    @if($errors->has('salary'))
+                        <div class="text-danger fw-semibold">{{ $errors->first('salary') }}</div>
+                    @endif
+                </div>
+                <div class="form-group mb-4">
                     <label for="date">Application Closing Date</label>
                     <input type="text" name="date" id="datepicker" class="form-control">
                     @if($errors->has('date'))
