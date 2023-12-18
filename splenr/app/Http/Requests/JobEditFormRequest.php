@@ -11,7 +11,7 @@ class JobEditFormRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,14 @@ class JobEditFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|min:5',
+            'feature_image' => 'mimes:png,jpeg,jpg,webp|max:5120',
+            'description' => 'required|min:10',
+            'roles' => 'required|min:10',
+            'job_type' => 'required',
+            'address' => 'required',
+            'date' => 'required',
+            'salary' => 'required'
         ];
     }
 }
