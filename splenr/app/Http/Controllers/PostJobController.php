@@ -24,4 +24,9 @@ class PostJobController extends Controller
         $this->job->store($request);
         return back();
     }
+
+    public function edit(Listing $listing)
+    {
+        return view('job.edit', compact('listing'));
+    }
 }
