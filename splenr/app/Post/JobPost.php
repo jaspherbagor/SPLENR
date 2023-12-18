@@ -14,9 +14,14 @@ use Illuminate\Support\Str;
         $this->listing =$listing;
     }
 
+    public function getImagePath(Request $data)
+    {
+        return $data->file('feature_image')->store('images', 'public');
+    }
+
     public function store(Request $data):void
     {
-        $imagePath = $data->file('feature_image')->store('images', 'public');
+        $imagePath = $this->getImagePath($data);
         $this->listing->feature_image = $imagePath;
         $this->listing->user_id = auth()->user()->id;
         $this->listing->title = $data['title'];
@@ -33,8 +38,7 @@ use Illuminate\Support\Str;
     public function updatePost(int $id, Request $data):void 
     {
         if($data->hasFile('feature_image')) {
-            $featureImage = $data->file('feature_image')->store('images', 'public');
-            $this->listing->find($id)->update(['feature_image' => $featureImage]);
+            $this->listing->find($id)->update(['feature_image' => $this->getImagePath($data)]);
         }
 
         $this->listing->find($id)->update($data->except('feature_image'));
