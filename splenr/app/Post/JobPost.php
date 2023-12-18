@@ -3,6 +3,7 @@
 namespace App\Post;
 
 use App\Models\Listing;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
  class JobPost {
@@ -13,7 +14,7 @@ use Illuminate\Support\Str;
         $this->listing =$listing;
     }
 
-    public function store($data):void
+    public function store(Request $data):void
     {
         $imagePath = $data->file('feature_image')->store('images', 'public');
         $this->listing->feature_image = $imagePath;
@@ -28,4 +29,15 @@ use Illuminate\Support\Str;
         $this->listing->slug = Str::slug($data['title']).'.'. Str::uuid();
         $this->listing->save();
     }
+
+    public function updatePost(int $id, Request $data):void 
+    {
+        if($data->hasFile('feature_image')) {
+            $featureImage = $data->file('feature_image')->store('images', 'public');
+            $this->listing->find($id)->update(['feature_image' => $featureImage]);
+        }
+
+        $this->listing->find($id)->update($data->except('feature_image'));
+    }
+
  }
