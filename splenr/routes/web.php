@@ -51,6 +51,9 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('user/profile', [UserController::class, 'profile'])->name('user.profile')->middleware('auth');
 Route::post('user/profile', [UserController::class, 'update'])->name('user.update.profile')->middleware('auth');
 
+Route::get('user/profile/seeker', [UserController::class, 'seekerProfile'])->name('seeker.profile')->middleware('auth');
+
+
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('verified', isPremiumUser::class)->name('dashboard');
 
 Route::get('/verify', [DashboardController::class, 'verify'])->name('verification.notice');
