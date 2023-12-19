@@ -62,3 +62,5 @@ Route::get('job/{listing}/edit', [PostJobController::class, 'edit'])->name('job.
 Route::put('job/{id}/edit', [PostJobController::class, 'update'])->name('job.update')->middleware(isPremiumUser::class);
 
 Route::get('job', [PostJobController::class, 'index'])->name('job.index')->middleware(isPremiumUser::class);
+
+Route::delete('job/{id}/delete', [PostJobController::class, 'erase'])->name('job.delete')->middleware(isPremiumUser::class);
