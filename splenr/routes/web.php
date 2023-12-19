@@ -4,6 +4,7 @@ use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostJobController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\CheckAuth;
 use App\Http\Middleware\isEmployer;
 use App\Http\Middleware\isPremiumUser;
 use Illuminate\Support\Facades\Route;
@@ -22,8 +23,14 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('homepage');
 });
+
+Route::get('/jobs', function () {
+    return view('jobs');
+});
+
+
  
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
@@ -31,13 +38,13 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
     return redirect('/login');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
-Route::get('/register/seeker', [UserController::class, 'createSeeker'])->name('create.seeker');
+Route::get('/register/seeker', [UserController::class, 'createSeeker'])->name('create.seeker')->middleware(CheckAuth::class);
 Route::post('/register/seeker', [UserController::class, 'storeSeeker'])->name('store.seeker');
 
-Route::get('/register/employer', [UserController::class, 'createEmployer'])->name('create.employer');
+Route::get('/register/employer', [UserController::class, 'createEmployer'])->name('create.employer')->middleware(CheckAuth::class);
 Route::post('/register/employer', [UserController::class, 'storeEmployer'])->name('store.employer');
 
-Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware(CheckAuth::class);
 Route::post('/login', [UserController::class, 'postLogin'])->name('login.post');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
