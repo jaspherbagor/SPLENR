@@ -40,6 +40,9 @@ Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::post('/login', [UserController::class, 'postLogin'])->name('login.post');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
+Route::get('user/profile', [UserController::class, 'profile'])->name('user.profile')->middleware('auth');
+Route::post('user/profile', [UserController::class, 'update'])->name('user.update.profile')->middleware('auth');
+
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('verified')->name('dashboard');
 
 Route::get('/verify', [DashboardController::class, 'verify'])->name('verification.notice');

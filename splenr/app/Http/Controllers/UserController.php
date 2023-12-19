@@ -55,8 +55,6 @@ class UserController extends Controller
         $user->sendEmailVerificationNotification();
 
         return response()->json('success');
-
-        // return redirect()->route('verification.notice')->with('successMessage', 'Your account was created!');
     }
 
     public function login()
@@ -84,5 +82,15 @@ class UserController extends Controller
         auth()->logout();
 
         return redirect()->route('login');
+    }
+
+    public function profile()
+    {
+        return view('profile.index');
+    }
+
+    public function update()
+    {
+
     }
 }
