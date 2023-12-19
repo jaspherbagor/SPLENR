@@ -4,6 +4,7 @@ use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostJobController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\isEmployer;
 use App\Http\Middleware\isPremiumUser;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
@@ -43,7 +44,7 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('user/profile', [UserController::class, 'profile'])->name('user.profile')->middleware('auth');
 Route::post('user/profile', [UserController::class, 'update'])->name('user.update.profile')->middleware('auth');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('verified')->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('verified', isPremiumUser::class)->name('dashboard');
 
 Route::get('/verify', [DashboardController::class, 'verify'])->name('verification.notice');
 
