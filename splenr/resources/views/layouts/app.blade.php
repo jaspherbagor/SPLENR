@@ -76,7 +76,7 @@
 
               @if(Auth::check())
               <li class="nav-item me-4">
-                <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="{{ route('seeker.profile') }}"><i class="bi bi-person fs-4"></i> PROFILE</a>
+                <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="{{ route('seeker.profile') }}"><i class="bi bi-person fs-5"></i> PROFILE</a>
               </li>
               @endif
               
