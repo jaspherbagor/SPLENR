@@ -103,7 +103,7 @@
             <div class="hero-text">
                 <h1 class="fw-bolder">Land the Perfect Electrician Position</h1>
                 <p class="fw-medium mt-2 fs-6">Assisting electricians to find their perfect fit in the industry.</p>
-                <a href="#"  class="btn browse-jobs-btn p-3 fw-semibold">BROWSE JOBS</a>
+                <a href="/jobs" class="btn browse-jobs-btn p-3 fw-semibold">BROWSE JOBS</a>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
