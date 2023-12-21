@@ -60,7 +60,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg px-3 position-fixed container-fluid mb-5" data-bs-theme="light">
+    <nav class="navbar navbar-expand-lg px-3 position-fixed container-fluid" data-bs-theme="light">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
             <img src="{{ asset('image/SPLENR-LOGO.svg') }}" class="logo" alt="SPLENR Logo">
