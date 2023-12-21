@@ -60,13 +60,16 @@
 
         <h2 class="fw-bolder mt-5 mb-4">Update Your Resume</h2>
 
-        <form action="#" method="post" class="w-100">@csrf
+        <form action="{{ route('upload.resume') }}" method="post" class="w-100" enctype="multipart/form-data">@csrf
             <div class="container">
                 <div class="form-group mb-4">
                     <label for="resume">Upload a Resume </label>
                     <input type="file" name="resume" class="form-control" id="resume">
+                    @if($errors->has('resume'))
+                        <span class="text-danger">{{ $errors->first('resume') }}</span>
+                    @endif  
                 </div>
-                <button type="submit" class="btn btn-success">Update</button>
+                <button type="submit" class="btn btn-success">Upload</button>
             </div>
         </form>
         

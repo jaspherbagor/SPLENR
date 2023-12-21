@@ -55,6 +55,8 @@ Route::get('user/profile/seeker', [UserController::class, 'seekerProfile'])->nam
 
 Route::post('user/changepassword', [UserController::class, 'changePassword'])->name('user.changepassword')->middleware('auth');
 
+Route::post('upload/resume', [UserController::class, 'uploadResume'])->name('upload.resume')->middleware('auth');
+
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('verified', isPremiumUser::class)->name('dashboard');
 
