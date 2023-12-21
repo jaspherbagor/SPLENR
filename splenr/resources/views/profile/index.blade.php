@@ -8,6 +8,8 @@
             <div class="alert alert-success">{{ Session::get('success') }}</div>
         @endif
 
+        <h2 class="fw-bolder mb-4">Update Your Profile</h2>
+
         <form action="{{ route('user.update.profile') }}" method="post" enctype="multipart/form-data">@csrf
             <div class="col-md-10">
                 <div class="form-group mb-4">
@@ -20,6 +22,36 @@
                 <div class="form-group mb-4">
                     <label for="name">Company Name</label>
                     <input type="text" id="name" name="name" class="form-control" value="{{ auth()->user()->name }}">
+                </div>
+                <button type="submit" class="btn btn-success">Update</button>
+            </div>
+        </form>
+
+        <h2 class="fw-bolder mt-5 mb-4">Change Your Password</h2>
+
+        <form action="{{ route('user.changepassword') }}" method="post" class="w-100">@csrf
+            <div class="container">
+                <div class="form-group mb-4">
+                    <label for="name">Current Password </label>
+                    <input type="password" name="current_password" class="form-control">
+                    @if($errors->has('current_password'))
+                        <span class="text-danger">{{ $errors->first('current_password') }}</span>
+                    @endif  
+                    
+                </div>
+                <div class="form-group mb-4">
+                    <label for="name">New Password</label>
+                    <input type="password" name="password" class="form-control">
+                    @if($errors->has('password'))
+                        <span class="text-danger">{{ $errors->first('password') }}</span>
+                    @endif  
+                </div>
+                <div class="form-group mb-4">
+                    <label for="name">Confirm Password</label>
+                    <input type="password" name="password_confirmation" class="form-control">
+                    @if($errors->has('password_confirmation'))
+                        <span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
+                    @endif  
                 </div>
                 <button type="submit" class="btn btn-success">Update</button>
             </div>
