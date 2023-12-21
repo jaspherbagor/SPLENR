@@ -26,6 +26,10 @@
                     <label for="name">Company Name</label>
                     <input type="text" id="name" name="name" class="form-control" value="{{ auth()->user()->name }}">
                 </div>
+                <div class="form-group mb-4">
+                    <label for="description">About Company</label>
+                    <textarea type="text" name="about" id="description" class="form-control summernote">{{ auth()->user()->about }}</textarea>
+                </div>
                 <button type="submit" class="btn btn-success">Update</button>
             </div>
         </form>
