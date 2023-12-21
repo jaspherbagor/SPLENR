@@ -104,7 +104,8 @@ class UserController extends Controller
     {
         $request->validate([
             'current_password' => 'required',
-            'password' => 'required|min:8|confirmed'
+            'password' => 'required|min:8|confirmed',
+            'password_confirmation' => 'required'
         ]);
 
         $user = auth()->user();

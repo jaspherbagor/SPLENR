@@ -4,11 +4,13 @@
 
 <div class="container-fluid py-5 px-4 container-fluid d-flex align-items-center justify-content-center">
     <div class="mt-5 container row justify-content-center">
-        <h2 class="fw-bolder mt-4 mb-4">Update Your Profile</h2>
         @if(Session::has('success'))
-            <div class="alert alert-success">{{ Session::get('success') }}</div>
+        <div class="alert alert-success">{{ Session::get('success') }}</div>
         @endif
-
+        @if(Session::has('error'))
+            <div class="alert alert-danger">{{ Session::get('error') }}</div>
+        @endif
+        <h2 class="fw-bolder mt-4 mb-4">Update Your Profile</h2>
         <form action="{{ route('user.update.profile') }}" method="post" enctype="multipart/form-data" class="">@csrf
             <div class="container">
                 <div class="form-group mb-4">
@@ -27,13 +29,6 @@
         </form>
 
         <h2 class="fw-bolder mt-5 mb-4">Change Your Password</h2>
-
-        @if(Session::has('success'))
-            <div class="alert alert-success">{{ Session::get('success') }}</div>
-        @endif
-        @if(Session::has('error'))
-            <div class="alert alert-danger">{{ Session::get('error') }}</div>
-        @endif
 
         <form action="{{ route('user.changepassword') }}" method="post" class="w-100">@csrf
             <div class="container">
