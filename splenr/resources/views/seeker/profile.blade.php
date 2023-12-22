@@ -14,8 +14,11 @@
         <form action="{{ route('user.update.profile') }}" method="post" enctype="multipart/form-data" class="">@csrf
             <div class="container">
                 <div class="form-group mb-4">
-                    <label for="name">Profile Image</label>
-                    <input type="file" id="name" name="profile_pic" class="form-control">
+                    <label for="profile_pic">Profile Image</label>
+                    <input type="file" id="profile_pic" name="profile_pic" class="form-control">
+                    @if($errors->has('profile_pic'))
+                        <p class="text-danger">{{ $errors->first('profile_pic') }}</p>
+                    @endif
                     @if(auth()->user()->profile_pic)
                     <img src="{{ Storage::url(auth()->user()->profile_pic) }}" width="150" class="mt-3" alt="profile image">
                     @endif

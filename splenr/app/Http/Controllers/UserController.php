@@ -136,6 +136,10 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
+        $this->validate($request, [
+            'profile_pic' => 'mimes:png,jpeg,webp|max:5120',
+        ]);
+
         if($request->hasFile('profile_pic')) {
             $imagePath =  $request->file('profile_pic')->store('profile', 'public');
 
