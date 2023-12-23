@@ -3,13 +3,13 @@
 <div class="container-fluid mt-5 px-4">
     <div class="row justify-content-center">
         <h2 class="fw-bolder">All Jobs</h2>
+        @if(Session::has('success'))
+            <div class="alert alert-success">{{ Session::get('success') }}</div>
+        @endif
         <div class="card mb-4 px-0">
             <div class="card-header">
                 <i class="fas fa-table me-1"></i>
                 Your Jobs
-                @if(Session::has('success'))
-                <div class="alert alert-success">{{ Session::get('success') }}</div>
-                @endif
             </div>
             <div class="card-body">
                 <table id="datatablesSimple">
