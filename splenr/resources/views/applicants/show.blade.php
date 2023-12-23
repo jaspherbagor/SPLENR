@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="col-auto ms-auto align-self-center">
-                        <a href="#" class="btn btn-warning">Download Resume</a>
+                        <a href="{{ Storage::url($user->resume) }}" class="btn btn-warning" target="_blank">Download Resume</a>
                     </div>
                 </div>
             </div>
