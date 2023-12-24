@@ -3,6 +3,7 @@
 use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\JoblistingController;
 use App\Http\Controllers\PostJobController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\CheckAuth;
@@ -27,9 +28,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/jobs', function () {
-    return view('jobs');
-});
+
+Route::get('/jobs', [JoblistingController::class, 'index']);
 
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
