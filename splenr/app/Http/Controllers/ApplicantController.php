@@ -17,6 +17,7 @@ class ApplicantController extends Controller
 
     public function show(Listing $listing)
     {
+        $this->authorize('view', $listing);
         $listing =  Listing::with('users')->where('slug', $listing->slug)->first();
 
         // return $listing;
