@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Listing;
 use Illuminate\Http\Request;
 
 class JoblistingController extends Controller
 {
     public function index()
     {
-        return view('jobs');
+        $jobs =  Listing::with('profile')->get();
+        return view('jobs', compact('jobs'));
     }
 }
