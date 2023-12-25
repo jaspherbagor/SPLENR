@@ -3,6 +3,7 @@
 use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\JoblistingController;
 use App\Http\Controllers\PostJobController;
 use App\Http\Controllers\UserController;
@@ -31,6 +32,8 @@ Route::get('/', function () {
 
 Route::get('/jobs', [JoblistingController::class, 'index']);
 Route::get('/jobs/{listing:slug}', [JoblistingController::class, 'show'])->name('job.show');
+
+Route::post('/resume/upload', [FileUploadController::class, 'store'])->middleware('auth');
 
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {

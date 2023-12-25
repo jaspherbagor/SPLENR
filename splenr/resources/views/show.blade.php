@@ -55,13 +55,12 @@
 
     pond.setOptions({
     server: {
-        url: '/',
+        url: '/resume/upload',
         process: {
             method: 'POST',
             withCredentials: false,
             headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}'},
             ondata: (formData) => {
-                console.log(pond.getFiles()[0].file)
                 formData.append('file', pond.getFiles()[0].file, pond.getFiles()[0].file.name)
 
                 return formData
@@ -69,7 +68,7 @@
             onload: (response) =>{
                 document.getElementById('btnApply').removeAttribute('disabled')
             },
-            onerror: () => {
+            onerror: (response) => {
                 console.log('Error while uploading...', response)
             }
         },
