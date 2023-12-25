@@ -30,6 +30,7 @@ Route::get('/', function () {
 
 
 Route::get('/jobs', [JoblistingController::class, 'index']);
+Route::get('/jobs/{listing:slug}', [JoblistingController::class, 'show'])->name('job.show');
 
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {

@@ -26,7 +26,7 @@
                         </div>
                         <div class="d-flex justify-content-between mt-3">
                             <span>₱{{ number_format($job->salary,2) }}</span>
-                            <a href="{{ $job->slug }}">
+                            <a href="{{ route('job.show', [$job->slug]) }}">
                                 <button class="btn btn-sm btn-outline-dark">Apply</button>
                             </a>
                         </div>
