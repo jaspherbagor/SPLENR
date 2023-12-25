@@ -4,13 +4,13 @@
 <div class="container py-5 px-4">
     <div class="row mt-5 justify-content-center">
         <div class="col-md-9">
-            @if(Session::has('success'))
-            <div class="alert alert-success">{{ Session::get('success') }}</div>
-            @endif
             <div class="card">
                 <img src="{{ Storage::url($listing->feature_image) }}" alt="" class="card-img-top">
                 <div class="card-body">
-                    <h2 class="card-title">{{ $listing->title }}</h2>
+                    <h2 class="card-title fw-bold">{{ $listing->title }}</h2>
+                    @if(Session::has('success'))
+                    <div class="alert alert-success">{{ Session::get('success') }}</div>
+                    @endif
                     <span class="badge bg-primary">{{ $listing->job_type }}</span>
                     <p class="mt-3">Salary: <span class="fw-bold">₱{{ number_format($listing->salary,2) }}</span></p>
                     <p>Address: <span class="fw-bold">{{ $listing->address }}</span></p>
@@ -19,14 +19,20 @@
                     <h4>Roles and Responsibilities</h4>
                     {!! $listing->roles !!}
                     <p class="card-text mt-4">Application Closing Date: <span class="fw-bold">{{ $listing->application_close_date }}</span></p>
-                    @if($listing->profile->resume)
-                    <a href="#" class="btn btn-primary mt-3">Apply Now</a>
-                    @else
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Apply
-                    </button>
-                    @endif
+                    @if(Auth::check())
+                        @if(auth()->user()->resume)
+                        <form action="{{ route('application.submit', [$listing->id]) }}" method="post">@csrf
+                            <button type="submit" class="btn btn-primary mt-3">Apply Now</button>
+                        </form>
+                        @else
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Apply
+                        </button>
+                        @endif
+                    @else 
+                        <p class="fw-bold">Please login to apply! <span class="text-primary"><a href="{{ route('login') }}">Login.</a></span></p>
 
+                    @endif
                     {{-- Modal --}}
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <form action="{{ route('application.submit', [$listing->id]) }}" method="post">@csrf
