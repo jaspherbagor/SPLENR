@@ -4,6 +4,9 @@
 <div class="container py-5 px-4">
     <div class="row mt-5 justify-content-center">
         <div class="col-md-9">
+            @if(Session::has('success'))
+            <div class="alert alert-success">{{ Session::get('success') }}</div>
+            @endif
             <div class="card">
                 <img src="{{ Storage::url($listing->feature_image) }}" alt="" class="card-img-top">
                 <div class="card-body">
@@ -26,20 +29,22 @@
 
                     {{-- Modal --}}
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="staticBackdropLabel">Upload Resume</h1>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <form action="{{ route('application.submit', [$listing->id]) }}" method="post">@csrf
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Upload Resume</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <input type="file" id="uploadResumeFile">
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="submit" disabled class="btn btn-primary" id="btnApply">Apply</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                              <input type="file" id="uploadResumeFile">
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" disabled class="btn btn-primary" id="btnApply">Apply</button>
-                            </div>
-                          </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

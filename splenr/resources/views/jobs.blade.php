@@ -8,7 +8,7 @@
             <h4>Recommended Jobs</h4>
             <button class="btn btn-dark">View</button>
         </div>
-        <div class="row mt-2 g-1">
+        <div class="row mt-3 g-3">
             @foreach($jobs as $job)
             <div class="col-md-3">
                 <div class="card p-2 mt-4">
