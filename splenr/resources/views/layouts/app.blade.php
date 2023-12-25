@@ -74,12 +74,6 @@
               <li class="nav-item me-4">
                 <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="/"><i class="bi bi-house-door fs-5"></i> HOME</a>
               </li>
-
-              @if(Auth::check())
-              <li class="nav-item me-4">
-                <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="{{ route('seeker.profile') }}"><i class="bi bi-person fs-5"></i> PROFILE</a>
-              </li>
-              @endif
               
               {{-- <li class="nav-item me-4">
                 <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="{{ route('dashboard') }}"><i class="bi bi-speedometer fs-5"></i> DASHBOARD</a>
@@ -104,20 +98,33 @@
                 <a class="nav-link fw-semibold text-black fs-6" href="{{ route('create.employer') }}"><i class="bi bi-building fs-5"></i> EMPLOYER</a>
               </li>
               @endif --}}
+              @if(Auth::check())
+              <li class="nav-item ms-auto me-4 dropdown text-decoration-none">
+                <a class="btn dropdown-toggle p-0 text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="{{ Storage::url(auth()->user()->profile_pic) }}" width="40" height="40" class="rounded-circle" alt="profile_pic">
+                </a>
+              
+                <ul class="dropdown-menu text-decoration-none">
+                  <li class="nav-item my-0 py-0">
+                    <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="{{ route('seeker.profile') }}"><i class="bi bi-person fs-5"></i> PROFILE</a>
+                  </li>
+                  <li class="nav-item my-0 py-0">
+                    <a class="nav-link fw-semibold text-black fs-6" href="#" id="logout"><i class="bi bi-box-arrow-left fs-5"></i> LOGOUT</a>
+                  </li>
+                </ul>
+              </li>
+            @endif
 
               <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf</form>
             </ul>
-            <div class="ms-auto me-4">
-              @if(Auth::check())
-              <button class="btn fw-semibold text-black logout-btn fs-6" id="logout">LOGOUT</button>
-              @endif
 
-              @if(!Auth::check())
+            @if(!Auth::check())
+            <div class="me-3">              
               <a href="{{ route('login') }}">
                 <button class="btn fw-semibold text-black login-btn fs-6">LOGIN</button>
               </a>
-              @endif
             </div>
+            @endif
           </div>
         </div>
     </nav>
