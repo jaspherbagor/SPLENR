@@ -30,7 +30,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/jobs', [JoblistingController::class, 'index']);
+Route::get('/jobs', [JoblistingController::class, 'index'])->name('listing.index');
 Route::get('/jobs/{listing:slug}', [JoblistingController::class, 'show'])->name('job.show');
 
 Route::post('/resume/upload', [FileUploadController::class, 'store'])->middleware('auth');
