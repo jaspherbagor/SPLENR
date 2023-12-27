@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\User;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 
@@ -13,14 +14,11 @@ class JoblistingController extends Controller
         $date = $request->query('date');
         $jobType = $request->query('job_type');
 
-        $listing = Listing::query();
+        $listings = Listing::query();
         if($salary === 'salary_high_to_low') {
-            Listing::orderBy('salary', 'desc');
-        }
-
-        $listing = Listing::query();
-        if($salary === 'salary_low_to_high') {
-            Listing::orderBy('salary', 'asc');
+            $listings->orderBy('salary', 'desc');
+        } else if($salary === 'salary_low_to_high') {
+            $listings->orderBy('salary', 'asc');
         }
 
         
