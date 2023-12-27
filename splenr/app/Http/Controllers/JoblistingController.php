@@ -15,8 +15,15 @@ class JoblistingController extends Controller
 
         $listing = Listing::query();
         if($salary === 'salary_high_to_low') {
-            Listing::orderBy('salary', 'descending')
+            Listing::orderBy('salary', 'desc');
         }
+
+        $listing = Listing::query();
+        if($salary === 'salary_low_to_high') {
+            Listing::orderBy('salary', 'asc');
+        }
+
+        
 
         //$jobs =  Listing::with('profile')->get();
         return view('jobs', compact('jobs'));
