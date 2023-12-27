@@ -28,7 +28,15 @@ class JoblistingController extends Controller
             $listings->orderBy('created_at', 'asc');
         }
 
-        
+        if($jobType === 'Fulltime') {
+            $listings->orderBy('job_type', 'Fulltime');
+        } else if($jobType === 'Parttime') {
+            $listings->orderBy('job_type', 'Parttime');
+        } else if($jobType === 'Casual') {
+            $listings->orderBy('job_type', 'Casual');
+        } else if($jobType === 'Contract') {
+            $listings->orderBy('job_type', 'Contract');
+        }
 
         $jobs =  $listings->with('profile')->get();
         return view('jobs', compact('jobs'));
