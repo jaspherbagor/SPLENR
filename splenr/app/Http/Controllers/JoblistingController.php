@@ -29,13 +29,13 @@ class JoblistingController extends Controller
         }
 
         if($jobType === 'Fulltime') {
-            $listings->orderBy('job_type', 'Fulltime');
+            $listings->where('job_type', 'Fulltime');
         } else if($jobType === 'Parttime') {
-            $listings->orderBy('job_type', 'Parttime');
+            $listings->where('job_type', 'Parttime');
         } else if($jobType === 'Casual') {
-            $listings->orderBy('job_type', 'Casual');
+            $listings->where('job_type', 'Casual');
         } else if($jobType === 'Contract') {
-            $listings->orderBy('job_type', 'Contract');
+            $listings->where('job_type', 'Contract');
         }
 
         $jobs =  $listings->with('profile')->get();
