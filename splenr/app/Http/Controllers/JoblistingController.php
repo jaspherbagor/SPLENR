@@ -23,7 +23,7 @@ class JoblistingController extends Controller
 
         
 
-        //$jobs =  Listing::with('profile')->get();
+        $jobs =  $listings->with('profile')->get();
         return view('jobs', compact('jobs'));
     }
 
