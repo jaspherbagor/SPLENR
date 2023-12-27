@@ -5,6 +5,9 @@
 <div class="container mt-3 justify-content-center px-4">
     <div class="row justify-content-center">
         <div class="col-md-10 my-4">
+            @if(Session::has('success'))
+            <div class="alert alert-success">{{ Session::get('success') }}</div>
+            @endif
             <h2 class="fw-bolder mb-3">Post a Job</h2>
             <form action="{{ route('job.store') }}" method="POST" enctype="multipart/form-data">@csrf
                 <div class="form-group mb-4">

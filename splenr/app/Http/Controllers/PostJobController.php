@@ -32,7 +32,7 @@ class PostJobController extends Controller
     public function store(JobPostFormRequest $request)
     {
         $this->job->store($request);
-        return back();
+        return back()->with('success', 'Your job has been posted successfully!');
     }
 
     public function edit(Listing $listing)
