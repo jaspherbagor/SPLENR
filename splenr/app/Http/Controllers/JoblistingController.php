@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class JoblistingController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $jobs =  Listing::with('profile')->get();
         return view('jobs', compact('jobs'));
