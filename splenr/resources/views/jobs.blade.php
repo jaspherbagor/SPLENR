@@ -8,7 +8,7 @@
             <h4 class="fw-bold">Recommended Jobs</h4>
 
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle me-1 my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-dark dropdown-toggle me-1 my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Salary
                 </button>
                 <ul class="dropdown-menu">
@@ -16,7 +16,7 @@
                   <li><a class="dropdown-item" href="{{ route('listing.index', ['sort' => 'salary_low_to_high']) }}">Low to High</a></li>
                 </ul>
 
-                <button class="btn btn-secondary dropdown-toggle me-1 my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-dark dropdown-toggle me-1 my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Date
                 </button>
                 <ul class="dropdown-menu">
@@ -24,7 +24,7 @@
                 <li><a class="dropdown-item" href="{{ route('listing.index', ['date' => 'oldest']) }}">Oldest</a></li>
                 </ul>
 
-                <button class="btn btn-secondary dropdown-toggle my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-dark dropdown-toggle my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Job Type
                 </button>
                 <ul class="dropdown-menu">
@@ -38,7 +38,7 @@
         <div class="row mt-3 g-3">
             @foreach($jobs as $job)
             <div class="col-md-3">
-                <div class="card p-2 mt-4">
+                <div class="card p-2 mt-3 {{ $job->job_type }} ">
                     <div class="text-end">
                         <small class="badge text-bg-info">{{ $job->job_type }}</small>
                     </div>
@@ -54,7 +54,7 @@
                         <div class="d-flex justify-content-between mt-3">
                             <span>₱{{ number_format($job->salary,2) }}</span>
                             <a href="{{ route('job.show', [$job->slug]) }}">
-                                <button class="btn btn-sm btn-outline-dark">Apply</button>
+                                <button class="btn btn-dark">Apply</button>
                             </a>
                         </div>
                     </div>
@@ -66,8 +66,21 @@
 </div>
 
 <style>
-    .card:hover {
-        background-color: #efefef;
+    .Fulltime {
+        background: green;
+        color:#fff
+    }
+    .Parttime {
+        background: blue;
+        color:#fff
+    }
+    .Casual {
+        background: red;
+        color:#fff
+    }
+    .Contract {
+        background: purple;
+        color:#fff
     }
 </style>
 
