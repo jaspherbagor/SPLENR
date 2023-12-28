@@ -17,9 +17,9 @@ class JoblistingController extends Controller
         $listings = Listing::query();
 
         if($salary === 'salary_high_to_low') {
-            $listings->orderBy('salary', 'desc');
+            $listings->orderByRaw('CAST(salary AS UNSIGNED) DESC');
         } else if($salary === 'salary_low_to_high') {
-            $listings->orderBy('salary', 'asc');
+            $listings->orderByRaw('CAST(salary AS UNSIGNED) ASC');
         }
 
         if($date === 'latest') {
