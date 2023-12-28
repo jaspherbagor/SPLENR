@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\User;
+use App\Models\User;
 use App\Models\Listing;
+use App\Models\User as ModelsUser;
+use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Http\Request;
 
 class JoblistingController extends Controller
@@ -45,5 +47,12 @@ class JoblistingController extends Controller
     public function show(Listing $listing)
     {
         return view('show', compact('listing'));
+    }
+
+    public function company($id)
+    {
+        $company = User::where('id', $id)->where('user_type', 'employer')->first();
+
+        return view('company', compact('company'));
     }
 }
