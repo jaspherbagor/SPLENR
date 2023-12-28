@@ -51,7 +51,7 @@ class JoblistingController extends Controller
 
     public function company($id)
     {
-        $company = User::where('id', $id)->where('user_type', 'employer')->first();
+        $company = User::with('jobs')->where('id', $id)->where('user_type', 'employer')->first();
 
         return view('company', compact('company'));
     }
