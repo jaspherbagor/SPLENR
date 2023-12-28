@@ -38,7 +38,7 @@
         <div class="row mt-3 g-3">
             @foreach($jobs as $job)
             <div class="col-md-3">
-                <div class="card p-2 mt-3 {{ $job->job_type }} ">
+                <div class="card p-2 mt-1 {{ $job->job_type }} ">
                     <div class="text-end">
                         <small class="badge text-bg-info">{{ $job->job_type }}</small>
                     </div>
