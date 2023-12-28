@@ -7,6 +7,10 @@
             <div class="card">
                 <img src="{{ Storage::url($listing->feature_image) }}" alt="" class="card-img-top">
                 <div class="card-body">
+                    <a href="">
+                        <img src="{{ Storage::url($listing->profile->profile_pic) }}" width="60" height="60" alt="company profile image" class="rounded-circle">
+                    </a>
+                    <b>{{ $listing->profile->name }}</b>
                     <h2 class="card-title fw-bold">{{ $listing->title }}</h2>
                     @if(Session::has('success'))
                     <div class="alert alert-success">{{ Session::get('success') }}</div>
