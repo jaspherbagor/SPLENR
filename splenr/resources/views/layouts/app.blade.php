@@ -82,12 +82,21 @@
                 </a>
               
                 <ul class="dropdown-menu text-decoration-none  p-0">
+                  @if(auth()->user()->user_type === 'seeker')
                   <li class="nav-item my-0 py-0 ps-2">
                     <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="{{ route('seeker.profile') }}"><i class="bi bi-person fs-5"></i> PROFILE</a>
                   </li>
                   <li class="nav-item my-0 py-0 ps-2">
-                    <a class="nav-link fw-semibold text-black fs-6" href="#" id="logout"><i class="bi bi-box-arrow-left fs-5"></i> LOGOUT</a>
+                    <a class="nav-link fw-semibold text-black fs-6" href="{{ route('job.applied') }}"><i class="bi bi-card-list fs-5"></i> JOB APPLIED</a>
                   </li>
+                  <li class="nav-item my-0 py-0 ps-2">
+                    <a class="nav-link fw-semibold text-danger fs-6" href="#" id="logout"><i class="bi bi-box-arrow-left fs-5"></i> LOGOUT</a>
+                  </li>
+                  @else
+                  <li class="nav-item my-0 py-0 ps-2">
+                    <a class="nav-link fw-semibold text-black fs-6" href="{{ route('dashboard') }}"><i class="bi bi-speedometer fs-5"></i> DASHBOARD</a>
+                  </li>
+                  @endif
                 </ul>
               </li>
             @endif
