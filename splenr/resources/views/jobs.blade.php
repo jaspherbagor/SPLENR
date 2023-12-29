@@ -4,6 +4,33 @@
 
 <div class="container-fluid px-4 py-5">
     <div class="container mt-5">
+        <div class="container mt-5 mb-3">
+            <h2 class="fw-bolder">Find your next employer</h2>
+        
+            <div class="row">
+                @foreach(\App\Models\User::where('user_type','employer')->take(10)->orderBy('id','DESC')->get() as $employer)
+                <div class="col-md-4">
+                    <div class="card p-3 mb-2">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row align-items-center">
+                                <div class="icon"> 
+                                    @if($employer->profile_pic)
+                                   <a href="{{route('company',[$employer->id])}}"><img src="{{Storage::url($employer->profile_pic)}}" width="50"></a>
+                                    @else 
+                                    <a href="{{route('company',[$employer->id])}}"><img src="icons8-amazon-60.png"></a>
+                                    @endif
+                                </div>
+                                <div class="ms-2 c-details">
+                                    <h6 class="mb-0">{{$employer->name}}</h6> <span></span>
+                                </div>
+                            </div>
+                            <div class="badge"> <span>Design</span> </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
         <div class="d-flex justify-content-between">
             <h4 class="fw-bold">Recommended Jobs</h4>
 
@@ -61,6 +88,32 @@
                 </div>
             </div>
             @endforeach
+        </div>
+
+        <div class="container">
+            <div class="mt-5">
+                <h3>Recent openning</h3>
+            </div>
+            @foreach(\App\Models\Listing::take(3)->orderBy('id','DESC')->get() as $listing)
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="d-flex flex-column flex-lg-row">
+                     
+                        <div class="row flex-fill">
+                            <div class="col-sm-5">
+                                <h4 class="h5">{{$listing->title}}</h4>
+                                <span class="badge bg-secondary">{{$listing->job_type}}</span> <span class="badge bg-success">₱{{number_format($listing->salary,2)}}</span>
+                            </div>
+                            
+                            <div class="col-sm-7 text-lg-end">
+                                <a href="{{route('job.show',$listing->slug)}}" class="btn btn-dark stretched-link">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+         
         </div>
     </div>
 </div>
