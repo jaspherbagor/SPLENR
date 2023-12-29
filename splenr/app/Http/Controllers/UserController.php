@@ -155,6 +155,6 @@ class UserController extends Controller
     {
         $users = User::with('listings')->where('id', auth()->user()->id)->get();
 
-        return view('seeker.job-applied')->with('users');
+        return view('seeker.job-applied', compact('users'));
     }
 }

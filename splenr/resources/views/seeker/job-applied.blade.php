@@ -5,16 +5,17 @@
 <div class="container px-4 py-5">
     <div class="row mt-5">
         <div class="col-md-8">
-            @foreach ($company->jobs as $job)
+            <h2 class="fw-bolder mb-3">Applied Jobs</h2>
+            @foreach ($users as $user)
+                @foreach($user->listings as $listing )
                 <div class="card mb-3">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $job->title }}</h5>
-                        <p class="card-text">Location: {{ $job->address }}</p>
-                        <p class="card-text">Salary: <span class="fw-bold">₱{{ number_format($job->salary, 2) }} per
-                                month</span></p>
-                        <a href="{{ route('job.show', [$job->slug]) }}" class="btn btn-dark">View</a>
+                        <h5 class="card-title">{{ $listing->title }}</h5>
+                        <p class="card-text">Applied: {{ $listing->pivot->created_at }}</p>
+                        <a href="{{ route('job.show', [$listing->slug]) }}" class="btn btn-dark">View</a>
                     </div>
                 </div>
+                @endforeach
             @endforeach
         </div>
     </div>
