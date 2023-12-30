@@ -91,8 +91,6 @@ class SubscriptionController extends Controller
                     'success_url' => $successURl.'?session_id={CHECKOUT_SESSION_ID}',
                     'cancel_url' => route('payment.cancel'),
                 ]);
-
-                // dd('$session');
                 if(isset($session->id) && $session->id !== '') {
                     return redirect($session->url);
                 } else {
