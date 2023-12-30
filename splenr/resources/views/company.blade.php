@@ -23,7 +23,6 @@
     <div class="col">
       <h3>About</h3>
       {!! $company->about !!}
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium eleifend erat id finibus. Donec tristique purus vitae urna varius, sed laoreet nisl efficitur.</p>
     </div>
   </div>
   
