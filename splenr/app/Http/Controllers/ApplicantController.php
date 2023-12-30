@@ -42,7 +42,12 @@ class ApplicantController extends Controller
     public function apply($listingId)
     {
         $user = auth()->user();
-        $user->listings()->syncWithoutDetaching($listingId);
-        return back()->with('success', 'Your application  has been successfully submitted!');
+
+        if ($user->user_type === 'seeker') {
+            $user->listings()->syncWithoutDetaching($listingId);
+            return back()->with('success', 'Your application has been successfully submitted!');
+        } else {
+            return back()->with('error', 'Only job seekers are allowed to apply the job.');
+        }
     }
 }

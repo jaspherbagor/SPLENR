@@ -15,6 +15,9 @@
                     @if(Session::has('success'))
                     <div class="alert alert-success">{{ Session::get('success') }}</div>
                     @endif
+                    @if(Session::has('error'))
+                    <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                    @endif
                     <span class="badge bg-primary">{{ $listing->job_type }}</span>
                     <p class="mt-3">Salary: <span class="fw-bold">₱{{ number_format($listing->salary,2) }}</span></p>
                     <p>Address: <span class="fw-bold">{{ $listing->address }}</span></p>
