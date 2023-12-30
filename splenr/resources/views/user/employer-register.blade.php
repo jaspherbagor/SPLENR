@@ -136,12 +136,14 @@
                         <div class="col-md-12 mb-3">
                             <label for="confirmPassword" class="form-label">Confirm Password</label>
                             <div class="d-flex">
-                                <input type="password" name="confirmPassword" class="form-control" id="confirmPassword">
+                                <input type="password" name="password_confirmation" class="form-control" id="confirmPassword">
                                 <span class="input-group-addon" id="toggleConfirmPassword">
                                     <i class="bi bi-eye position-absolute fs-4 mt-1" ></i>
                                 </span>   
                             </div>
-                            <span class="text-danger" id="confirmPasswordValidation"></span>           
+                            @if($errors->has('password_confirmation'))
+                            <span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
+                            @endif          
                         </div>
                     </div>
                 </div>
