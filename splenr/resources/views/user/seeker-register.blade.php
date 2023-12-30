@@ -141,7 +141,9 @@
                                     <i class="bi bi-eye position-absolute fs-4 mt-1" ></i>
                                 </span>   
                             </div>
-                            <span class="text-danger" id="confirmPasswordValidation"></span>           
+                            @if($errors->has('confirm_password'))
+                            <span class="text-danger">{{ $errors->first('confirm_password') }}</span>
+                            @endif            
                         </div>
                     </div>
                 </div>
