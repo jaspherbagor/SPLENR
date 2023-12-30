@@ -77,10 +77,12 @@
         <div class="text-center">
             <a href="/">
                 <img src="{{ asset('image/login-logo.svg') }}" class="logo-img"/>
-            </a>
-            
+            </a>       
         </div>
         <h2 class="my-4 text-center fw-bolder heading">Login Account</h2>
+        @if(Session::has('error'))
+        <div class="alert alert-danger">{{ Session::get('error') }}</div>
+        @endif
         @include('message')
         <form action="{{ route('login.post') }}" method="post">@csrf
             <div class="row">
