@@ -1,6 +1,6 @@
 <nav class="sb-topnav navbar navbar-expand navbar-light bg-white">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="{{ route('dashboard') }}">
+    <a class="navbar-brand ps-3" href="/">
         <img src="{{ asset('image/SPLENR-LOGO.svg') }}" alt="logo">
     </a>
     <!-- Sidebar Toggle-->

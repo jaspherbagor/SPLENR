@@ -111,6 +111,22 @@
         </div>
     </div>
 </div>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for electrician jobs..." aria-label="Search" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid px-4 mty-5 pt-5 text-center d-flex align-items-center justify-content-center">
     <div class="row d-flex align-items-center justify-content-center text-center">
         <div class="description-box col-lg-3 col-md-3 col-sm-6 text-center d-flex mb-4  p-2">
