@@ -29,6 +29,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/', [JoblistingController::class, 'index'])->name('listing.index');
 
 Route::get('/jobs', [JoblistingController::class, 'index'])->name('listing.index');
 Route::get('/company/{id}', [JoblistingController::class, 'company'])->name('company');
