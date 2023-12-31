@@ -218,7 +218,7 @@
 <div class="container-fluid px-4 py-5">
     <h2 class="fw-bolder my-5 text-center">TRENDING JOB <span>POSITIONS</span></h2>
     <div class="row px-2">
-        
+        @foreach($jobs as $job)
         <div class="category col-lg-3 col-md-3 col-sm-6 col-12 mb-4">
             <div class="d-flex align-items-center justify-content-center">
                 <div class="card" style="width: 18rem;">
@@ -249,6 +249,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
 </div>
 <div class="container-fluid px-4 py-5">
