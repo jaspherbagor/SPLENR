@@ -56,7 +56,7 @@ class JoblistingController extends Controller
         return view('company', compact('company'));
     }
 
-    public function home(Request $request)
+    public function homepage(Request $request)
     {
         $salary = $request->query('sort');
         $date = $request->query('date');
@@ -87,7 +87,7 @@ class JoblistingController extends Controller
         }
 
         $jobs =  $listings->with('profile')->get();
-        return view('jobs', compact('jobs'));
+        return view('home', compact('jobs'));
     }
 
 
