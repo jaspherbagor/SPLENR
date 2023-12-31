@@ -100,6 +100,10 @@
         text-overflow: ellipsis;
     }
 
+    .carousel-text i {
+        font-size:60px
+    }
+
 </style>
 {{-- Hero Section --}}
 <div class="container-fluid px-4 py-5 d-flex align-items-center justify-content-center">
@@ -338,4 +342,63 @@
         <a href="{{ route('create.employer') }}" class="btn btn-warning btn-outline-dark btn-lg fw-semibold px-3 py-2 post-job-btn">Post a Job</a>
     </div>
 </div>
+
+<section class="success-stories-section container-fluid px-3 py-4 text-center h-auto">
+
+    <h2 class="fw-bolder mt-4 mb-3">SUCCESS <span>STORIES</span></h2>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade mb-4 mt-3 px-2" data-bs-ride="carousel">
+        <div class="carousel-inner px-0">
+
+            <div class="carousel-item active">
+                <div class="carousel-text">
+                    <i class="bi bi-quote"></i>
+                    <h3 class="fw-semi-bold text-dark fst-italic">"Incredible quality coupled with unbeatable durability! I'm amazed by the reliability of these electrical supplies. They've truly exceeded my expectations. Plus, the affordability makes them a game-changer for any project. Thank you for providing top-notch products!"</h3>
+                    <h5 class="fw-bold mb-5 mt-4">Olivia Chen</h5>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-text">
+                    <i class="bi bi-quote"></i>
+                    <h3 class="fw-semi-bold text-dark fst-italic">"I can't express enough gratitude for the exceptional quality your electrical supplies offer. The durability is unmatched, and the affordability makes them a gem in the market. Thank you for making high-quality products accessible to everyone!"</h3>
+                    <h5 class="fw-bold mb-5 mt-4">Jonathan Martinez</h5>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-text">
+                    <i class="bi bi-quote"></i>
+                    <h3 class="fw-semi-bold text-dark fst-italic">"Exceptional quality that withstands the test of time! Your electrical supplies have transformed my projects. The durability is impressive, and what's more amazing is the affordability. Thank you for delivering such outstanding products!"</h3>
+                    <h5 class="fw-bold mb-5 mt-4">Michael Turner</h5>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-text">
+                    <i class="bi bi-quote"></i>
+                    <h3 class="fw-semi-bold text-dark fst-italic">"Words can't describe how thankful I am for discovering your electrical supplies shop. The quality of your products is outstanding, and the durability is exceptional. Above all, the affordability has made my projects stress-free. Highly recommended!"</h3>
+                    <h5 class="fw-bold mb-5 mt-4">Emily Rodriguez</h5>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-text">
+                    <i class="bi bi-quote"></i>
+                    <h3 class="fw-semi-bold text-dark fst-italic">"Kudos to your shop for providing top-notch electrical supplies! The quality is unparalleled, the durability is impressive, and the affordability makes it a standout choice. Thank you for offering such amazing products that cater to every need!"</h3>
+                    <h5 class="fw-bold mb-5 mt-4">Robert Thompson</h5>
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
 @endsection
