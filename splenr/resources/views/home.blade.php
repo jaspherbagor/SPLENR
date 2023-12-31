@@ -218,32 +218,32 @@
 <div class="container-fluid px-4 py-5">
     <h2 class="fw-bolder my-5 text-center">TRENDING JOB <span>POSITIONS</span></h2>
     <div class="row px-2">
-        @foreach($jobs as $job)
-        <div class="category col-lg-3 col-md-3 col-sm-6 col-12 mb-4">
+        @foreach(\App\Models\Listing::take(6)->orderBy('id','DESC')->get() as $listing)
+        <div class="category col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
             <div class="d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 22rem;">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-2 d-flex align-items-center justify-content-center">
                                 <div class="col-12">
-                                    <img src="https://seeklogo.com/images/W/wesco-logo-DC72F9E3B2-seeklogo.com.png" alt="" class="img-fluid w-100 h-100">
+                                    <img src="{{ Storage::url($listing->profile->profile_pic) }}" alt="" class="img-fluid" width="60" height="60">
                                 </div>
                             </div>
                             <div class="col-md-10">
                                 <div class="col-12">
-                                    <p class="card-title fw-semibold">Master Electrician</p>
+                                    <p class="card-title fw-semibold">{{ $listing->title }}</p>
                                 </div>
                                 <div class="col-12">
-                                    <h6 class="card-subtitle mb-2 text-secondary">WESTCO Electrical and Equipment Corporation</h6>
+                                    <h6 class="card-subtitle mb-2 text-secondary">{{ $listing->profile->name }}</h6>
                                 </div>
                             </div>
                         </div>
                                            
-                      <p class="card-text">Deadline: <span class="fw-semibold">N/A</span></p>
-                      <p class="card-text">Salary: <span class="fw-semibold">₱16K - ₱18K a month</span></p>
-                      <p class="card-text">Location: <span class="fw-semibold">Paranaque City</span></p>
+                      <p class="card-text">Deadline: <span class="fw-semibold">{{ $listing->application_close_date }}</span></p>
+                      <p class="card-text">Salary: <span class="fw-semibold">₱{{ number_format($listing->salary,2) }}</span></p>
+                      <p class="card-text">Location: <span class="fw-semibold">{{ $listing->address }}</span></p>
                       <div class="d-flex align-items-center justify-content-center">
-                        <a href="#" class="btn btn-success card-link apply-now-btn">Apply Now <i class="bi bi-arrow-right"></i></a>
+                        <a href="{{ route('job.show', [$listing->slug]) }}" class="btn btn-success card-link apply-now-btn">Apply Now <i class="bi bi-arrow-right"></i></a>
                       </div>
                     </div>
                 </div>
@@ -255,9 +255,9 @@
 <div class="container-fluid px-4 py-5">
     <h2 class="fw-bolder text-center mb-5">POPULAR JOB <span>LOCATIONS</span></h2>
     <div class="row px-2">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12 job-location mb-4">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 22rem;">
                     <img src="{{ asset('image/cebu-location.jpg') }}" class="card-img-top" alt="Cebu">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
@@ -266,9 +266,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12 job-location mb-4">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 22rem;">
                     <img src="{{ asset('image/quezon-location.jpg') }}" class="card-img-top" alt="Quezon">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
@@ -277,9 +277,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12 job-location mb-4">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 22rem;">
                     <img src="{{ asset('image/cavite-location.webp') }}" class="card-img-top img-fluid" alt="Cavite">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
@@ -288,7 +288,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12 job-location mb-4">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('image/makati-location.webp') }}" class="card-img-top img-fluid" alt="Makati City">
@@ -299,9 +299,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12 job-location mb-4">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 22rem;">
                     <img src="{{ asset('image/pasay-location.jpg') }}" class="card-img-top" alt="Pasay City">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
@@ -310,35 +310,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12 job-location mb-4">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 22rem;">
                     <img src="{{ asset('image/taguig-location.jpg') }}" class="card-img-top" alt="Taguig City">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
                         <p class="card-text fw-bold text-center">TAGUIG</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12 job-location mb-4">
-            <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ asset('image/pasig-location.jpg') }}" class="card-img-top img-fluid" alt="Pasig City">
-                    <div class="card-body">
-                        <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
-                        <p class="card-text fw-bold text-center">PASIG</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-12 job-location mb-4">
-            <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ asset('image/paranaque-location.webp') }}" class="card-img-top img-fluid" alt="Parañaque City">
-                    <div class="card-body">
-                        <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
-                      <p class="card-text fw-bold text-center">PARAÑAQUE</p>
                     </div>
                 </div>
             </div>

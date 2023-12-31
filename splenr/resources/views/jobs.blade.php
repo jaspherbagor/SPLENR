@@ -92,7 +92,7 @@
 
         <div class="container">
             <div class="mt-5">
-                <h3>Recent openning</h3>
+                <h3>Recent opening</h3>
             </div>
             @foreach(\App\Models\Listing::take(3)->orderBy('id','DESC')->get() as $listing)
             <div class="card mb-3">
