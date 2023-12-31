@@ -25,10 +25,6 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
-
 Route::get('/', [JoblistingController::class, 'homepage'])->name('homepage');
 
 Route::get('/jobs', [JoblistingController::class, 'index'])->name('listing.index');
