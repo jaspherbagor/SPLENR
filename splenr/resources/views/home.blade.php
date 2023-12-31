@@ -238,13 +238,13 @@
                                 </div>
                             </div>
                         </div>
-                                           
-                      <p class="card-text">Deadline: <span class="fw-semibold">{{ $listing->application_close_date }}</span></p>
-                      <p class="card-text">Salary: <span class="fw-semibold">₱{{ number_format($listing->salary,2) }}</span></p>
-                      <p class="card-text">Location: <span class="fw-semibold">{{ $listing->address }}</span></p>
-                      <div class="d-flex align-items-center justify-content-center">
-                        <a href="{{ route('job.show', [$listing->slug]) }}" class="btn btn-success card-link apply-now-btn">Apply Now <i class="bi bi-arrow-right"></i></a>
-                      </div>
+                        <p class="card-text">Job Type: <span class="fw-semibold">{{ $listing->job_type }}</span></p>                  
+                        <p class="card-text">Deadline: <span class="fw-semibold">{{ $listing->application_close_date }}</span></p>
+                        <p class="card-text">Salary: <span class="fw-semibold">₱{{ number_format($listing->salary,2) }}</span></p>
+                        <p class="card-text">Location: <span class="fw-semibold">{{ $listing->address }}</span></p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="{{ route('job.show', [$listing->slug]) }}" class="btn btn-success card-link apply-now-btn">Apply Now <i class="bi bi-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
