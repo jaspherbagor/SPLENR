@@ -38,12 +38,12 @@
         --font-family: sans-serif;
     }
     
-    .browse-jobs-btn {
+    .browse-jobs-btn, .post-job-btn {
         background: var(--primary-color);
         border: 2px solid var(--text-color-dark)
     }
 
-    .browse-jobs-btn:hover {
+    .browse-jobs-btn:hover, .post-job-btn:hover {
         background: var(--text-color-dark);
         border: 2px solid var(--primary-color);
         color:var(--text-color-light)
@@ -81,7 +81,6 @@
         right:2px;
         
     }
-
     .company-img {
         height: 100px
     }
@@ -332,11 +331,11 @@
     </div>
 </div>
 {{-- Employer CTA Section --}}
-<div class="container-fluid bg-secondary px-4 py-5 d-flex justify-content-center align-items-center">
+<div class="container-fluid px-4 py-5 d-flex justify-content-center align-items-center">
     <div class="container text-center">
         <h2 class="mb-4 fw-bolder">Looking for Electricians to Hire?</h2>
-        <p>Post your job openings and find qualified electricians quickly and efficiently.</p>
-        <a href="#" class="btn btn-warning btn-outline-dark btn-lg fw-semibold px-3 py-2">Post a Job</a>
+        <p class="mb-4">Post your job openings and find qualified electricians quickly and efficiently.</p>
+        <a href="#" class="btn btn-warning btn-outline-dark btn-lg fw-semibold px-3 py-2 post-job-btn">Post a Job</a>
     </div>
 </div>
 @endsection
