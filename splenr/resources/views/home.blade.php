@@ -102,7 +102,7 @@
     }
 
 </style>
-
+{{-- Hero Section --}}
 <div class="container-fluid px-4 py-5 d-flex align-items-center justify-content-center">
     <div class="row mt-5 align-items-center">
         <div class="col-lg-6 col-md-6 px-4 mx-auto mt-5 align-items-center d-flex justify-content-center">
@@ -132,7 +132,7 @@
         </div>
     </div>
 </div>
-
+{{-- Feature Section --}}
 <div class="container-fluid px-4 mty-5 pt-5 text-center d-flex align-items-center justify-content-center">
     <div class="row d-flex align-items-center justify-content-center text-center">
         <div class="description-box col-lg-3 col-md-3 col-sm-6 text-center d-flex mb-4  p-2">
@@ -197,7 +197,7 @@
         </div>
     </div>
 </div>
-
+{{-- Trusted Company Section --}}
 <div class="container-fluid px-4 py-5">
     <h2 class="fw-bolder text-center my-5">OUR TRUSTED <span>COMPANY</span></h2>
     <div class="row">
@@ -221,21 +221,22 @@
         </div>
     </div>
 </div>
+{{-- Trending Job Positions Section --}}
 <div class="container-fluid px-4 py-5">
     <h2 class="fw-bolder my-5 text-center">TRENDING JOB <span>POSITIONS</span></h2>
     <div class="row px-2">
         @foreach(\App\Models\Listing::take(6)->orderBy('id','DESC')->get() as $listing)
         <div class="category col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
             <div class="d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 22rem;">
+                <div class="card" style="width: 25rem;">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center">
                                 <div class="col-12">
                                     <img src="{{ Storage::url($listing->profile->profile_pic) }}" alt="" class="img-fluid" width="60" height="60">
                                 </div>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-9">
                                 <div class="col-12">
                                     <p class="card-title fw-semibold">{{ $listing->title }}</p>
                                 </div>
@@ -258,12 +259,13 @@
         @endforeach
     </div>
 </div>
+{{-- Popular Job Locations Section --}}
 <div class="container-fluid px-4 py-5">
     <h2 class="fw-bolder text-center mb-5">POPULAR JOB <span>LOCATIONS</span></h2>
     <div class="row px-2">
         <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 22rem;">
+                <div class="card" style="width: 25rem;">
                     <img src="{{ asset('image/cebu-location.jpg') }}" class="card-img-top" alt="Cebu">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
@@ -274,7 +276,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 22rem;">
+                <div class="card" style="width: 25rem;">
                     <img src="{{ asset('image/quezon-location.jpg') }}" class="card-img-top" alt="Quezon">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
@@ -285,7 +287,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 22rem;">
+                <div class="card" style="width: 25rem;">
                     <img src="{{ asset('image/cavite-location.webp') }}" class="card-img-top img-fluid" alt="Cavite">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
@@ -296,7 +298,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 25rem;">
                     <img src="{{ asset('image/makati-location.webp') }}" class="card-img-top img-fluid" alt="Makati City">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
@@ -307,7 +309,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 22rem;">
+                <div class="card" style="width: 25rem;">
                     <img src="{{ asset('image/pasay-location.jpg') }}" class="card-img-top" alt="Pasay City">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
@@ -318,7 +320,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 22rem;">
+                <div class="card" style="width: 25rem;">
                     <img src="{{ asset('image/taguig-location.jpg') }}" class="card-img-top" alt="Taguig City">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
@@ -326,8 +328,15 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </div>       
+    </div>
+</div>
+{{-- Employer CTA Section --}}
+<div class="container-fluid bg-secondary px-4 py-5 d-flex justify-content-center align-items-center">
+    <div class="container text-center">
+        <h2 class="mb-4 fw-bolder">Looking for Electricians to Hire?</h2>
+        <p>Post your job openings and find qualified electricians quickly and efficiently.</p>
+        <a href="#" class="btn btn-warning btn-outline-dark btn-lg fw-semibold px-3 py-2">Post a Job</a>
     </div>
 </div>
 @endsection
