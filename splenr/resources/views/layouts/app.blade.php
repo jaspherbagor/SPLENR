@@ -101,12 +101,6 @@
               </li>
             @endif
               
-              {{-- <li class="nav-item me-4">
-                <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="{{ route('dashboard') }}"><i class="bi bi-speedometer fs-5"></i> DASHBOARD</a>
-              </li>
-              <li class="nav-item me-4">
-                <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="{{ route('subscribe') }}"><i class="bi bi-bell fs-5"></i> SUBSCRIBE</a>
-              </li> --}}
               <li class="nav-item me-4">
                 <a class="nav-link fw-semibold text-black fs-6" href="{{ route('listing.index') }}"><i class="bi bi-briefcase fs-5"></i> JOBS</a>
               </li>
