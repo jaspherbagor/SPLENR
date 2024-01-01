@@ -109,6 +109,13 @@
 
     }
 
+    .employer-cta-section {
+        background: url('{{ asset('image/employer-cta-bg.svg') }}');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
 </style>
 {{-- Hero Section --}}
 <div class="container-fluid px-4 py-5 d-flex align-items-center justify-content-center">
@@ -340,7 +347,7 @@
     </div>
 </div>
 {{-- Employer CTA Section --}}
-<div class="container-fluid px-4 py-5 d-flex justify-content-center align-items-center">
+<div class="employer-cta-section container-fluid px-4 py-5 d-flex justify-content-center align-items-center">
     <div class="container text-center">
         <h2 class="mb-4 fw-bolder">Looking for Electricians to Hire?</h2>
         <p class="mb-4">Post your job openings and find qualified electricians quickly and efficiently.</p>
