@@ -106,6 +106,9 @@
 
     .success-stories-section {
         background: url('{{ asset('image/stories_bg.svg') }}');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 
     }
 
@@ -349,8 +352,8 @@
 {{-- Employer CTA Section --}}
 <div class="employer-cta-section container-fluid px-4 py-5 d-flex justify-content-center align-items-center">
     <div class="container text-center">
-        <h2 class="mb-4 fw-bolder">Looking for Electricians to Hire?</h2>
-        <p class="mb-4">Post your job openings and find qualified electricians quickly and efficiently.</p>
+        <h2 class="mb-4 fw-bolder text-white">Looking for Electricians to Hire?</h2>
+        <h5 class="mb-4 text-white">Post your job openings and find qualified electricians quickly and efficiently.</h5>
         <a href="{{ route('create.employer') }}" class="btn btn-warning btn-outline-dark btn-lg fw-semibold px-3 py-2 post-job-btn">Post a Job</a>
     </div>
 </div>
