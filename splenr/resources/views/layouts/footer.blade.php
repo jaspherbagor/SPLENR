@@ -1,6 +1,4 @@
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;800&display=swap');
-
 * {
     padding:0;
     margin:0;
@@ -20,11 +18,11 @@ html, body {
 }
 
 :root {
-    --primary-color: #fca311;
+    --primary-color: #fdd100;
     --footer-bg: #000;
     --text-color-light: #fff;
     --text-color-dark: #000;
-    --font-family: 'Inter', sans-serif;
+    --font-family: sans-serif;
 }
 
 footer {
@@ -35,7 +33,7 @@ footer {
     font-size: 12px
 }
 
-.footer_link:hover, p.footer_link:hover {
+.footer_link:hover, p.footer_link:hover, .footer_a:hover {
     color:var(--primary-color) !important;
     cursor: pointer;
 }
@@ -49,94 +47,86 @@ footer {
 <footer class="footer container-fluid px-4 pt-5 pb-3">
     <div class="row flex-wrap align-items-top justify-content-space-between pb-1">
         <div class="footer_logo col-lg-2 col-md-4 col-sm-4 col-12 text-start text-white px-2 py-2">
-            <Link to="/">
+            <a href="/">
                 <img src="" class="logo-img mt-4" alt="logo"/>
-            </Link>
+            </a>
         </div>
         <div class="customer_service col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
             <h5 class="fw-semibold mb-3">CUSTOMER SERVICE</h5>
             <p>
-                <Link to="/contact" class="text-decoration-none text-white footer_link">Contact Us</Link>
+                <a href="/contact" class="text-decoration-none text-white footer_a">Contact Us</a>
             </p>
             <p>
-                <Link to="/termsandcondition" class="footer_link text-decoration-none text-white">Shipping Policy</Link>
+                <a href="/termsandcondition" class="footer_a text-decoration-none text-white">Shipping Policy</a>
             </p>
             <p>
-                <Link to="/termsandcondition#returnsandrefunds" class="footer_link text-decoration-none text-white">Return & Refund</Link></p>
+                <a href="/termsandcondition#returnsandrefunds" class="footer_a text-decoration-none text-white">Return & Refund</a></p>
             <p>
-                <Link to="/faqs" class="footer_link text-decoration-none text-white">FAQs</Link>
+                <a href="/faqs" class="footer_a text-decoration-none text-white">FAQs</a>
             </p>
             <p>
-                <Link to="/termsandcondition" class="footer_link text-decoration-none text-white">Privacy Policy</Link>
+                <a href="/termsandcondition" class="footer_link text-decoration-none text-white">Privacy Policy</a>
             </p>
             <p>
-                <Link to="/termsandcondition" class="footer_link text-decoration-none text-white">Terms and Condition</Link>
+                <a href="/termsandcondition" class="footer_link text-decoration-none text-white">Terms and Condition</a>
             </p>
         </div>
         <div class="categories col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
             <h5 class="fw-semibold mb-3">CATEGORIES</h5>
-            <p class="footer_link text-decoration-none text-white" onClick={() => {
-                localStorage.setItem('search', '')
-                filterProducts("Tools & Accessories")}}>
+            <p class="footer_link text-decoration-none text-white">
                 Tools & Accessories
             </p>
 
-            <p class="footer_link text-decoration-none text-white" onClick={() => {
-                localStorage.setItem('search', '')
-                filterProducts("Safety & Protection")}}>
+            <p class="footer_link text-decoration-none text-white">
                 Safety & Protection
             </p>
 
-            <p class="footer_link text-decoration-none text-white" onClick={() => {
-                localStorage.setItem('search', '')
-                filterProducts("Lighting Fixtures")}}>
+            <p class="footer_link text-decoration-none text-white">
                 Lighting Fixtures
             </p>
 
-            <p class="footer_link text-decoration-none text-white" onClick={() => {
-                localStorage.setItem('search', '')
-                filterProducts("Switches & Outlets")}}>
+            <p class="footer_link text-decoration-none text-white">
                 Switches & Outlets
             </p>
         </div>
         <div class="quick_links col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
             <h5 class="fw-semibold mb-3">QUICK LINKS</h5>
             <p>
-                <Link to="/" class="footer_link text-decoration-none text-white">Home</Link>
+                <a href="/" class="footer_link text-decoration-none text-white">Home</a>
             </p>
             <p>
-                <Link to="/product" class="footer_link text-decoration-none text-white">Products</Link>
+                <a href="/product" class="footer_link text-decoration-none text-white">Products</a>
             </p>
             <p>
-                <Link to="/blog" class="footer_link text-decoration-none text-white">Blog</Link>
+                <a href="/blog" class="footer_link text-decoration-none text-white">Blog</a>
             </p>
         </div>
         <div class="my_account col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
             <h5 class="fw-semibold mb-3">MY ACCOUNT</h5>
             <p>
-                <Link to="/cart" class="footer_link text-decoration-none text-white">Cart</Link>
+                <a href="/cart" class="footer_link text-decoration-none text-white">Cart</a>
             </p>
             <p>
-                <Link to="/wishlist" class="footer_link text-decoration-none text-white">My Wishlist</Link>
+                <a href="/wishlist" class="footer_link text-decoration-none text-white">My Wishlist</a>
             </p>
         </div>
         
         <div class="social_links col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
             <h5 class="fw-semibold mb-3">SOCIAL LINKS</h5>
             <div class="social_icons align-items-center justify-content-start">
-                <a href="https://www.facebook.com/jas.bagor/" target="_blank" class="mx-2 text-white">
+                <a href="https://www.facebook.com/jas.bagor/" target="_blank" class="mx-2 text-white text-decoration-none">
                     <i class="footer_link bi bi-facebook fs-4"></i>
                 </a>
-                <a href="https://www.youtube.com/channel/UCTNYaiZxQGNiNLFg8VosSpw" target="_blank" class="mx-2 text-white">
+                <a href="https://www.youtube.com/channel/UCTNYaiZxQGNiNLFg8VosSpw" target="_blank" class="mx-2 text-white text-decoration-none">
                     <i class="footer_link bi bi-youtube fs-4"></i>
                 </a>
-                <a href="https://www.tiktok.com/@jasbgr" target="_blank" class="mx-2 text-white">
+                <a href="https://www.tiktok.com/@jasbgr" target="_blank" class="mx-2 text-white text-decoration-none">
                     <i class="footer_link bi bi-tiktok fs-4"></i>
                 </a>
             </div>
         </div>
     </div>
     <div class="footer_copyright container-fluid px-4 pt-4 mt-4 pb-0">
-        <p class="text-white my-auto text-center">Copyright © 2023 SparkSource Central. All rights reserved.</p>
+        <p class="text-white my-auto text-center">Copyright © 2024 <span class="fw-semibold">splenr</span>. All rights reserved.</p>
     </div>
 </footer>
