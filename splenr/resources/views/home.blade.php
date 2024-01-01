@@ -367,41 +367,41 @@
 
             <div class="carousel-item active">
                 <div class="carousel-text">
-                    <i class="bi bi-quote text-white"></i>
+                    <i class="bi bi-quote text-warning"></i>
                     <h3 class="fw-medium text-white fst-italic"> "Splenr has been a game-changer in my job search. The platform's user-friendly interface and extensive job listings helped me find the perfect electrician role. Kudos to Splenr for connecting job seekers with incredible opportunities!"</h3>
-                    <h5 class="fw-bold mb-5 mt-4 text-white">Olivia Chen</h5>
+                    <h5 class="fw-bold mb-5 mt-4 text-warning">Olivia Chen</h5>
                 </div>
             </div>
 
             <div class="carousel-item">
                 <div class="carousel-text">
-                    <i class="bi bi-quote text-white"></i>
+                    <i class="bi bi-quote text-warning"></i>
                     <h3 class="fw-medium text-white fst-italic">"Splenr is our go-to platform for hiring electricians. The process of posting jobs and filtering applicants is incredibly efficient. We've successfully recruited skilled professionals through Splenr's platform, making our hiring process seamless."</h3>
-                    <h5 class="fw-bold mb-5 mt-4 text-white">Jonathan Martinez</h5>
+                    <h5 class="fw-bold mb-5 mt-4 text-warning">Jonathan Martinez</h5>
                 </div>
             </div>
 
             <div class="carousel-item">
                 <div class="carousel-text">
-                    <i class="bi bi-quote text-white"></i>
+                    <i class="bi bi-quote text-warning"></i>
                     <h3 class="fw-medium text-white fst-italic">"Splenr makes job hunting a breeze! The tailored job recommendations and easy application process streamlined my search. The platform's responsiveness and diverse job listings exceeded my expectations. Highly recommended for aspiring electricians!"</h3>
-                    <h5 class="fw-bold mb-5 mt-4 text-white">Michael Turner</h5>
+                    <h5 class="fw-bold mb-5 mt-4 text-warning">Michael Turner</h5>
                 </div>
             </div>
 
             <div class="carousel-item">
                 <div class="carousel-text">
-                    <i class="bi bi-quote text-white"></i>
+                    <i class="bi bi-quote text-warning"></i>
                     <h3 class="fw-medium text-white fst-italic">"Impressed by the quality of candidates we found on Splenr! The platform attracts top-notch talent in the electrical field. The intuitive interface and tools for managing job postings make it an invaluable resource for employers seeking skilled electricians."</h3>
-                    <h5 class="fw-bold mb-5 mt-4 text-white">Emily Rodriguez</h5>
+                    <h5 class="fw-bold mb-5 mt-4 text-warning">Emily Rodriguez</h5>
                 </div>
             </div>
 
             <div class="carousel-item">
                 <div class="carousel-text">
-                    <i class="bi bi-quote text-white"></i>
+                    <i class="bi bi-quote text-warning"></i>
                     <h3 class="fw-medium text-white fst-italic">"Splenr is not just a job portal; it's a career launchpad! As an aspiring electrician, I found an array of opportunities that matched my skills and preferences. The platform's support in navigating the job market and its user-friendly interface make it an indispensable tool for anyone entering the electrical field. Splenr has my highest recommendation!"</h3>
-                    <h5 class="fw-bold mb-5 text-white mt-4">Robert Thompson</h5>
+                    <h5 class="fw-bold mb-5 text-warning mt-4">Robert Thompson</h5>
                 </div>
             </div>
 
