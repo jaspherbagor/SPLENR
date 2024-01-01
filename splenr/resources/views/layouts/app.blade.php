@@ -105,7 +105,7 @@
                 <a class="nav-link fw-semibold text-black fs-6" href="{{ route('listing.index') }}"><i class="bi bi-briefcase fs-5"></i> JOBS</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-semibold text-black fs-6" href="#"><i class="bi bi-file-earmark-text fs-5"></i> RESOURCES</a>
+                <a class="nav-link fw-semibold text-black fs-6" href="#"><i class="bi bi-patch-question fs-5"></i> FAQs</a>
               </li>
               <li class="nav-item me-4">
                 <a class="nav-link fw-semibold text-black fs-6" href="#"><i class="bi bi-telephone fs-5"></i> CONTACT</a>
