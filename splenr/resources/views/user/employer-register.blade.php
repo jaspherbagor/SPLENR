@@ -27,7 +27,7 @@
 
     /* Paragraph Line Height */
     p {
-        line-height: 30px;
+        line-height: 16px;
     }
     :root {
         --primary-color: #fdd100;
@@ -78,7 +78,7 @@
     color:var(--text-color-light)!important
     }
 
-    .login-link:hover {
+    .login-link:hover, .register-link:hover {
         color: green
     }
     
@@ -151,7 +151,8 @@
                     <button class="btn fs-5 fw-semibold px-3 py-2 register-btn" type="submit" id="btnRegister">Register</button>
                 </div>
                 <div class="text-center mt-4">
-                    <p class="text-black">Already have an account? <a href="{{ route('login') }}" class="text-decoration-none login-link">Login instead.</a></p>
+                    <p class="text-black">Not an employer? Register as a <a href="{{ route('create.seeker') }}" class="text-decoration-none my-0 register-link fw-semibold">Job Seeker</a>.</p>
+                    <p class="text-black">Already have an account? <a href="{{ route('login') }}" class="text-decoration-none login-link fw-semibold">Login</a> instead.</p>
                 </div>
             </form>
         </div>
