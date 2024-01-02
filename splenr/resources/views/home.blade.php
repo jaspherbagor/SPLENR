@@ -62,14 +62,20 @@
 
     .description-box {
         border: 2px solid var(--text-color-light);
+        cursor: pointer;
     }
 
-    .description-box:hover {
+    .description-box:hover .description-icon {
         cursor: pointer;
         border: 2px solid var(--primary-color);
         border-radius: 10px;
         box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-        background: var(--navbar-bg)
+        border-radius: 50%
+    }
+
+    .description-box:hover .description-quantity {
+        transform: scale(1.07);
+        color: var(--primary-color) !important
     }
 
     .card-img-top {
@@ -164,7 +170,7 @@
                         <p class="fw-medium my-0 py-0 fs-5">Live Jobs</p>
                     </div>
                     <div class="col-12 my-0 p-0">
-                        <h2 class="fw-bolder m-0 p-0 text-warning">120+</h2>
+                        <h2 class="fw-bolder m-0 p-0 text-warning description-quantity">120+</h2>
                     </div>
                 </div>
             </div>
@@ -179,7 +185,7 @@
                         <p class="fw-medium m-0 p-0 fs-5">Companies</p>
                     </div>
                     <div class="col-12 m-0 p-0">
-                        <h2 class="fw-bolder m-0 p-0 text-warning">100+</h2>
+                        <h2 class="fw-bolder m-0 p-0 text-warning description-quantity">100+</h2>
                     </div>
                 </div>
             </div>
@@ -194,7 +200,7 @@
                         <p class="fw-medium m-0 p-0 fs-5">Candidates</p>
                     </div>
                     <div class="col-12 m-0 p-0">
-                        <h2 class="fw-bolder m-0 p-0 text-warning">150+</h2>
+                        <h2 class="fw-bolder m-0 p-0 text-warning description-quantity">150+</h2>
                     </div>
                 </div>
             </div>
@@ -209,7 +215,7 @@
                         <p class="fw-medium m-0 p-0 fs-5">New Jobs</p>
                     </div>
                     <div class="col-12 m-0 p-0">
-                        <h2 class="fw-bolder m-0 p-0 text-warning">50+</h2>
+                        <h2 class="fw-bolder m-0 p-0 text-warning description-quantity">50+</h2>
                     </div>
                 </div>
             </div>
