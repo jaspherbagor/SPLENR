@@ -38,12 +38,12 @@
         --font-family: sans-serif;
     }
     
-    .browse-jobs-btn, .post-job-btn {
+    .browse-jobs-btn, .post-job-btn, .apply-now-btn {
         background: var(--primary-color);
         border: 2px solid var(--text-color-dark)
     }
 
-    .browse-jobs-btn:hover, .post-job-btn:hover {
+    .browse-jobs-btn:hover, .post-job-btn:hover, .apply-now-btn:hover {
         background: var(--text-color-dark);
         border: 2px solid var(--primary-color);
         color:var(--text-color-light)
@@ -269,7 +269,7 @@
                         <p class="card-text">Salary: <span class="fw-semibold">₱{{ number_format($listing->salary,2) }}</span></p>
                         <p class="card-text">Location: <span class="fw-semibold">{{ $listing->address }}</span></p>
                         <div class="d-flex align-items-center justify-content-center">
-                            <a href="{{ route('job.show', [$listing->slug]) }}" class="btn btn-success card-link apply-now-btn">Apply Now <i class="bi bi-arrow-right"></i></a>
+                            <a href="{{ route('job.show', [$listing->slug]) }}" class="btn card-link apply-now-btn fw-semibold">APPLY NOW <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
