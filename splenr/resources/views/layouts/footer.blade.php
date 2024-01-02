@@ -103,28 +103,26 @@ footer {
                 <a href="{{ route('create.seeker') }}" class="footer_link text-decoration-none text-white">Seeker Register</a>
             </p>
             <p>
-                <a href="route('create.employer')" class="footer_link text-decoration-none text-white">Employer Register</a>
+                <a href="{{ route('create.employer') }}" class="footer_link text-decoration-none text-white">Employer Register</a>
             </p>
             @endif
             @if(Auth::check())
             @if(auth()->user()->user_type === 'seeker')
             <p>
-                <a href="/cart" class="footer_link text-decoration-none text-white">Profile</a>
+                <a href="{{ route('seeker.profile') }}" class="footer_link text-decoration-none text-white">Profile</a>
             </p>
             <p>
-                <a href="/wishlist" class="footer_link text-decoration-none text-white">Job Applied</a>
+                <a href="{{ route('job.applied') }}" class="footer_link text-decoration-none text-white">Job Applied</a>
             </p>
             @else
             <p>
-                <a href="/wishlist" class="footer_link text-decoration-none text-white">Dashboard</a>
+                <a href="{{ route('dashboard') }}" class="footer_link text-decoration-none text-white">Dashboard</a>
             </p>
             @endif
             <p>
-                <a href="/wishlist" class="footer_link text-decoration-none text-white" id="logout">Logout</a>
+                <a class="footer_link text-decoration-none text-white" id="logout" href="{{ route('logout') }}">Logout</a>
             </p>
             @endif
-            <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf</form>
-
         </div>
         
         <div class="social_links col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
@@ -146,5 +144,3 @@ footer {
         <p class="text-white my-auto text-center">Copyright © 2024 <span class="fw-semibold">splenr</span>. All rights reserved.</p>
     </div>
 </footer>
-
-
