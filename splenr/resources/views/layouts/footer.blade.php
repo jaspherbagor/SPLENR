@@ -77,52 +77,35 @@ footer {
             <p>
                 <a href="/blog" class="footer_link text-decoration-none text-white">Jobs</a>
             </p>
-        </div>
-        {{-- <div class="categories col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
-            <h5 class="fw-semibold mb-3">For Employer</h5>
-            <p class="footer_link text-decoration-none text-white">
-                Tools & Accessories
-            </p>
-
-            <p class="footer_link text-decoration-none text-white">
-                Safety & Protection
-            </p>
-
-            <p class="footer_link text-decoration-none text-white">
-                Lighting Fixtures
-            </p>
-
-            <p class="footer_link text-decoration-none text-white">
-                Switches & Outlets
-            </p>
-        </div> --}}
-        <div class="my_account col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
-            <h5 class="fw-semibold mb-3">MY ACCOUNT</h5>
-            @if(!Auth::check())
+            @if(Auth::check())
             <p>
-                <a href="{{ route('create.seeker') }}" class="footer_link text-decoration-none text-white">Seeker Register</a>
+                <a class="footer_link text-decoration-none text-white" id="logout" href="{{ route('logout') }}">Logout</a>
             </p>
+            @endif
+        </div>
+        <div class="categories col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
+            <h5 class="fw-semibold mb-3">For Employer</h5>
             <p>
                 <a href="{{ route('create.employer') }}" class="footer_link text-decoration-none text-white">Employer Register</a>
             </p>
-            @endif
-            @if(Auth::check())
-            @if(auth()->user()->user_type === 'seeker')
+            <p>
+                <a href="{{ route('dashboard') }}" class="footer_link text-decoration-none text-white">Dashboard</a>
+            </p>
+            <p>
+                <a href="{{ route('subscribe') }}" class="footer_link text-decoration-none text-white">Subscribe</a>
+            </p>
+        </div>
+        <div class="my_account col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
+            <h5 class="fw-semibold mb-3">For Job Seeker</h5>
+            <p>
+                <a href="{{ route('create.seeker') }}" class="footer_link text-decoration-none text-white">Seeker Register</a>
+            </p>
             <p>
                 <a href="{{ route('seeker.profile') }}" class="footer_link text-decoration-none text-white">Profile</a>
             </p>
             <p>
                 <a href="{{ route('job.applied') }}" class="footer_link text-decoration-none text-white">Job Applied</a>
             </p>
-            @else
-            <p>
-                <a href="{{ route('dashboard') }}" class="footer_link text-decoration-none text-white">Dashboard</a>
-            </p>
-            @endif
-            <p>
-                <a class="footer_link text-decoration-none text-white" id="logout" href="{{ route('logout') }}">Logout</a>
-            </p>
-            @endif
         </div>
         
         <div class="social_links col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
