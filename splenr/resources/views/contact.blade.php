@@ -60,15 +60,16 @@
         height:150px
     }
 
-    .submit_form {
-        background:var(--navbar-bg);
+    .submit-form-btn {
+        background:var(--primary-color) !important;
         border-radius:10px;
-        border: 2px solid var(--primary-color);
+        border: 2px solid var(--text-color-dark) !important;
     }
 
-    .submit_form:hover {
-        background: var(--text-color-dark);
-        border: 2px solid var(--primary-color);
+    .submit-form-btn:hover {
+        background: var(--text-color-dark) !important;
+        color: var(--text-color-light) !important;
+        border: 2px solid var(--primary-color) !important;
     }
     /* Contact Form End */
 
@@ -134,14 +135,14 @@
             </div>
         </div>
         <div class="mt-3 px-2">
-            <button type="submit" class="btn btn-success submit_form ms-1 px-3 py-2 fw-semibold">Send</button>
+            <button type="submit" class="btn submit-form-btn ms-1 px-3 py-2 fw-semibold">Send</button>
         </div>    
     </form>
 </section>
 {{-- Contact Form End --}}
 
 {{-- Contact Info Section Start  --}}
-<section class="contact container-fluid h-auto bg-dark">
+<section class="contact container-fluid py-2 h-auto bg-dark">
     <div class="row">
         <div class="col-md-6 contact-info-left py-4 px-4">
             <h2 class="mb-4 mt-2 text-white fw-bold">CONTACTS</h2>
