@@ -32,7 +32,7 @@
             </div>
         </div> --}}
         <div class="d-flex justify-content-between">
-            <h4 class="fw-bold">Recommended Jobs</h4>
+            <h4 class="fw-bold">JOB LISTINGS</h4>
 
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle me-1 my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -90,7 +90,7 @@
             @endforeach
         </div>
 
-        <div class="container">
+        {{-- <div class="container">
             <div class="mt-5">
                 <h3>Recent opening</h3>
             </div>
@@ -114,7 +114,7 @@
             </div>
             @endforeach
          
-        </div>
+        </div> --}}
     </div>
 </div>
 
