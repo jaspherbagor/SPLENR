@@ -1,7 +1,54 @@
 @extends('layouts.app')
+<style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+    * {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+        list-style:none;
+        text-decoration: none;
+        border:none;
+        outline:none;
+        scroll-behavior: smooth;
+        font-family:var(--font-family);
+        word-wrap: break-word;
+    }
+    html, body {
+        width:100%;
+        overflow-x:hidden
+    }
 
+    /* Heading 2 & Heading 1 Spacing */
+    h2, h1 {
+        word-spacing: 10px;
+        letter-spacing: 5px;
+    }
+
+    /* Paragraph Line Height */
+    p {
+        line-height: 30px;
+    }
+    :root {
+        --primary-color: #fdd100;
+        --navbar-bg: #F5F4F2;
+        --text-color-light: #ffffff;
+        --text-color-dark: #202020;
+        --font-family: sans-serif;
+    }
+    
+    .contact-info-left p {
+        color: var(--primary-color)
+    }
+
+    .contact-text-section {
+        background: url('{{ asset('image/contact-bg.svg') }}');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+    }
+</style>
 @section('content')
-<section class="contact-text-section bg-warning container-fluid mt-5 py-5 px-4 w-100 d-flex align-content-center justify-content-center">
+<section class="contact-text-section container-fluid mt-5 py-5 px-4 w-100 d-flex align-content-center justify-content-center">
     <div class="services-text text-white my-5">
         <h1 class="fw-bolder text-center">CONTACT FORM</h1>
     </div>
@@ -69,7 +116,7 @@
             </div>
         </div>
         <div class="col-md-6 contact-map-right py-4 px-4">
-            <iframe src="https:www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.4791905761967!2d122.51804132756394!3d8.06749679481777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3253c81e878401b9%3A0xeade9e033a04dabe!2sAntonino%2C%20Labason%2C%20Zamboanga%20del%20Norte!5e1!3m2!1sen!2sph!4v1700537105943!5m2!1sen!2sph" class="h-100 w-100 border-0"/>
+            <iframe src="https:www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.4791905761967!2d122.51804132756394!3d8.06749679481777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3253c81e878401b9%3A0xeade9e033a04dabe!2sAntonino%2C%20Labason%2C%20Zamboanga%20del%20Norte!5e1!3m2!1sen!2sph!4v1700537105943!5m2!1sen!2sph" class="h-100 w-100 border-0"></iframe>
         </div>
     </div>
 </section>
