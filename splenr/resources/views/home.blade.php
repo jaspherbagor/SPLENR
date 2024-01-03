@@ -143,7 +143,7 @@
     </div>
 </div>
 
-<div class="container mt-4">
+{{-- <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <form class="form-inline">
@@ -156,7 +156,7 @@
             </form>
         </div>
     </div>
-</div>
+</div> --}}
 {{-- Feature Section --}}
 <div class="container-fluid px-4 mty-5 pt-5 text-center d-flex align-items-center justify-content-center">
     <div class="row d-flex align-items-center justify-content-center text-center">
