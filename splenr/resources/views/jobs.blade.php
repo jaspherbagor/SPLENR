@@ -4,7 +4,7 @@
 
 <div class="container-fluid px-4 py-5">
     <div class="container mt-5">
-        <div class="container mt-5 mb-3">
+        {{-- <div class="container mt-5 mb-3">
             <h2 class="fw-bolder">Find your next employer</h2>
         
             <div class="row">
@@ -30,7 +30,7 @@
                 </div>
                 @endforeach
             </div>
-        </div>
+        </div> --}}
         <div class="d-flex justify-content-between">
             <h4 class="fw-bold">Recommended Jobs</h4>
 
