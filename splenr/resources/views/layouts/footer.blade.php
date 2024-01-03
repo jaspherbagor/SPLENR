@@ -66,8 +66,20 @@ footer {
                 <a href="/termsandcondition" class="footer_link text-decoration-none text-white">Terms and Condition</a>
             </p>
         </div>
+        <div class="quick_links col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
+            <h5 class="fw-semibold mb-3">QUICK LINKS</h5>
+            <p>
+                <a href="/" class="footer_link text-decoration-none text-white">Home</a>
+            </p>
+            <p>
+                <a href="/product" class="footer_link text-decoration-none text-white">About</a>
+            </p>
+            <p>
+                <a href="/blog" class="footer_link text-decoration-none text-white">Jobs</a>
+            </p>
+        </div>
         {{-- <div class="categories col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
-            <h5 class="fw-semibold mb-3"></h5>
+            <h5 class="fw-semibold mb-3">For Employer</h5>
             <p class="footer_link text-decoration-none text-white">
                 Tools & Accessories
             </p>
@@ -84,18 +96,6 @@ footer {
                 Switches & Outlets
             </p>
         </div> --}}
-        <div class="quick_links col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
-            <h5 class="fw-semibold mb-3">QUICK LINKS</h5>
-            <p>
-                <a href="/" class="footer_link text-decoration-none text-white">Home</a>
-            </p>
-            <p>
-                <a href="/product" class="footer_link text-decoration-none text-white">About</a>
-            </p>
-            <p>
-                <a href="/blog" class="footer_link text-decoration-none text-white">Jobs</a>
-            </p>
-        </div>
         <div class="my_account col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
             <h5 class="fw-semibold mb-3">MY ACCOUNT</h5>
             @if(!Auth::check())
