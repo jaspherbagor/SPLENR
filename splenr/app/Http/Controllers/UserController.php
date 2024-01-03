@@ -80,7 +80,7 @@ class UserController extends Controller
             }
         }
         
-        return back()->with('error', 'Invalid email or password!');
+        return back()->with('error', 'Wrong email or password!');
     }
 
     public function logout()
