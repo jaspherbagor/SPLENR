@@ -46,6 +46,46 @@
         background-size: cover;
         background-position:center;
     }
+
+    /* Contact Form Start */
+    #firstname, #lastname, #contactnumber, #zipcode, #email, #address {
+        height:50px !important
+    }
+
+    #firstname, #lastname, #contactnumber, #zipcode, #email, #address, #message {
+        border:1px solid var(--text-color-dark) !important
+    }
+
+    textarea.message-text-area {
+        height:150px
+    }
+
+    .submit_form {
+        background:var(--navbar-bg);
+        border-radius:10px;
+        border: 2px solid var(--primary-color);
+    }
+
+    .submit_form:hover {
+        background: var(--text-color-dark);
+        border: 2px solid var(--primary-color);
+    }
+    /* Contact Form End */
+
+
+    /* Contact Section Start */
+    .contact {
+        background: var(--navbar-bg);
+    }
+
+    .contact p {
+        color:var(--primary-color)
+    }
+
+    .social-icons a i:hover {
+        color:var(--primary-color)
+    }
+    /* Contact Section End */
 </style>
 @section('content')
 <section class="contact-text-section container-fluid mt-5 py-5 px-4 w-100 d-flex align-content-center justify-content-center">
