@@ -118,6 +118,8 @@
     </div>
 </div>
 
+@include('layouts.footer')
+
 <style>
     .Fulltime {
         background: green;
