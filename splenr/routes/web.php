@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApplicantController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FileUploadController;
@@ -26,6 +27,8 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 */
 
 Route::get('/', [JoblistingController::class, 'homepage'])->name('homepage');
+
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
 Route::get('/jobs', [JoblistingController::class, 'index'])->name('listing.index');
 Route::get('/company/{id}', [JoblistingController::class, 'company'])->name('company');

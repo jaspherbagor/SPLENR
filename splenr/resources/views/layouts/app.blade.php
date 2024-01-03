@@ -108,7 +108,7 @@
                 <a class="nav-link fw-semibold text-black fs-6" href="#"><i class="bi bi-patch-question fs-5"></i> FAQs</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-semibold text-black fs-6" href="#"><i class="bi bi-telephone fs-5"></i> CONTACT</a>
+                <a class="nav-link fw-semibold text-black fs-6" href="{{ route('contact') }}"><i class="bi bi-telephone fs-5"></i> CONTACT</a>
               </li>
               {{-- @if(!Auth::check())
               <li class="nav-item me-4">
