@@ -6,8 +6,8 @@
     <div class="mt-5">
         <h2 class="fw-bolder text-center my-4">JOB LISTINGS</h2>
         
-        <div class="row px-3 mt-4">
-            <div class="col-lg-3 col-md-3 col-sm-3 filter-column mb-4">
+        <div class="row mt-4">
+            <div class="col-lg-3 col-md-3 col-sm-4 filter-column mb-4">
                 <div class="filter-container container-fluid p-2">
                     <h4 class="fw-bold mb-4">FILTER JOBS</h4>
 
@@ -36,11 +36,11 @@
                     <li class="ms-2"><a href="{{ route('listing.index', ['job_type' => 'Contract']) }}" class="text-decoration-none text-black filter-item fw-medium">Contract</a></li>   
                 </div>           
             </div>
-            <div class="col-lg-9 col-md-9 col-sm-9 job-listing-column">
+            <div class="col-lg-9 col-md-9 col-sm-8 job-listing-column">
                 <div class="row align-items-center">
                     @foreach($jobs as $job)
                     <div class="col-lg-4 col-md-4">
-                        <div class="card p-2 {{ $job->job_type }} mb-4">
+                        <div class="card job-listing-card p-2 {{ $job->job_type }} mb-4">
                             <div class="text-end">
                                 <small class="badge text-bg-dark">{{ $job->job_type }}</small>
                             </div>
@@ -53,10 +53,10 @@
                                 <div class="d-flex flex-row align-items-center justify-content-center">
                                     <small class="ms-1 listing-address">{{ $job->address }}</small>
                                 </div>
-                                <p class="listing-salary">₱{{ number_format($job->salary,2) }}</p>
+                                <p class="listing-salary mt-2 fw-semibold">₱{{ number_format($job->salary,2) }}</p>
                                 <div class="text-center mt-3"> 
                                     <a href="{{ route('job.show', [$job->slug]) }}">
-                                        <button class="btn listing-apply-btn fw-semibold">Apply</button>
+                                        <button class="btn listing-apply-btn fw-semibold">APPLY NOW <i class="bi bi-arrow-right"></i></button>
                                     </a>
                                 </div>
                             </div>
@@ -141,6 +141,10 @@
         background: var(--text-color-dark);
         border: 2px solid var(--primary-color);
         color:var(--text-color-light)
+    }
+
+    .job-listing-card {
+        border: 2px solid var(--text-color-dark)
     }
     .Fulltime {
         background: green;
