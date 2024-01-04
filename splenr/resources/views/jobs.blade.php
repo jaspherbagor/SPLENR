@@ -4,6 +4,7 @@
 
 <section class="container-fluid px-4 py-5 job-listing-section">
     <div class="mt-5">
+        <h2 class="fw-bolder text-center mb-4">JOB LISTINGS</h2>
         {{-- <div class="container mt-5 mb-3">
             <h2 class="fw-bolder">Find your next employer</h2>
         
@@ -32,20 +33,31 @@
             </div>
         </div> --}}
         <div class="row">
-            <div class="col-lg-2 col-md-2">
-                <div class="bg-dark">
-                    <h2>This is a left column content and layout</h2>
-                </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 filter-column p-3">
+                <h4 class="fw-semibold mb-4">FILTER JOBS</h4>
+
+                <h5 class="fw-semibold mt-3 mb-2">SALARY</h5>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">HIGH TO LOW</a></li>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">LOW TO HIGH</a></li>
+
+                <h5 class="fw-semibold mt-3 mb-2">DATE</h5>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">OLDEST</a></li>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">LATEST</a></li>
+
+                <h5 class="fw-semibold mt-3 mb-2">JOB TYPE</h5>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">FULLTIME</a></li>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">PARTTIME</a></li>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">CASUAL</a></li>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">CONTRACT</a></li>
+                
             </div>
-            <div class="col-lg-10 col-md-10">
-                <div class="bg-warning">
-                    <h2>This is a right column content and layout</h2>
-                </div>
+            <div class="col-lg-10 col-md-10 col-sm-8 job-listing-column p-2 bg-warning">
+                <h2>This is a right column content and layout</h2>
+
             </div>
         </div>
 
         <div class="d-flex justify-content-center">
-            <h2 class="fw-bold">JOB LISTINGS</h2>
 
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle me-1 my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -134,6 +146,47 @@
 @include('layouts.footer')
 
 <style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+    * {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+        list-style:none;
+        text-decoration: none;
+        border:none;
+        outline:none;
+        scroll-behavior: smooth;
+        font-family:var(--font-family);
+        word-wrap: break-word;
+    }
+    html, body {
+        width:100%;
+        overflow-x:hidden
+    }
+
+    /* Heading 2 & Heading 1 Spacing */
+    h2, h1 {
+        word-spacing: 10px;
+        letter-spacing: 5px;
+    }
+
+    /* Paragraph Line Height */
+    p {
+        line-height: 30px;
+    }
+    :root {
+        --primary-color: #fdd100;
+        --navbar-bg: #F5F4F2;
+        --text-color-light: #ffffff;
+        --text-color-dark: #202020;
+        --font-family: sans-serif;
+    }
+
+    .filter-column {
+        background: var(--navbar-bg);
+        border: 2px solid var(--text-color-dark)
+    }
+
     .Fulltime {
         background: green;
         color:#fff
