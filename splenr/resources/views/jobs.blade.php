@@ -94,7 +94,7 @@
             </div>
         </div>
 
-        <div class="d-flex justify-content-center">
+        {{-- <div class="d-flex justify-content-center">
 
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle me-1 my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -124,7 +124,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row mt-3 g-3">
+        <div class="row mt-3 g-3"> --}}
             {{-- @foreach($jobs as $job)
             <div class="col-md-3">
                 <div class="card p-2 mt-1 {{ $job->job_type }} ">
