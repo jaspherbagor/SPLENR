@@ -40,7 +40,7 @@
                 <div class="row align-items-center">
                     @foreach($jobs as $job)
                     <div class="col-lg-4 col-md-4">
-                        <div class="card job-listing-card p-2 {{ $job->job_type }} mb-4">
+                        <div class="card job-listing-card p-1 {{ $job->job_type }} mb-4">
                             <div class="text-end">
                                 <small class="badge text-bg-dark">{{ $job->job_type }}</small>
                             </div>
