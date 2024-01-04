@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container-fluid px-4 py-5">
-    <div class="container mt-5">
+    <div class="mt-5">
         {{-- <div class="container mt-5 mb-3">
             <h2 class="fw-bolder">Find your next employer</h2>
         
@@ -31,8 +31,21 @@
                 @endforeach
             </div>
         </div> --}}
-        <div class="d-flex justify-content-between">
-            <h4 class="fw-bold">JOB LISTINGS</h4>
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+                <div class="bg-dark">
+                    <h2>This is a left column content and layout</h2>
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-10">
+                <div class="bg-warning">
+                    <h2>This is a right column content and layout</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <h2 class="fw-bold">JOB LISTINGS</h2>
 
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle me-1 my-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
