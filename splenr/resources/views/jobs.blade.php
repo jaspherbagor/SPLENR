@@ -4,7 +4,7 @@
 
 <section class="container-fluid px-4 py-5 job-listing-section">
     <div class="mt-5">
-        <h2 class="fw-bolder text-center mb-4">JOB LISTINGS</h2>
+        <h2 class="fw-bolder text-center my-4">JOB LISTINGS</h2>
         {{-- <div class="container mt-5 mb-3">
             <h2 class="fw-bolder">Find your next employer</h2>
         
@@ -34,21 +34,31 @@
         </div> --}}
         <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-4 filter-column p-3">
-                <h4 class="fw-semibold mb-4">FILTER JOBS</h4>
+                <h4 class="fw-bold mb-4">FILTER JOBS</h4>
 
                 <h5 class="fw-semibold mt-3 mb-2">SALARY</h5>
-                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">HIGH TO LOW</a></li>
-                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">LOW TO HIGH</a></li>
+                <hr>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item fw-medium">HIGH TO LOW</a></li>
+                <hr>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item fw-medium">LOW TO HIGH</a></li>
+                <hr>
 
                 <h5 class="fw-semibold mt-3 mb-2">DATE</h5>
-                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">OLDEST</a></li>
-                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">LATEST</a></li>
+                <hr>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item fw-medium">OLDEST</a></li>
+                <hr>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item fw-medium">LATEST</a></li>
+                <hr>
 
                 <h5 class="fw-semibold mt-3 mb-2">JOB TYPE</h5>
-                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">FULLTIME</a></li>
-                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">PARTTIME</a></li>
-                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">CASUAL</a></li>
-                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item">CONTRACT</a></li>
+                <hr>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item fw-medium">FULLTIME</a></li>
+                <hr>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item fw-medium">PARTTIME</a></li>
+                <hr>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item fw-medium">CASUAL</a></li>
+                <hr>
+                <li class="ms-2"><a href="" class="text-decoration-none text-black filter-item fw-medium">CONTRACT</a></li>
                 
             </div>
             <div class="col-lg-10 col-md-10 col-sm-8 job-listing-column p-2 bg-warning">
@@ -184,7 +194,13 @@
 
     .filter-column {
         background: var(--navbar-bg);
-        border: 2px solid var(--text-color-dark)
+        border: 1.5px solid var(--text-color-dark);
+        border-radius: 5px
+    }
+
+    .filter-item:hover {
+        color:var(--primary-color) !important;
+        font-weight:500 !important
     }
 
     .Fulltime {
