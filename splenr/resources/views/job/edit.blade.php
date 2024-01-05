@@ -46,7 +46,7 @@
                         <label for="Fulltime" class="form-check-label">Fulltime</label>
                     </div>
                     <div class="form-check mb-2">
-                        <input class="form-check-input" type="radio" name="job_type" id="Parttime" value="Fulltime"
+                        <input class="form-check-input" type="radio" name="job_type" id="Parttime" value="Parttime"
                         {{ $listing->job_type === 'Parttime' ? 'checked' : '' }}>
                         <label for="Parttime" class="form-check-label">Parttime</label>
                     </div>
