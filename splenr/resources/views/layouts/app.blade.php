@@ -110,14 +110,14 @@
               <li class="nav-item me-4">
                 <a class="nav-link fw-semibold text-black fs-6" href="{{ route('contact') }}"><i class="bi bi-telephone fs-5"></i> CONTACT</a>
               </li>
-              {{-- @if(!Auth::check())
+              @if(!Auth::check())
               <li class="nav-item me-4">
                 <a class="nav-link fw-semibold text-black fs-6" href="{{ route('create.seeker') }}"><i class="bi bi-person fs-5"></i> JOB SEEKER</a>
               </li>
               <li class="nav-item me-4">
                 <a class="nav-link fw-semibold text-black fs-6" href="{{ route('create.employer') }}"><i class="bi bi-building fs-5"></i> EMPLOYER</a>
               </li>
-              @endif --}}
+              @endif
 
               <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf</form>
             </ul>
