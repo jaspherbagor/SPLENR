@@ -79,9 +79,10 @@ footer {
             </p>
             @if(Auth::check())
             <p>
-                <a class="footer_link text-decoration-none text-white" id="logout" href="{{ route('logout') }}">Logout</a>
+                <a class="footer_link text-decoration-none text-white" id="logoutbtn" href="#">Logout</a>
             </p>
             @endif
+            <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf</form>
         </div>
         <div class="categories col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
             <h5 class="fw-semibold mb-3">For Employer</h5>
@@ -127,3 +128,10 @@ footer {
         <p class="text-white my-auto text-center">Copyright © 2024 <span class="fw-semibold">splenr</span>. All rights reserved.</p>
     </div>
 </footer>
+<script>
+    let logout = document.getElementById('logoutbtn');
+    let form = document.getElementById('form-logout');
+    logout.addEventListener('click', function() {
+        form.submit();
+    })
+</script>
