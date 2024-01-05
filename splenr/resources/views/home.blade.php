@@ -35,6 +35,10 @@
         --navbar-bg: #F5F4F2;
         --text-color-light: #ffffff;
         --text-color-dark: #202020;
+        --fulltime-card-bg: #2ECC71;
+        --parttime-card-bg: #FFA500;
+        --casual-card-bg: #ffd700;
+        --contract-card-bg: #E74C3C;
         --font-family: sans-serif;
     }
     
@@ -124,6 +128,45 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+
+    .listing-company-logo {
+        width: 60px;
+        height: 60px
+    }
+
+    .Fulltime, .Parttime, .Casual, .Contract {
+        color:var(--text-color-dark)
+    }
+    .Fulltime {
+        background: var(--fulltime-card-bg);
+    }
+    .Parttime {
+        background: var(--parttime-card-bg);
+    }
+    .Casual {
+        background: var(--casual-card-bg);
+    }
+    .Contract {
+        background: var(--contract-card-bg);
+    }
+
+    .listing-title, .listing-company-name, .listing-address, .listing-salary
+    {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .listing-apply-btn {
+        background: var(--primary-color);
+        border: 2px solid var(--text-color-dark)
+    }
+
+    .listing-apply-btn:hover {
+        background: var(--text-color-dark);
+        border: 2px solid var(--primary-color);
+        color:var(--text-color-light)
     }
 
 </style>
@@ -251,7 +294,31 @@
     <h2 class="fw-bolder my-5 text-center">TRENDING JOB <span>POSITIONS</span></h2>
     <div class="row px-2">
         @foreach(\App\Models\Listing::take(6)->orderBy('id','DESC')->get() as $listing)
-        
+
+        <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="card job-listing-card p-1 mb-4">
+                <div class="text-end">
+                    <small class="badge {{ $listing->job_type }}">{{ $listing->job_type }}</small>
+                </div>
+                <div class="text-center mt-2 p-3">
+                    <img src="{{ Storage::url($listing->profile->profile_pic) }}" alt="logo" class="listing-company-logo rounded-circle">
+                    <br>
+                    <p class="d-block fw-bold listing-title">{{ $listing->title }}</p>
+                    <hr>
+                    <p class="listing-company-name">{{ $listing->profile->name }}</p>
+                    <div class="d-flex flex-row align-items-center justify-content-center">
+                        <small class="ms-1 listing-address">{{ $listing->address }}</small>
+                    </div>
+                    <p class="listing-salary mt-2 fw-semibold">₱{{ number_format($listing->salary,2) }}</p>
+                    <div class="text-center mt-3"> 
+                        <a href="{{ route('job.show', [$listing->slug]) }}">
+                            <button class="btn listing-apply-btn fw-semibold">APPLY NOW <i class="bi bi-arrow-right"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         {{-- <div class="category col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
             <div class="d-flex align-items-center justify-content-center">
                 <div class="card" style="width: 25rem;">
