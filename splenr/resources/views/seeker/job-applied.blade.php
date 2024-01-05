@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="container px-4 py-5">
-    <div class="row mt-5">
-        <div class="col-md-8">
-            <h2 class="fw-bolder mb-3">Applied Jobs</h2>
+<div class="container-fluid px-4 py-5">
+    <div class="mt-5 align-items-center">
+        <h2 class="fw-bolder mb-4 text-center">APPLIED JOBS</h2>
+        <div class="container">
             @foreach ($users as $user)
                 @foreach($user->listings as $listing )
                 <div class="card mb-3">
