@@ -40,7 +40,7 @@
                 <div class="row align-items-center">
                     @foreach($jobs as $job)
                     <div class="col-lg-4 col-md-4">
-                        <div class="card job-listing-card p-1 bg-black {{ $job->job_type }} mb-4">
+                        <div class="card job-listing-card p-1 {{ $job->job_type }} mb-4">
                             <div class="text-end">
                                 <small class="badge text-bg-dark">{{ $job->job_type }}</small>
                             </div>
@@ -106,6 +106,10 @@
         --navbar-bg: #F5F4F2;
         --text-color-light: #ffffff;
         --text-color-dark: #202020;
+        --fulltime-card-bg: #2ECC71;
+        --parttime-card-bg: #FFA500;
+        --casual-card-bg: #ffd700;
+        --contract-card-bg: #E74C3C;
         --font-family: sans-serif;
     }
 
@@ -147,20 +151,20 @@
         border: 2px solid var(--text-color-dark)
     }
     .Fulltime {
-        background: green;
-        color:#fff
+        background: var(--fulltime-card-bg);
+        color:var(--text-color-light)
     }
     .Parttime {
-        background: blue;
-        color:#fff
+        background: var(--parttime-card-bg);
+        color: var(--text-color-dark)
     }
     .Casual {
-        background: red;
-        color:#fff
+        background: var(--casual-card-bg);
+        color:var(--text-color-dark)
     }
     .Contract {
-        background: purple;
-        color:#fff
+        background: var(--contract-card-bg);
+        color:var(--primary-color)
     }
 </style>
 
