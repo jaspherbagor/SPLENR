@@ -251,7 +251,8 @@
     <h2 class="fw-bolder my-5 text-center">TRENDING JOB <span>POSITIONS</span></h2>
     <div class="row px-2">
         @foreach(\App\Models\Listing::take(6)->orderBy('id','DESC')->get() as $listing)
-        <div class="category col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
+        
+        {{-- <div class="category col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
             <div class="d-flex align-items-center justify-content-center">
                 <div class="card" style="width: 25rem;">
                     <div class="card-body">
@@ -280,7 +281,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         @endforeach
     </div>
 </div>

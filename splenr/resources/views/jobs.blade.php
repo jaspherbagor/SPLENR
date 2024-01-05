@@ -3,8 +3,8 @@
 @section('content')
 
 <section class="container-fluid px-4 py-5 job-listing-section">
-    <div class="mt-5">
-        <h2 class="fw-bolder text-center my-4">JOB LISTINGS</h2>
+    <div class="mt-5 py-3">
+        <h2 class="fw-bolder text-center my-4 pb-5">JOB LISTINGS</h2>
         
         <div class="row mt-4">
             <div class="col-lg-3 col-md-3 col-sm-4 filter-column mb-4">
