@@ -8,7 +8,7 @@
         
         <div class="row mt-4">
             <div class="col-lg-3 col-md-3 col-sm-4 filter-column mb-4">
-                <div class="filter-container container-fluid p-2">
+                <div class="filter-container container-fluid p-3">
                     <h4 class="fw-bold mb-4">FILTER JOBS</h4>
 
                     <h5 class="fw-semibold mt-3 mb-2">SALARY</h5>
@@ -40,7 +40,7 @@
                 <div class="row align-items-center">
                     @foreach($jobs as $job)
                     <div class="col-lg-4 col-md-4">
-                        <div class="card job-listing-card p-1 {{ $job->job_type }} mb-4">
+                        <div class="card job-listing-card p-1 bg-black {{ $job->job_type }} mb-4">
                             <div class="text-end">
                                 <small class="badge text-bg-dark">{{ $job->job_type }}</small>
                             </div>
