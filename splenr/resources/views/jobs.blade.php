@@ -39,7 +39,7 @@
             <div class="col-lg-9 col-md-9 col-sm-8 job-listing-column">
                 <div class="row align-items-center">
                     @foreach($jobs as $job)
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="card job-listing-card p-1 mb-4">
                             <div class="text-end">
                                 <small class="badge {{ $job->job_type }}">{{ $job->job_type }}</small>
@@ -156,15 +156,15 @@
     }
     .Parttime {
         background: var(--parttime-card-bg);
-        color: var(--text-color-dark)
+        color:var(--text-color-light)
     }
     .Casual {
         background: var(--casual-card-bg);
-        color:var(--text-color-dark)
+        color:var(--text-color-light)
     }
     .Contract {
         background: var(--contract-card-bg);
-        color:var(--primary-color)
+        color:var(--text-color-light)
     }
 </style>
 
