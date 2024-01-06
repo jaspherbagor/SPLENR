@@ -1,8 +1,8 @@
 @extends('layouts.admin.main')
 @section('content')
 <div class="container-fluid mt-5 px-4">
-    <div class="row justify-content-center">
-        <h2 class="fw-bolder">All Jobs</h2>
+    <div class="row justify-content-center px-4">
+        <h2 class="fw-bolder mb-4">ALL JOBS</h2>
         @if(Session::has('success'))
             <div class="alert alert-success">{{ Session::get('success') }}</div>
         @endif
