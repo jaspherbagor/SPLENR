@@ -2,13 +2,13 @@
 
 @section('content')
 
-<div class="container mt-3 justify-content-center px-4">
-    <div class="row justify-content-center">
-        <div class="col-md-10 my-4">
+<div class="container-fluid mt-3 justify-content-center px-4">
+    <div class="justify-content-center">
+        <div class="col-md-12 my-4">
             @if(Session::has('success'))
             <div class="alert alert-success">{{ Session::get('success') }}</div>
             @endif
-            <h2 class="fw-bolder mb-3">Post a Job</h2>
+            <h2 class="fw-bolder mb-3 text-center">POST A JOB</h2>
             <form action="{{ route('job.store') }}" method="POST" enctype="multipart/form-data">@csrf
                 <div class="form-group mb-4">
                     <label for="feature_image">Feature Image</label>

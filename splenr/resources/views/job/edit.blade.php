@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="container mt-3 justify-content-center px-4">
-    <div class="row justify-content-center">
-        <div class="col-md-9 my-4">
-            <h2 class="fw-bolder mb-3">Update a Job</h2>
+<div class="container-fluid mt-3 justify-content-center px-4">
+    <div class="justify-content-center">
+        <div class="col-md-12 my-4">
+            <h2 class="fw-bolder mb-3 text-center">UPDATE A JOB</h2>
             @if(Session::has('success'))
                 <div class="alert alert-success">{{ Session::get('success') }}</div>
             @endif
@@ -14,6 +14,9 @@
                 <div class="form-group mb-4">
                     <label for="feature_image">Feature Image</label>
                     <input type="file" name="feature_image" id="feature_image" class="form-control">
+                    @if($listing->feature_image)
+                    <img src="{{ Storage::url($listing->feature_image) }}" class="mt-3 job_edit_feature_image w-25" alt="profile image">
+                    @endif
                     @if($errors->has('feature_image'))
                         <div class="text-danger fw-semibold">{{ $errors->first('feature_image') }}</div>
                     @endif
@@ -93,6 +96,9 @@
 <style>
     .note-insert {
         display:none !important
+    }
+    .job_edit_feature_image {
+        border: 2px solid black
     }
 </style>
 
