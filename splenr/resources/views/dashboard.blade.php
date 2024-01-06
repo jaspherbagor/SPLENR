@@ -2,10 +2,8 @@
 
 @section('content')
 
-<div class="container px-4 py-5">
-    <div class="container">
-
-        <div class="row justify-content-center">
+<div class="container-fluid px-4 py-5">
+    <div class="container-fluid">
 
         @if(Session::has('success'))
             <div class="alert alert-success">{{ Session::get('success') }}</div>
@@ -15,20 +13,19 @@
         <div class="alert alert-danger">{{ Session::get('error') }}</div>
         @endif
 
-        <div class="container-fluid px-4">
-            <h1 class="mt-4">Dashboard</h1>
-            <ol class="breadcrumb mb-4">
-                Hello, {{ auth()->user()->name }}
+        <div class="container-fluid">
+            <h2 class="fw-bolder">Dashboard</h2>
+            <p class="pt-2 mb-0">
+                Hello, <span class="fw-semibold">{{ auth()->user()->name }}</span>!
                 @if(!auth()->user()->billing_ends)
                     @if(Auth::check() && auth()->user()->user_type == 'employer')
-                    <p>Your trial {{ now()->format('Y-m-d') > auth()->user()->user_trial ? 'was expired': 'will expire'  }} on {{ auth()->user()->user_trial}}</p>
+                    <span>Your trial {{ now()->format('Y-m-d') > auth()->user()->user_trial ? 'was expired': 'will expire'  }} on {{ auth()->user()->user_trial}}</span>
                     @endif
                 @endif
-
-                @if(Auth::check() && auth()->user()->user_type == 'employer')
-                    <p class="fw-semibold">Your membership {{ now()->format('Y-m-d') > auth()->user()->user_trial ? 'was expired': 'will expire'  }} on {{ auth()->user()->user_trial}}</p>
-                @endif
-            </ol>
+            </p>
+            @if(Auth::check() && auth()->user()->user_type == 'employer')
+                <p>Your membership {{ now()->format('Y-m-d') > auth()->user()->billing_ends ? 'was expired': 'will expire'  }} on <span class="fw-semibold">{{ auth()->user()->billing_ends}}</span></p>
+            @endif
             <div class="row">
                 <div class="col-xl-3 col-md-6">
                     <div class="card bg-primary text-white mb-4">

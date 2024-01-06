@@ -26,14 +26,14 @@
                 </div>
                 <div class="form-group mb-4">
                     <label for="description">Description</label>
-                    <textarea type="text" name="description" id="description" class="form-control summernote"></textarea>
+                    <textarea type="text" name="description" id="summernote" class="form-control summernote"></textarea>
                     @if($errors->has('description'))
                         <div class="text-danger fw-semibold">{{ $errors->first('description') }}</div>
                     @endif
                 </div>
                 <div class="form-group mb-4">
                     <label for="roles">Roles and Responsibility</label>
-                    <textarea type="text" name="roles" id="roles" class="form-control summernote"></textarea>
+                    <textarea type="text" name="roles" id="summernote" class="form-control summernote"></textarea>
                     @if($errors->has('roles'))
                         <div class="text-danger fw-semibold">{{ $errors->first('roles') }}</div>
                     @endif
