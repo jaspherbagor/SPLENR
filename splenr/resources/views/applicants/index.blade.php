@@ -16,7 +16,8 @@
 @extends('layouts.admin.main')
 @section('content')
 <div class="container-fluid mt-5 px-4">
-    <div class="row justify-content-center px-1">
+    <h2 class="fw-bolder mb-4 text-center">APPLICANTS</h2>
+    <div class="row justify-content-center px-3">
         <div class="card mb-4 px-0">
             <div class="card-header">
                 <i class="fas fa-table me-1"></i>
@@ -39,8 +40,8 @@
                             <td>{{ $listing->title }}</td>
                             <td>{{ $listing->created_at->format('Y-m-d') }}</td>
                             <td>{{ $listing->users_count }}</td>
-                            <td>View</td>
-                            <td><a href="{{ route('applicants.show', $listing->slug) }}">View</a></td>
+                            <td><a href="{{ route('job.show', [$listing->slug]) }}" class="text-secondary">View</a></td>
+                            <td><a href="{{ route('applicants.show', $listing->slug) }}" class="text-success">View</a></td>
                         </tr>
                         
                         @endforeach
