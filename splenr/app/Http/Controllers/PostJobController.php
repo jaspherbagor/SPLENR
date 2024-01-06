@@ -43,12 +43,12 @@ class PostJobController extends Controller
     public function update($id, JobEditFormRequest $request)
     {
         $this->job->updatePost($id, $request);
-        return back()->with('success', 'Your job post has been successfully updated');
+        return back()->with('success', 'Your job post has been successfully updated!');
     }
 
     public function erase($id)
     {
         Listing::find($id)->delete();
-        return back()->with('success', 'Your job post has been successfully deleted');
+        return back()->with('success', 'Your job post has been successfully deleted!');
     }
 }
