@@ -45,5 +45,12 @@ p {
 
 .select-plan-btn {
     background: var(--text-color-dark) !important;
-    border: 2px solid var(--primary-color) !important
+    border: 2px solid var(--primary-color) !important;
+    color: var(--text-color-light) !important
+}
+
+.select-plan-btn:hover {
+    background: var(--primary-color) !important;
+    border: 2px solid var(--text-color-dark) !important;
+    color: var(--text-color-dark) !important
 }
