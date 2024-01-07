@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid mt-5 px-4">
     <h2 class="fw-bolder mb-4 text-center">APPLICANTS</h2>
-    <div class="row justify-content-center px-3">
+    <div class="row justify-content-center px-2">
         <div class="card mb-4 px-0">
             <div class="card-header">
                 <i class="fas fa-table me-1"></i>
