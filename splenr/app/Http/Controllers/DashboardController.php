@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,7 +15,8 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return view('dashboard');
+        $listings = Listing::latest()->withCount('users')->where('user_id', auth()->user()->id)->get();
+        return view('dashboard', compact('listings'));
 
     }
 
