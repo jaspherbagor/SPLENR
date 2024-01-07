@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-fluid px-4 py-5">
+<div class="container-fluid px-0 py-5">
     <div class="container-fluid">
 
         @if(Session::has('success'))
@@ -27,43 +27,45 @@
                 <p>Your membership {{ now()->format('Y-m-d') > auth()->user()->billing_ends ? 'was expired': 'will expire'  }} on <span class="fw-semibold">{{ auth()->user()->billing_ends}}</span></p>
             @endif
             <div class="row">
-                <div class="col-xl-3 col-md-6">
-                    <div class="card bg-primary text-white mb-4">
-                        <div class="card-body">Total Jobs (<span class="fw-bold">{{ \App\Models\Listing::where('user_id', auth()->id())->count() }}</span>)</div>
-                        <div class="card-footer d-flex align-items-center justify-content-between">
-
-                            <a class="small text-white stretched-link" href="{{ route('job.index') }}">View</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card bg-warning text-white mb-4">
-                        <div class="card-body">Profile</div>
-                        <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{{ route('user.profile') }}">View</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card bg-success text-white mb-4">
-                        <div class="card-body">Plan (<span class="fw-bold">{{ App\Models\User::where('id', auth()->id())->first()->plan }}</span>)</div>
-                        <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="{{ route('subscribe') }}">View</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-                {{-- <div class="col-xl-3 col-md-6">
+                <div class="col-xl-4 col-md-6">
                     <div class="card bg-danger text-white mb-4">
-                        <div class="card-body">Danger Card</div>
+                        <div class="card-body">
+                            <h1 class="fw-bolder fs-1">{{ \App\Models\Listing::where('user_id', auth()->id())->count() }}</h1>
+                            <div class="icon text-end"><i class="bi bi-suitcase-lg fs-2"></i></div>
+                            <h6 class="fw-medium">Total Jobs</h6>
+                        </div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <a class="small text-white stretched-link fw-semibold" href="{{ route('job.index') }}">VIEW</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
-                </div> --}}
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="card bg-warning text-white mb-4">
+                        <div class="card-body">
+                            <h1 class="fw-bolder">PROFILE</h1>
+                            <div class="icon text-end"><i class="bi bi-person-circle fs-2"></i></div>
+                            <h6 class="fw-medium">Account</h6>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link fw-semibold" href="{{ route('user.profile') }}">VIEW</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="card bg-success text-white mb-4">
+                        <div class="card-body">
+                            <h1 class="fw-bolder text-uppercase fs-1">{{ App\Models\User::where('id', auth()->id())->first()->plan }}</h1>
+                            <div class="icon text-end"><i class="bi bi-unlock fs-2"></i></div>
+                            <h6>Plan</h6>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link fw-semibold" href="{{ route('subscribe') }}">View</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-xl-6">
