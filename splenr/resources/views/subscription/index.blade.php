@@ -7,8 +7,8 @@
         @if(Session::has('message'))
             <div class="alert alert-warning">{{ Session::get('message') }}</div>
         @endif
-        <div class="col-md-4 d-flex align-items-center justify-content-center">
-            <div class="card mb-5 bg-warning" style="width: 18rem;">
+        <div class="col-lg-4 col-md-4 col-sm-6 d-flex align-items-center justify-content-center">
+            <div class="card mb-5 weekly-subscription" style="width: 22rem;">
                 <div class="card-body">
                     <h5 class="card-title fw-semibold">Weekly Plan</h5>
                     <h1 class="fw-bolder">₱500.00</h1>
@@ -26,8 +26,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center justify-content-center">
-            <div class="card mb-5 bg-danger" style="width: 18rem;">
+        <div class="col-lg-4 col-md-4 col-sm-6 d-flex align-items-center justify-content-center">
+            <div class="card mb-5 monthly-subscription" style="width: 22rem;">
                 <div class="card-body">
                     <h5 class="card-title fw-semibold">Monthly Plan</h5>
                     <h1 class="fw-bolder">₱1,500.00</h1>
@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="col-md-4 d-flex align-items-center justify-content-center">
-            <div class="card mb-5 bg-success" style="width: 18rem;">
+            <div class="card mb-5 yearly-subscription" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title fw-semibold">Yearly Plan</h5>
                     <h1 class="fw-bolder">₱10,000.00</h1>
