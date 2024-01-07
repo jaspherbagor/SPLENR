@@ -21,7 +21,7 @@
                 </ul>
                 <div class="card-body text-center">
                     <a href="{{ route('pay.weekly') }}" class="card-link">
-                        <button class="btn btn-success btn-outline-dark">Select Plan</button>
+                        <button class="btn select-plan-btn">Select Plan</button>
                     </a>
                 </div>
             </div>
@@ -40,13 +40,13 @@
                 </ul>
                 <div class="card-body text-center">
                     <a href="{{ route('pay.monthly') }}" class="card-link">
-                        <button class="btn btn-success btn-outline-dark">Select Plan</button>
+                        <button class="btn select-plan-btn">Select Plan</button>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center justify-content-center">
-            <div class="card mb-5 yearly-subscription" style="width: 18rem;">
+        <div class="col-lg-4 col-md-4 col-sm-6 d-flex align-items-center justify-content-center">
+            <div class="card mb-5 yearly-subscription" style="width: 22rem;">
                 <div class="card-body">
                     <h5 class="card-title fw-semibold">Yearly Plan</h5>
                     <h1 class="fw-bolder">₱10,000.00</h1>
@@ -59,7 +59,7 @@
                 </ul>
                 <div class="card-body text-center">
                     <a href="{{ route('pay.yearly') }}" class="card-link">
-                        <button class="btn btn-success btn-outline-dark">Select Plan</button>
+                        <button class="btn select-plan-btn">Select Plan</button>
                     </a>
                 </div>
             </div>
