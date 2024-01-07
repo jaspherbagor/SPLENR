@@ -21,7 +21,7 @@
                 </ul>
                 <div class="card-body text-center">
                     <a href="{{ route('pay.weekly') }}" class="card-link">
-                        <button class="btn select-plan-btn">Select Plan</button>
+                        <button class="btn select-plan-btn fw-semibold">SELECT PLAN</button>
                     </a>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 </ul>
                 <div class="card-body text-center">
                     <a href="{{ route('pay.monthly') }}" class="card-link">
-                        <button class="btn select-plan-btn">Select Plan</button>
+                        <button class="btn select-plan-btn fw-semibold">SELECT PLAN</button>
                     </a>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                 </ul>
                 <div class="card-body text-center">
                     <a href="{{ route('pay.yearly') }}" class="card-link">
-                        <button class="btn select-plan-btn">Select Plan</button>
+                        <button class="btn select-plan-btn fw-semibold">SELECT PLAN</button>
                     </a>
                 </div>
             </div>
