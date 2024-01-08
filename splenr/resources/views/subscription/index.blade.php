@@ -36,7 +36,7 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">&#x2713; Cost-efficient extended job visibility.</li>
                         <li class="list-group-item">&#x2713; Consistent presence for attracting candidates.</li>
-                        <li class="list-group-item">&#x2713; Access to advanced candidate search features.</li>
+                        <li class="list-group-item">&#x2713; Unlimited job postings for 1 month.</li>
                         <li class="list-group-item">&#x2713; Company branding opportunities.</li>
                         <li class="list-group-item">&#x2713; Flexibility in scheduling job postings.</li>
                     </ul>
