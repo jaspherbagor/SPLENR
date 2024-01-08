@@ -97,7 +97,11 @@ class UserController extends Controller
 
     public function seekerProfile()
     {
-        return view('seeker.profile');
+        if(auth()->user()->user_type === 'seeker') {
+            return view('seeker.profile');
+        } else {
+            return back();
+        }   
     }
 
     public function changePassword(Request $request)
@@ -155,6 +159,10 @@ class UserController extends Controller
     {
         $users = User::with('listings')->where('id', auth()->user()->id)->get();
 
-        return view('seeker.job-applied', compact('users'));
+        if(auth()->user()->user_type === 'seeker') {
+            return view('seeker.job-applied', compact('users'));
+        } else {
+            return back();
+        }
     }
 }
