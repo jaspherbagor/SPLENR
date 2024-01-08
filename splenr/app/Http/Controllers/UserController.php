@@ -99,7 +99,7 @@ class UserController extends Controller
             return view('seeker.profile');
         } else {
             return back();
-        }   
+        }
     }
 
     public function changePassword(Request $request)
