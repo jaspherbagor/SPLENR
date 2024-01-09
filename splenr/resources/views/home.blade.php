@@ -96,13 +96,16 @@
     }
 
     .card {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+         rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         border: 2px solid var(--text-color-dark)
     }
 
     .card:hover {
         cursor: pointer;
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+         rgba(17, 17, 26, 0.1) 0px 16px 56px,
+          rgba(17, 17, 26, 0.1) 0px 24px 80px;
     }
 
     .card-title, .card-subtitle, .card-text {
@@ -191,7 +194,8 @@
         <div class="col-md-6">
             <form class="form-inline">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for electrician jobs..." aria-label="Search" aria-describedby="button-addon2">
+                    <input type="text" class="form-control" placeholder="Search for electrician jobs..."
+                     aria-label="Search" aria-describedby="button-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
                     </div>
