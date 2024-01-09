@@ -26,19 +26,28 @@ Route::get('/jobs/{listing:slug}', [JoblistingController::class, 'show'])->name(
 // File upload route
 Route::post('/resume/upload', [FileUploadController::class, 'store'])->middleware('auth');
 
+// Define a constant for the login route
+define('LOGIN_ROUTE', '/login');
+
 // Email verification route
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
-    return redirect('/login');
+    return redirect(LOGIN_ROUTE);
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 // User registration routes
-Route::get('/register/seeker', [UserController::class, 'createSeeker'])->name('create.seeker')->middleware(CheckAuth::class);
+Route::get('/register/seeker', [UserController::class, 'createSeeker'])
+    ->name('create.seeker')
+    ->middleware(CheckAuth::class);
+
 Route::post('/register/seeker', [UserController::class, 'storeSeeker'])->name('store.seeker');
-Route::get('/register/employer', [UserController::class, 'createEmployer'])->name('create.employer')->middleware(CheckAuth::class);
+Route::get('/register/employer', [UserController::class, 'createEmployer'])
+    ->name('create.employer')
+    ->middleware(CheckAuth::class);
+    
 Route::post('/register/employer', [UserController::class, 'storeEmployer'])->name('store.employer');
-Route::get('/login', [UserController::class, 'login'])->name('login')->middleware(CheckAuth::class);
-Route::post('/login', [UserController::class, 'postLogin'])->name('login.post');
+Route::get(LOGIN_ROUTE, [UserController::class, 'login'])->name('login')->middleware(CheckAuth::class);
+Route::post(LOGIN_ROUTE, [UserController::class, 'postLogin'])->name('login.post');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 // User profile routes
@@ -52,7 +61,10 @@ Route::middleware('auth')->group(function () {
 });
 
 // Dashboard and verification routes
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['verified', isPremiumUser::class])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware(['verified', isPremiumUser::class])
+    ->name('dashboard');
+
 Route::get('/verify', [DashboardController::class, 'verify'])->name('verification.notice');
 Route::get('/resend/verification/email', [DashboardController::class, 'resend'])->name('resend.email');
 
