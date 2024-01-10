@@ -110,11 +110,14 @@ class UserController extends Controller
             'password_confirmation' => 'required'
         ]);
 
+        // Retrieve the authenticated user
         $user = auth()->user();
+
         if(!Hash::check($request->current_password, $user->password)) {
             return back()->with('error', 'Current password is incorrect!');
         }
 
+        $user = new User();
         $user->password = Hash::make($request->password);
         $user->save();
 

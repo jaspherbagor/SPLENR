@@ -15,7 +15,8 @@
                     <label for="feature_image">Feature Image</label>
                     <input type="file" name="feature_image" id="feature_image" class="form-control">
                     @if($listing->feature_image)
-                    <img src="{{ Storage::url($listing->feature_image) }}" class="mt-3 job_edit_feature_image w-25" alt="profile image">
+                    <img src="{{ Storage::url($listing->feature_image) }}"
+                     class="mt-3 job_edit_feature_image w-25" alt="profile image">
                     @endif
                     @if($errors->has('feature_image'))
                         <div class="text-danger fw-semibold">{{ $errors->first('feature_image') }}</div>
@@ -30,14 +31,18 @@
                 </div>
                 <div class="form-group mb-4">
                     <label for="description">Description</label>
-                    <textarea type="text" name="description" id="description" class="form-control summernote">{{ $listing->description }}</textarea>
+                    <textarea type="text" name="description" id="description" class="form-control summernote">
+                        {{ $listing->description }}
+                    </textarea>
                     @if($errors->has('description'))
                         <div class="text-danger fw-semibold">{{ $errors->first('description') }}</div>
                     @endif
                 </div>
                 <div class="form-group mb-4">
                     <label for="roles">Roles and Responsibility</label>
-                    <textarea type="text" name="roles" id="roles" class="form-control summernote">{{ $listing->roles }}</textarea>
+                    <textarea type="text" name="roles" id="roles" class="form-control summernote">
+                        {{ $listing->roles }}
+                    </textarea>
                     @if($errors->has('roles'))
                         <div class="text-danger fw-semibold">{{ $errors->first('roles') }}</div>
                     @endif
@@ -54,11 +59,14 @@
                         <label for="Parttime" class="form-check-label">Parttime</label>
                     </div>
                     <div class="form-check mb-2">
-                        <input class="form-check-input" type="radio" name="job_type" id="Casual" value="Casual" {{ $listing->job_type === 'Casual' ? 'checked' : '' }}>
+                        <input class="form-check-input" type="radio"
+                         name="job_type" id="Casual" value="Casual"
+                          {{ $listing->job_type === 'Casual' ? 'checked' : '' }}>
                         <label for="Casual" class="form-check-label">Casual</label>
                     </div>
                     <div class="form-check mb-2">
-                        <input class="form-check-input" type="radio" name="job_type" id="Contract" value="Contract" {{ $listing->job_type === 'Contract' ? 'checked' : '' }}>
+                        <input class="form-check-input" type="radio"
+                         name="job_type" id="Contract" value="Contract" {{ $listing->job_type === 'Contract' ? 'checked' : '' }}>
                         <label for="Contract" class="form-check-label">Contract</label>
                     </div>
                     @if($errors->has('job_type'))
@@ -81,7 +89,8 @@
                 </div>
                 <div class="form-group mb-4">
                     <label for="date">Application Closing Date</label>
-                    <input type="text" name="date" id="datepicker" class="form-control" value="{{ $listing->application_close_date }}">
+                    <input type="text" name="date" id="datepicker"
+                     class="form-control" value="{{ $listing->application_close_date }}">
                     @if($errors->has('date'))
                         <div class="text-danger fw-semibold">{{ $errors->first('date') }}</div>
                     @endif
@@ -101,5 +110,4 @@
         border: 2px solid black
     }
 </style>
-
 @endsection
