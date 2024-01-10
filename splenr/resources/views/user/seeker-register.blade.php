@@ -224,7 +224,7 @@
     }).catch(error => {
         button.innerHTML = 'Register'
         button.disabled = false
-        messageDiv.innerHTML = '<div class="alert alert-danger">Something went wrong. Please try again</div>'    
+        messageDiv.innerHTML = '<div class="alert alert-danger">Something went wrong. Please try again</div>'
     })
     }
     

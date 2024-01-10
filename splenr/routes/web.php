@@ -14,9 +14,14 @@ use App\Http\Middleware\isPremiumUser;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
-// Public routes
+// Homepage Route
 Route::get('/', [JoblistingController::class, 'homepage'])->name('homepage');
+
+// Route to display the contact form
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+
+// Route to handle form submissions
+Route::post('/submit/contact', [ContactController::class, 'submitContact'])->name('submit.contact');
 
 // Job routes
 Route::get('/jobs', [JoblistingController::class, 'index'])->name('listing.index');

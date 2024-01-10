@@ -19,7 +19,8 @@
                     <label for="logo">Logo</label>
                     <input type="file" id="logo" name="profile_pic" class="form-control">
                     @if(auth()->user()->profile_pic)
-                    <img src="{{ Storage::url(auth()->user()->profile_pic) }}" width="150" class="mt-3" alt="profile image">
+                    <img src="{{ Storage::url(auth()->user()->profile_pic) }}"
+                     width="150" class="mt-3" alt="profile image">
                     @endif
                 </div>
                 <div class="form-group mb-4">
@@ -27,8 +28,15 @@
                     <input type="text" id="name" name="name" class="form-control" value="{{ auth()->user()->name }}">
                 </div>
                 <div class="form-group mb-4">
+                    <label for="name">Address</label>
+                    <input type="text" id="address" name="company_address"
+                     class="form-control" value="{{ auth()->user()->company_address }}">
+                </div>
+                <div class="form-group mb-4">
                     <label for="description">About Company</label>
-                    <textarea type="text" name="about" id="description" class="form-control summernote">{{ auth()->user()->about }}</textarea>
+                    <textarea type="text" name="about" id="description" class="form-control summernote">
+                        {{ auth()->user()->about }}
+                    </textarea>
                 </div>
                 <button type="submit" class="btn btn-success">Update</button>
             </div>
@@ -43,7 +51,7 @@
                     <input type="password" name="current_password" class="form-control">
                     @if($errors->has('current_password'))
                         <span class="text-danger">{{ $errors->first('current_password') }}</span>
-                    @endif  
+                    @endif
                     
                 </div>
                 <div class="form-group mb-4">
@@ -51,14 +59,14 @@
                     <input type="password" name="password" class="form-control">
                     @if($errors->has('password'))
                         <span class="text-danger">{{ $errors->first('password') }}</span>
-                    @endif  
+                    @endif
                 </div>
                 <div class="form-group mb-4">
                     <label for="name">Confirm Password</label>
                     <input type="password" name="password_confirmation" class="form-control">
                     @if($errors->has('password_confirmation'))
                         <span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
-                    @endif  
+                    @endif
                 </div>
                 <button type="submit" class="btn btn-success">Update</button>
             </div>

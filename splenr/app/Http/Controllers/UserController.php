@@ -140,6 +140,7 @@ class UserController extends Controller
     {
         $this->validate($request, [
             'profile_pic' => 'mimes:png,jpeg,webp|max:5120',
+            'company_address' => 'required|string',
         ]);
 
         if($request->hasFile('profile_pic')) {
