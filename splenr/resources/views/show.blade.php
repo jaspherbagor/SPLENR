@@ -61,14 +61,6 @@
                                 LOGIN TO APPLY
                             </a>
                         </button>
-                        {{-- <p class="fw-bold">
-                            Please login to apply!
-                             <span class="text-primary">
-                                <a href="{{ route('login') }}" class="fw-bold">
-                                    LOGIN.
-                                </a>
-                            </span>
-                        </p> --}}
                     @endif
 
                     {{-- Modal --}}
