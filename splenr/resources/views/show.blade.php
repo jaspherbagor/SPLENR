@@ -10,7 +10,7 @@
                     <a href="{{ route('company', [$listing->profile->id]) }}" class="text-decoration-none">
                         <img src="{{ Storage::url($listing->profile->profile_pic) }}" width="60" height="60"
                         alt="company profile image" class="rounded-circle">
-                        <span class="fw-bold fs-5 my-auto">{{ $listing->profile->name }}</span>
+                        <span class="fw-bold fs-5 my-auto text-black">{{ $listing->profile->name }}</span>
                     </a>
                     <h2 class="card-title fw-bold">{{ $listing->title }}</h2>
 
@@ -22,15 +22,15 @@
                     <div class="alert alert-danger">{{ Session::get('error') }}</div>
                     @endif
 
-                    <span class="badge bg-primary">{{ $listing->job_type }}</span>
+                    <span class="badge bg-success">{{ $listing->job_type }}</span>
                     <p class="mt-3 fw-semibold">Salary:
-                         <span class="fw-bold text-warning">
+                         <span class="fw-bold">
                             ₱{{ number_format($listing->salary,2) }}
                         </span>
                     </p>
                     <p class="fw-semibold">
                         Address:
-                        <span class="fw-bold text-warning">
+                        <span class="fw-bold">
                              {{ $listing->address }}
                         </span>
                     </p>
@@ -40,7 +40,7 @@
                     {!! $listing->roles !!}
                     <p class="card-text mt-4 fw-semibold">
                         Application Closing Date:
-                         <span class="fw-bold text-warning">
+                         <span class="fw-bold">
                             {{ $listing->formattedDate }}
                         </span>
                     </p>
@@ -50,9 +50,9 @@
                             <button type="submit" class="btn btn-success mt-3">EASY APPLY</button>
                         </form>
                         @else
-                        <button type="button" class="btn btn-dark btn-outline-secondary"
+                        <button type="button" class="btn btn-dark btn-outline-white fw-semibold"
                          data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                            Apply
+                            APPLY
                         </button>
                         @endif
                     @else
