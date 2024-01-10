@@ -20,7 +20,8 @@
                         <p class="text-danger">{{ $errors->first('profile_pic') }}</p>
                     @endif
                     @if(auth()->user()->profile_pic)
-                    <img src="{{ Storage::url(auth()->user()->profile_pic) }}" width="150" class="mt-3" alt="profile image">
+                    <img src="{{ Storage::url(auth()->user()->profile_pic) }}"
+                     width="150" class="mt-3" alt="profile image">
                     @endif
                 </div>
                 <div class="form-group mb-4">
@@ -40,7 +41,7 @@
                     <input type="password" name="current_password" class="form-control">
                     @if($errors->has('current_password'))
                         <span class="text-danger">{{ $errors->first('current_password') }}</span>
-                    @endif  
+                    @endif
                     
                 </div>
                 <div class="form-group mb-4">
@@ -48,14 +49,14 @@
                     <input type="password" name="password" class="form-control">
                     @if($errors->has('password'))
                         <span class="text-danger">{{ $errors->first('password') }}</span>
-                    @endif  
+                    @endif
                 </div>
                 <div class="form-group mb-4">
                     <label for="name">Confirm Password</label>
                     <input type="password" name="password_confirmation" class="form-control">
                     @if($errors->has('password_confirmation'))
                         <span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
-                    @endif  
+                    @endif
                 </div>
                 <button type="submit" class="btn btn-success">Update</button>
             </div>
@@ -70,7 +71,7 @@
                     <input type="file" name="resume" class="form-control" id="resume">
                     @if($errors->has('resume'))
                         <span class="text-danger">{{ $errors->first('resume') }}</span>
-                    @endif  
+                    @endif
                 </div>
                 <button type="submit" class="btn btn-success">Upload</button>
             </div>
