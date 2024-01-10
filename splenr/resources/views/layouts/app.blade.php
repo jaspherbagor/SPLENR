@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPLENR</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+     rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
     <style>
@@ -66,35 +68,50 @@
           <a class="navbar-brand" href="/">
             <img src="{{ asset('image/SPLENR-LOGO.svg') }}" class="logo" alt="SPLENR Logo">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+           data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item me-4">
-                <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="/"><i class="bi bi-house-door fs-5"></i> HOME</a>
+                <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="/">
+                  <i class="bi bi-house-door fs-5"></i> HOME</a>
               </li>
 
               @if(Auth::check())
               <li class="nav-item me-4 dropdown text-decoration-none">
-                <a class="btn dropdown-toggle p-0 text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="{{ Storage::url(auth()->user()->profile_pic) }}" width="40" height="40" class="rounded-circle" alt="profile_pic">
+                <a class="btn dropdown-toggle p-0 text-decoration-none" href="#"
+                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="{{ Storage::url(auth()->user()->profile_pic) }}"
+                   width="40" height="40" class="rounded-circle" alt="profile_pic">
                 </a>
               
                 <ul class="dropdown-menu text-decoration-none  p-0">
                   @if(auth()->user()->user_type === 'seeker')
                   <li class="nav-item my-0 py-0 ps-2">
-                    <a class="nav-link active fw-semibold text-black fs-6" aria-current="page" href="{{ route('seeker.profile') }}"><i class="bi bi-person fs-5"></i> PROFILE</a>
+                    <a class="nav-link active fw-semibold text-black fs-6"
+                     aria-current="page" href="{{ route('seeker.profile') }}">
+                      <i class="bi bi-person fs-5"></i> PROFILE
+                    </a>
                   </li>
                   <li class="nav-item my-0 py-0 ps-2">
-                    <a class="nav-link fw-semibold text-black fs-6" href="{{ route('job.applied') }}"><i class="bi bi-card-list fs-5"></i> JOB APPLIED</a>
+                    <a class="nav-link fw-semibold text-black fs-6" href="{{ route('job.applied') }}">
+                      <i class="bi bi-card-list fs-5"></i>
+                       JOB APPLIED
+                    </a>
                   </li>
                   <li class="nav-item my-0 py-0 ps-2">
-                    <a class="nav-link fw-semibold text-danger fs-6" href="#" id="logout"><i class="bi bi-box-arrow-left fs-5"></i> LOGOUT</a>
+                    <a class="nav-link fw-semibold text-danger fs-6"  id="logoutAccount" href="#">
+                      <i class="bi bi-box-arrow-left fs-5"></i> LOGOUT
+                    </a>
                   </li>
                   @else
                   <li class="nav-item my-0 py-0 ps-2">
-                    <a class="nav-link fw-semibold text-black fs-6" href="{{ route('dashboard') }}"><i class="bi bi-speedometer fs-5"></i> DASHBOARD</a>
+                    <a class="nav-link fw-semibold text-black fs-6" href="{{ route('dashboard') }}">
+                      <i class="bi bi-speedometer fs-5"></i> DASHBOARD
+                    </a>
                   </li>
                   @endif
                 </ul>
@@ -102,45 +119,56 @@
             @endif
               
               <li class="nav-item me-4">
-                <a class="nav-link fw-semibold text-black fs-6" href="{{ route('listing.index') }}"><i class="bi bi-briefcase fs-5"></i> JOBS</a>
+                <a class="nav-link fw-semibold text-black fs-6" href="{{ route('listing.index') }}">
+                  <i class="bi bi-briefcase fs-5"></i> JOBS
+                </a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-semibold text-black fs-6" href="#"><i class="bi bi-patch-question fs-5"></i> FAQs</a>
+                <a class="nav-link fw-semibold text-black fs-6" href="#">
+                  <i class="bi bi-patch-question fs-5"></i> FAQs
+                </a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-semibold text-black fs-6" href="{{ route('contact') }}"><i class="bi bi-telephone fs-5"></i> CONTACT</a>
+                <a class="nav-link fw-semibold text-black fs-6" href="{{ route('contact') }}">
+                  <i class="bi bi-telephone fs-5"></i> CONTACT
+                </a>
               </li>
               @if(!Auth::check())
               <li class="nav-item me-4">
-                <a class="nav-link fw-semibold text-black fs-6" href="{{ route('create.seeker') }}"><i class="bi bi-person fs-5"></i> JOB SEEKER</a>
+                <a class="nav-link fw-semibold text-black fs-6" href="{{ route('create.seeker') }}">
+                  <i class="bi bi-person fs-5"></i> JOB SEEKER
+                </a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-semibold text-black fs-6" href="{{ route('create.employer') }}"><i class="bi bi-building fs-5"></i> EMPLOYER</a>
+                <a class="nav-link fw-semibold text-black fs-6" href="{{ route('create.employer') }}">
+                  <i class="bi bi-building fs-5"></i> EMPLOYER
+                </a>
               </li>
               @endif
-
-              <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf</form>
             </ul>
 
             @if(!Auth::check())
-            <div class="me-3">              
+            <div class="me-3">
               <a href="{{ route('login') }}">
                 <button class="btn fw-semibold text-black login-btn fs-6">LOGIN</button>
               </a>
             </div>
             @endif
+            <form id="logout-account-form" action="{{ route('logout') }}" method="post" >@csrf</form>
           </div>
         </div>
     </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
     <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
 
     @yield('content')
 
     <script>
-        let logout = document.getElementById('logout');
-        let form = document.getElementById('form-logout');
+        let logout = document.getElementById('logoutAccount');
+        let form = document.getElementById('logout-account-form');
         logout.addEventListener('click', function() {
             form.submit();
         })
