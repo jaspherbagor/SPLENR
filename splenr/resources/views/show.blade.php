@@ -23,17 +23,17 @@
                     @endif
 
                     <span class="badge bg-primary">{{ $listing->job_type }}</span>
-                    <p class="mt-3">Salary:
+                    <p class="mt-3 fw-semibold">Salary:
                          <span class="fw-bold">
                             ₱{{ number_format($listing->salary,2) }}
                         </span>
                     </p>
-                    <p>Address: <span class="fw-bold">{{ $listing->address }}</span></p>
-                    <h4 class="mt-4">Description</h4>
+                    <p class="fw-semibold">Address: <span class="fw-bold">{{ $listing->address }}</span></p>
+                    <h4 class="mt-4 fw-bold">Description</h4>
                     <p class="card-text">{!! $listing->description !!}</p>
-                    <h4>Roles and Responsibilities</h4>
+                    <h4 class="fw-bold">Roles and Responsibilities</h4>
                     {!! $listing->roles !!}
-                    <p class="card-text mt-4">
+                    <p class="card-text mt-4 fw-semibold">
                         Application Closing Date:
                          <span class="fw-bold">
                             {{ $listing->application_close_date }}
@@ -42,7 +42,7 @@
                     @if(Auth::check())
                         @if(auth()->user()->resume)
                         <form action="{{ route('application.submit', [$listing->id]) }}" method="post">@csrf
-                            <button type="submit" class="btn btn-primary mt-3">Apply Now</button>
+                            <button type="submit" class="btn btn-success mt-3">EASY APPLY</button>
                         </form>
                         @else
                         <button type="button" class="btn btn-dark"
@@ -51,14 +51,19 @@
                         </button>
                         @endif
                     @else
-                        <p class="fw-bold">
+                        <button class="btn btn-outline-dark btn-success">
+                            <a href="{{ route('login') }}" class="fw-semibold text-decoration-none text-white">
+                                LOGIN TO APPLY
+                            </a>
+                        </button>
+                        {{-- <p class="fw-bold">
                             Please login to apply!
                              <span class="text-primary">
-                                <a href="{{ route('login') }}">
-                                    Login.
+                                <a href="{{ route('login') }}" class="fw-bold">
+                                    LOGIN.
                                 </a>
                             </span>
-                        </p>
+                        </p> --}}
                     @endif
 
                     {{-- Modal --}}
