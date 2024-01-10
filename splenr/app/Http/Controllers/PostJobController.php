@@ -18,7 +18,7 @@ class PostJobController extends Controller
         $this->middleware(isPremiumUser::class)->only(['create', 'store']);
     }
 
-    public function index() 
+    public function index()
     {
         $jobs = Listing::where('user_id', auth()->user()->id)->get();
         return view('job.index', compact('jobs'));
@@ -26,7 +26,7 @@ class PostJobController extends Controller
 
     public function create()
     {
-        return view('job.create');   
+        return view('job.create');
     }
 
     public function store(JobPostFormRequest $request)

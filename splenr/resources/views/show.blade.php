@@ -5,7 +5,7 @@
     <div class="row mt-5 justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <img src="{{ Storage::url($listing->feature_image) }}" alt="" class="card-img-top">
+                <img src="{{ Storage::url($listing->feature_image) }}" alt="feature_image" class="card-img-top">
                 <div class="card-body">
                     <a href="{{ route('company', [$listing->profile->id]) }}" class="text-decoration-none">
                         <img src="{{ Storage::url($listing->profile->profile_pic) }}" width="60" height="60"
@@ -24,19 +24,24 @@
 
                     <span class="badge bg-primary">{{ $listing->job_type }}</span>
                     <p class="mt-3 fw-semibold">Salary:
-                         <span class="fw-bold">
+                         <span class="fw-bold text-warning">
                             ₱{{ number_format($listing->salary,2) }}
                         </span>
                     </p>
-                    <p class="fw-semibold">Address: <span class="fw-bold">{{ $listing->address }}</span></p>
+                    <p class="fw-semibold">
+                        Address:
+                        <span class="fw-bold text-warning">
+                             {{ $listing->address }}
+                        </span>
+                    </p>
                     <h4 class="mt-4 fw-bold">Description</h4>
                     <p class="card-text">{!! $listing->description !!}</p>
                     <h4 class="fw-bold">Roles and Responsibilities</h4>
                     {!! $listing->roles !!}
                     <p class="card-text mt-4 fw-semibold">
                         Application Closing Date:
-                         <span class="fw-bold">
-                            {{ $listing->application_close_date }}
+                         <span class="fw-bold text-warning">
+                            {{ $listing->formattedDate }}
                         </span>
                     </p>
                     @if(Auth::check())
@@ -45,7 +50,7 @@
                             <button type="submit" class="btn btn-success mt-3">EASY APPLY</button>
                         </form>
                         @else
-                        <button type="button" class="btn btn-dark"
+                        <button type="button" class="btn btn-dark btn-outline-secondary"
                          data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Apply
                         </button>

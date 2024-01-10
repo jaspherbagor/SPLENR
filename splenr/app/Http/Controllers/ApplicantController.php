@@ -20,8 +20,6 @@ class ApplicantController extends Controller
         $this->authorize('view', $listing);
         $listing =  Listing::with('users')->where('slug', $listing->slug)->first();
 
-        // return $listing;
-
         return view('applicants.show', compact('listing'));
     }
 

@@ -62,12 +62,12 @@ class SubscriptionController extends Controller
             if($request->is('pay/weekly')) {
                 $selectPlan = $plans['weekly'];
                 $billingEnds = now()->addWeek()->startOfDay()->toDateString();
-            }else if($request->is('pay/monthly')) {
+            }elseif($request->is('pay/monthly')) {
                 $selectPlan = $plans['monthly'];
-                $billingEnds = now()->addMonth()->startOfDay()->toDateString();   
-            }else if($request->is('pay/yearly')) {
+                $billingEnds = now()->addMonth()->startOfDay()->toDateString();
+            }elseif($request->is('pay/yearly')) {
                 $selectPlan = $plans['yearly'];
-                $billingEnds = now()->addYear()->startOfDay()->toDateString();   
+                $billingEnds = now()->addYear()->startOfDay()->toDateString();
             }
 
             if($selectPlan) {
@@ -105,7 +105,7 @@ class SubscriptionController extends Controller
         
     }
 
-    public function paymentSuccess(Request $request) 
+    public function paymentSuccess(Request $request)
     {
     $plan = $request->plan;
     $billingEnds = $request->billing_ends;
