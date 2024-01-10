@@ -298,14 +298,14 @@
     <h2 class="fw-bolder my-5 text-center">TRENDING JOB <span>POSITIONS</span></h2>
     <div class="row px-2 align-items-center justify-content-center">
         @foreach(\App\Models\Listing::take(8)->orderBy('id','DESC')->get() as $listing)
-
         <div class="col-lg-3 col-md-3 col-sm-6 col-12">
             <div class="card job-listing-card p-1 mb-4">
                 <div class="text-end">
                     <small class="badge {{ $listing->job_type }}">{{ $listing->job_type }}</small>
                 </div>
                 <div class="text-center mt-2 p-3">
-                    <img src="{{ Storage::url($listing->profile->profile_pic) }}" alt="logo" class="listing-company-logo rounded-circle">
+                    <img src="{{ Storage::url($listing->profile->profile_pic) }}"
+                     alt="logo" class="listing-company-logo rounded-circle">
                     <br>
                     <p class="d-block fw-bold listing-title">{{ $listing->title }}</p>
                     <hr>
@@ -314,45 +314,16 @@
                         <small class="ms-1 listing-address">{{ $listing->address }}</small>
                     </div>
                     <p class="listing-salary mt-2 fw-semibold">₱{{ number_format($listing->salary,2) }}</p>
-                    <div class="text-center mt-3"> 
+                    <div class="text-center mt-3">
                         <a href="{{ route('job.show', [$listing->slug]) }}">
-                            <button class="btn listing-apply-btn fw-semibold">APPLY NOW <i class="bi bi-arrow-right"></i></button>
+                            <button class="btn listing-apply-btn fw-semibold">
+                                APPLY NOW <i class="bi bi-arrow-right"></i>
+                            </button>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-
-        {{-- <div class="category col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-            <div class="d-flex align-items-center justify-content-center">
-                <div class="card" style="width: 25rem;">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-3 d-flex align-items-center justify-content-center">
-                                <div class="col-12">
-                                    <img src="{{ Storage::url($listing->profile->profile_pic) }}" alt="" class="img-fluid" width="60" height="60">
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="col-12">
-                                    <p class="card-title fw-semibold">{{ $listing->title }}</p>
-                                </div>
-                                <div class="col-12">
-                                    <h6 class="card-subtitle mb-2 text-secondary">{{ $listing->profile->name }}</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="card-text">Job Type: <span class="fw-semibold">{{ $listing->job_type }}</span></p>                  
-                        <p class="card-text">Deadline: <span class="fw-semibold">{{ $listing->application_close_date }}</span></p>
-                        <p class="card-text">Salary: <span class="fw-semibold">₱{{ number_format($listing->salary,2) }}</span></p>
-                        <p class="card-text">Location: <span class="fw-semibold">{{ $listing->address }}</span></p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <a href="{{ route('job.show', [$listing->slug]) }}" class="btn card-link apply-now-btn fw-semibold">APPLY NOW <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
         @endforeach
     </div>
 </div>
@@ -396,7 +367,8 @@
         <div class="col-lg-3 col-md-3 col-sm-6 col-12 job-location mb-4">
             <div class="job-location-card d-flex align-items-center justify-content-center">
                 <div class="card" style="width: 25rem;">
-                    <img src="{{ asset('image/makati-location.webp') }}" class="card-img-top img-fluid" alt="Makati City">
+                    <img src="{{ asset('image/makati-location.webp') }}"
+                     class="card-img-top img-fluid" alt="Makati City">
                     <div class="card-body">
                         <button class="btn btn-warning text-white position-absolute popular-btn">Popular</button>
                       <p class="card-text fw-bold text-center">MAKATI</p>
@@ -447,7 +419,7 @@
                     </div>
                 </div>
             </div>
-        </div>             
+        </div>
     </div>
 </div>
 {{-- Employer CTA Section --}}
@@ -455,7 +427,10 @@
     <div class="container text-center">
         <h2 class="mb-4 fw-bolder text-white">Looking for Electricians to Hire?</h2>
         <h5 class="mb-4 text-white">Post your job openings and find qualified electricians quickly and efficiently.</h5>
-        <a href="{{ route('create.employer') }}" class="btn btn-warning btn-outline-dark btn-lg fw-semibold px-3 py-2 post-job-btn">Post a Job</a>
+        <a href="{{ route('create.employer') }}"
+         class="btn btn-warning btn-outline-dark btn-lg fw-semibold px-3 py-2 post-job-btn">
+            Post a Job
+        </a>
     </div>
 </div>
 
@@ -469,7 +444,12 @@
             <div class="carousel-item active">
                 <div class="carousel-text">
                     <i class="bi bi-quote text-warning"></i>
-                    <h3 class="fw-medium text-white fst-italic"> "Splenr has been a game-changer in my job search. The platform's user-friendly interface and extensive job listings helped me find the perfect electrician role. Kudos to Splenr for connecting job seekers with incredible opportunities!"</h3>
+                    <h3 class="fw-medium text-white fst-italic">
+                        "Splenr has been a game-changer in my job search.
+                         The platform's user-friendly interface and extensive job listings helped me
+                          find the perfect electrician role.
+                           Kudos to Splenr for connecting job seekers with incredible opportunities!"
+                    </h3>
                     <h5 class="fw-bold mb-5 mt-4 text-warning">Olivia Chen</h5>
                 </div>
             </div>
@@ -477,7 +457,12 @@
             <div class="carousel-item">
                 <div class="carousel-text">
                     <i class="bi bi-quote text-warning"></i>
-                    <h3 class="fw-medium text-white fst-italic">"Splenr is our go-to platform for hiring electricians. The process of posting jobs and filtering applicants is incredibly efficient. We've successfully recruited skilled professionals through Splenr's platform, making our hiring process seamless."</h3>
+                    <h3 class="fw-medium text-white fst-italic">
+                        "Splenr is our go-to platform for hiring electricians.
+                         The process of posting jobs and filtering applicants is incredibly efficient.
+                          We've successfully recruited skilled professionals through Splenr's platform,
+                           making our hiring process seamless."
+                    </h3>
                     <h5 class="fw-bold mb-5 mt-4 text-warning">Jonathan Martinez</h5>
                 </div>
             </div>
@@ -485,7 +470,12 @@
             <div class="carousel-item">
                 <div class="carousel-text">
                     <i class="bi bi-quote text-warning"></i>
-                    <h3 class="fw-medium text-white fst-italic">"Splenr makes job hunting a breeze! The tailored job recommendations and easy application process streamlined my search. The platform's responsiveness and diverse job listings exceeded my expectations. Highly recommended for aspiring electricians!"</h3>
+                    <h3 class="fw-medium text-white fst-italic">
+                        "Splenr makes job hunting a breeze!
+                         The tailored job recommendations and easy application process streamlined my search.
+                          The platform's responsiveness and diverse job listings exceeded my expectations.
+                           Highly recommended for aspiring electricians!"
+                    </h3>
                     <h5 class="fw-bold mb-5 mt-4 text-warning">Michael Turner</h5>
                 </div>
             </div>
@@ -493,7 +483,12 @@
             <div class="carousel-item">
                 <div class="carousel-text">
                     <i class="bi bi-quote text-warning"></i>
-                    <h3 class="fw-medium text-white fst-italic">"Impressed by the quality of candidates we found on Splenr! The platform attracts top-notch talent in the electrical field. The intuitive interface and tools for managing job postings make it an invaluable resource for employers seeking skilled electricians."</h3>
+                    <h3 class="fw-medium text-white fst-italic">
+                        "Impressed by the quality of candidates we found on Splenr!
+                         The platform attracts top-notch talent in the electrical field.
+                          The intuitive interface and tools for managing job postings make it
+                           an invaluable resource for employers seeking skilled electricians."
+                    </h3>
                     <h5 class="fw-bold mb-5 mt-4 text-warning">Emily Rodriguez</h5>
                 </div>
             </div>
@@ -501,17 +496,25 @@
             <div class="carousel-item">
                 <div class="carousel-text">
                     <i class="bi bi-quote text-warning"></i>
-                    <h3 class="fw-medium text-white fst-italic">"Splenr is not just a job portal; it's a career launchpad! As an aspiring electrician, I found an array of opportunities that matched my skills and preferences. The platform's support in navigating the job market and its user-friendly interface make it an indispensable tool for anyone entering the electrical field. Splenr has my highest recommendation!"</h3>
+                    <h3 class="fw-medium text-white fst-italic">
+                        "Splenr is not just a job portal; it's a career launchpad!
+                         As an aspiring electrician, I found an array of opportunities that matched
+                          my skills and preferences. The platform's support in navigating the job
+                           market and its user-friendly interface make it an indispensable tool for
+                            anyone entering the electrical field. Splenr has my highest recommendation!"
+                    </h3>
                     <h5 class="fw-bold mb-5 text-warning mt-4">Robert Thompson</h5>
                 </div>
             </div>
 
         </div>
-        <button class="carousel-control-prev m-0" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <button class="carousel-control-prev m-0" type="button"
+         data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next m-0" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <button class="carousel-control-next m-0" type="button"
+         data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
         </button>
