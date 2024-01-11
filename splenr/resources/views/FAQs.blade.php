@@ -195,8 +195,9 @@
                         <div class="card mb-3">
                             <div class="card-header" id="heading1">
                                 <h5 class="mb-0 text-start">
-                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                    <button class="btn btn-link collapsed fw-semibold text-decoration-none text-black"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false"
+                                    aria-controls="collapse1">
                                         Q. How do I create a job seeker account on splenr's job portal?
                                     </button>
                                 </h5>
@@ -243,20 +244,22 @@
                         <!-- FAQ 3 -->
                         <div class="card mb-3">
                             <div class="card-header" id="heading3">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3"><span
-                                            class="text-theme-secondary me-2">Q.</span>How
-                                        can I apply for jobs on Splenr's job portal?</button>
+                                <h5 class="mb-0 text-start">
+                                    <button class="btn btn-link collapsed text-decoration-none fw-semibold text-black"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
+                                    aria-controls="collapse3">
+                                        Q. How can I apply for jobs on Splenr's job portal?
+                                    </button>
                                 </h5>
                             </div>
                             <div id="collapse3" class="collapse" aria-labelledby="heading3"
                                 data-bs-parent="#accordion1">
-                                <div class="card-body" style="text-align: justify;">
-                                    To apply for jobs on Splenr's job portal, click on the job posting you're interested in,
-                                    review the requirements and details, and click the "Apply Now" button. Follow the
-                                    instructions to submit your application. Some job postings may require additional
-                                    documents or information, so review the posting carefully before applying.
+                                <div class="card-body">
+                                    <p class="text-start">
+                                        To apply for jobs on Splenr's job portal, click on the job posting
+                                        you're interestedin, review the requirements and details, and click
+                                        the "Apply Now"button and upload a resume.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -264,20 +267,45 @@
                         <!-- FAQ 4 -->
                         <div class="card mb-3">
                             <div class="card-header" id="heading4">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4"><span
-                                            class="text-theme-secondary me-2">Q.</span>How
-                                        do I communicate with employers on Splenr's job portal?</button>
+                                <h5 class="mb-0 text-start">
+                                    <button class="btn btn-link collapsed text-decoration-none text-black fw-semibold"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
+                                    aria-controls="collapse4">
+                                        Q. How do I communicate with employers on Splenr's job portal?
+                                    </button>
                                 </h5>
                             </div>
                             <div id="collapse4" class="collapse" aria-labelledby="heading4"
                                 data-bs-parent="#accordion1">
+                                <div class="card-body">
+                                    <p class="text-start">
+                                        As of now, there is no messaging system present in the platform.
+                                        For further update, the platform is aiming to have a messaging system to
+                                        communicate and respond directly the employer.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="card mb-3">
+                            <div class="card-header" id="heading5">
+                                <h5 class="mb-0 text-start">
+                                    <button class="btn btn-link collapsed text-decoration-none fw-semibold text-black"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
+                                    aria-controls="collapse4">
+                                        Q. How do I know that I have been shortlisted by the employer?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapse5" class="collapse" aria-labelledby="heading5"
+                                data-bs-parent="#accordion1">
                                 <div class="card-body" style="text-align: justify;">
-                                    You can communicate with employers on Splenr's job portal through the platform's
-                                    messaging system. When you apply for a job, the employer will receive your application
-                                    and can respond to you directly through the platform. You can also initiate
-                                    communication by sending them a message through the platform's messaging system.
+                                    <p class="text-start">
+                                        You will know that you have been shortlisted through an email that will be
+                                        sent toyou saying that you have been shortlisted in a specific position that
+                                        you have applied.
+                                    </p>
                                 </div>
                             </div>
                         </div>
