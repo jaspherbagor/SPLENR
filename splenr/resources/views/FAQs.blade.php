@@ -310,12 +310,9 @@
                             </div>
                         </div>
 
-                        
                     </div>
                 </div>
             </div>
-
-
         </div>
 
         <!-- Employer FAQs -->
@@ -323,142 +320,127 @@
             <div class="tab-content">
                 <div id="employer" class="tab-pane fade show p-0">
                     <div id="accordion2" class="accordion-style">
-                        <h4 class="fw-bold mb-4">EMPLOYER FREQUENTLY ASKED QUESTIONS
+                        <h4 class="fw-bold mb-4 mt-0">EMPLOYER FREQUENTLY ASKED QUESTIONS
                         </h4>
 
                         <div class="card mb-3">
                             <div class="card-header" id="heading6">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse6" aria-expanded="false"
-                                        aria-controls="collapse6"><span
-                                            class="text-theme-secondary me-2">Q.</span>How
-                                        do I create a employer account on Splenr's job portal?</button>
+                                <h5 class="mb-0 text-start">
+                                    <button class="btn btn-link collapsed fw-semibold text-decoration-none text-black"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false"
+                                    aria-controls="collapse6">
+                                        Q. How do I create a employer account on Splenr's job portal?
+                                    </button>
                                 </h5>
                             </div>
                             <div id="collapse6" class="collapse" aria-labelledby="heading6"
                                 data-bs-parent="#accordion2">
-                                <div class="card-body" style="text-align: justify;">
-                                    To create an employer account on Splenr's job portal, visit the Splenr
-                                    website, click on the "Employer" option in the "Login/Register" header
-                                    menu, and then click the green "Create an account" link below the form.
-                                    Provide your name, email address, and a password to create your account.
-                                    Once registered, you can start posting job opportunities and connecting
-                                    with job seekers.
+                                <div class="card-body">
+                                    <p class="text-start">
+                                        To create an employer account on Splenr's job portal, visit the Splenr
+                                        website, click on the "Employer" option in the "Login/Register" header
+                                        menu, and then click the green "Create an account" link below the form.
+                                        Provide your name, email address, and a password to create your account.
+                                        Once registered, you can start posting job opportunities and connecting
+                                        with job seekers.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="card mb-3">
                             <div class="card-header" id="heading7">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse7" aria-expanded="false"
-                                        aria-controls="collapse7"><span
-                                            class="text-theme-secondary me-2">Q.</span>How
-                                        do I post a job opportunity on Splenr's job portal?</button>
+                                <h5 class="mb-0 text-start">
+                                    <button class="btn btn-link collapsed fw-semibold text-decoration-none text-black"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false"
+                                    aria-controls="collapse7">
+                                            Q. How do I post a job opportunity on Splenr's job portal?
+                                    </button>
                                 </h5>
                             </div>
                             <div id="collapse7" class="collapse" aria-labelledby="heading7"
                                 data-bs-parent="#accordion2">
-                                <div class="card-body" style="text-align: justify;">
-                                    To post a job opportunity on Splenr's job portal, log in to your
-                                    employer account and click the "Post a Job" button. Fill in details such
-                                    as the job title, description, location, work hours, pay rate, and
-                                    required skills. Once you've created a job posting, it will be reviewed
-                                    by Splenr's team before being published on the platform.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-3">
-                            <div class="card-header" id="heading8">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse8" aria-expanded="false"
-                                        aria-controls="collapse8"><span
-                                            class="text-theme-secondary me-2">Q.</span>How
-                                        do I search for job seekers on Splenr's job portal?</button>
-                                </h5>
-                            </div>
-                            <div id="collapse8" class="collapse" aria-labelledby="heading8"
-                                data-bs-parent="#accordion2">
-                                <div class="card-body" style="text-align: justify;">
-                                    To search for job seekers on Splenr's job portal, log in to your
-                                    employer account and browse through the available applications for your
-                                    job postings. You can use filters to narrow down your search based on
-                                    location, experience, or other criteria. Once you've found a job seeker
-                                    you're interested in hiring, you can communicate with them directly
-                                    through the platform's messaging system.
+                                <div class="card-body">
+                                    <p class="text-start">
+                                        To post a job opportunity on Splenr's job portal, log in to your
+                                        employer account and click the "Create Job" button on your dashboard
+                                        sidebar. Fill in details such as the job title, description, location, job type,
+                                        roles and responsibilities, salary, and closing date.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="card mb-3">
                             <div class="card-header" id="heading9">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse9" aria-expanded="false"
-                                        aria-controls="collapse9"><span
-                                            class="text-theme-secondary me-2">Q.</span>How
-                                        can I communicate with job seekers on Splenr's job portal?</button>
+                                <h5 class="mb-0 text-start">
+                                    <button class="btn btn-link collapsed fw-semibold text-decoration-none text-black"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false"
+                                    aria-controls="collapse9">
+                                        Q. How can I communicate with job seekers on Splenr's job portal?
+                                    </button>
                                 </h5>
                             </div>
                             <div id="collapse9" class="collapse" aria-labelledby="heading9"
                                 data-bs-parent="#accordion2">
-                                <div class="card-body" style="text-align: justify;">
-                                    You can communicate with job seekers on Splenr's job portal through
-                                    external means as the platform does not currently have a built-in
-                                    messaging system. When you receive an application for a job posting, you
-                                    can review the job seeker's profile and application. Initiate
-                                    communication by sending them a message through your preferred external
-                                    communication channel.
+                                <div class="card-body">
+                                    <p class="text-start">
+                                        You can communicate with job seekers on Splenr's job portal through
+                                        external means as the platform does not currently have a built-in
+                                        messaging system. When you receive an application for a job posting, you
+                                        can review the job seeker's profile and application. Initiate
+                                        communication by sending them a message through your preferred external
+                                        communication channel.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="card mb-3">
                             <div class="card-header" id="heading10">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse10" aria-expanded="false"
-                                        aria-controls="collapse10"><span
-                                            class="text-theme-secondary me-2">Q.</span>Is there a trial
-                                        period for posting jobs on Splenr's job portal?</button>
+                                <h5 class="mb-0 text-start">
+                                    <button class="btn btn-link collapsed fw-semibold text-decoration-none text-black"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false"
+                                    aria-controls="collapse10">
+                                        Q. Is there a trial period for posting jobs on splenr's job portal?
+                                    </button>
                                 </h5>
                             </div>
                             <div id="collapse10" class="collapse" aria-labelledby="heading10"
                                 data-bs-parent="#accordion2">
-                                <div class="card-body" style="text-align: justify;">
-                                    Yes, Splenr's job portal offers a one-week trial period for posting
-                                    jobs. During this trial period, you can post job opportunities for free.
-                                    Once the trial period expires, you can choose to subscribe for continued
-                                    access. Subscription options include weekly for Php500, monthly for
-                                    Php1500, and yearly for Php10000.
+                                <div class="card-body">
+                                    <p class="text-start">
+                                        Yes, splenr's job portal offers a one-week trial period for posting
+                                        jobs. During this trial period, you can post job opportunities for free.
+                                        Once the trial period expires, you can choose to subscribe for continued
+                                        access. Subscription options include weekly for Php500, monthly for
+                                        Php1500, and yearly for Php10000.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Additional FAQ -->
                         <div class="card mb-3">
                             <div class="card-header" id="heading11">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse11" aria-expanded="false"
-                                        aria-controls="collapse11"><span
-                                            class="text-theme-secondary me-2">Q.</span>Is there a review
-                                        and rating system for employers and job seekers on Splenr's job
-                                        portal?</button>
+                                <h5 class="mb-0 text-start">
+                                    <button class="btn btn-link collapsed fw-semibold text-decoration-none text-black"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false"
+                                    aria-controls="collapse11">
+                                        Q. Is there a review and rating system for employers and job seekers on
+                                        splenr's job portal?
+                                    </button>
                                 </h5>
                             </div>
                             <div id="collapse11" class="collapse" aria-labelledby="heading11"
                                 data-bs-parent="#accordion2">
-                                <div class="card-body" style="text-align: justify;">
-                                    No, currently, Splenr's job portal does not have a review and rating
-                                    system for employers and job seekers. The platform focuses on connecting
-                                    employers with job seekers through job postings and applications. Any
-                                    future updates or changes to the platform's features will be
-                                    communicated to users accordingly.
+                                <div class="card-body">
+                                    <p class="text-start">
+                                        No, currently, splenr's job portal does not have a review and rating
+                                        system for employers and job seekers. The platform focuses on connecting
+                                        employers with job seekers through job postings and applications. Any
+                                        future updates or changes to the platform's features will be
+                                        communicated to users accordingly.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -467,6 +449,7 @@
                 </div>
             </div>
         </div>
+
     </section>
     @include('layouts.footer')
 @endsection
