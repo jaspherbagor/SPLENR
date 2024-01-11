@@ -17,6 +17,11 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 // Homepage Route
 Route::get('/', [JoblistingController::class, 'homepage'])->name('homepage');
 
+// FAQs Route
+Route::get('/FAQs', function () {
+    return view('FAQs');
+});
+
 // Route to display the contact form
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
