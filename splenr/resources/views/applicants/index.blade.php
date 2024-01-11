@@ -26,8 +26,16 @@
                             <td>{{ $listing->title }}</td>
                             <td>{{ $listing->created_at->format('Y-m-d') }}</td>
                             <td>{{ $listing->users_count }}</td>
-                            <td><a href="{{ route('job.show', [$listing->slug]) }}" class="text-secondary">View</a></td>
-                            <td><a href="{{ route('applicants.show', $listing->slug) }}" class="text-success">View</a></td>
+                            <td>
+                                <a href="{{ route('job.show', [$listing->slug]) }}" class="text-secondary">
+                                    View
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ route('applicants.show', $listing->slug) }}" class="text-success">
+                                    View
+                                </a>
+                            </td>
                         </tr>
                         
                         @endforeach
