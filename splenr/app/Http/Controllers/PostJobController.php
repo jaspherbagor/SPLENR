@@ -46,7 +46,7 @@ class PostJobController extends Controller
         return back()->with('success', 'Your job post has been successfully updated!');
     }
 
-    public function erase($id)
+    public function destroy($id)
     {
         Listing::find($id)->delete();
         return back()->with('success', 'Your job post has been successfully deleted!');

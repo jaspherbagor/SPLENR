@@ -1,66 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPLENR</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-     rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
-    <style>
-      * {
-          padding:0;
-          margin:0;
-          box-sizing: border-box;
-          list-style:none;
-          text-decoration: none;
-          border:none;
-          outline:none;
-          scroll-behavior: smooth;
-          font-family:var(--font-family);
-          word-wrap: break-word;
-      }
-      html, body {
-          width:100%;
-          overflow-x:hidden
-      }
-      :root {
-          --primary-color: #fdd100;
-          --navbar-bg: #F5F4F2;
-          --text-color-light: #ffffff;
-          --text-color-dark: #202020;
-          --font-family: sans-serif;
-      }
-      .nav-link {
-        font-family: sans-serif
-      }
-
-      .nav-link:hover {
-        color: var(--primary-color)!important
-      }
-      .navbar {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        background: var(--navbar-bg);
-        z-index:1000
-      }
-
-      .login-btn, .logout-btn {
-        background:var(--primary-color);
-        border: 2px solid var(--text-color-dark)
-      }
-
-      .login-btn:hover, .logout-btn:hover {
-        background:var(--text-color-dark);
-        border: 2px solid var(--primary-color);
-        color:var(--text-color-light)!important
-      }
-
-      .navbar-toggler {
-        border: none
-      }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPLENR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg px-3 position-fixed container-fluid" data-bs-theme="light">
