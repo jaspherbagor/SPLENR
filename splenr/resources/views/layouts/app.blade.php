@@ -124,7 +124,7 @@
                 </a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-semibold text-black fs-6" href="#">
+                <a class="nav-link fw-semibold text-black fs-6" href="/FAQs">
                   <i class="bi bi-patch-question fs-5"></i> FAQs
                 </a>
               </li>

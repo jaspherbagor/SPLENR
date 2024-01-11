@@ -243,12 +243,14 @@
                                 <div class="card-body" style="text-align: justify;">
                                     To apply for jobs on AgriLadder's hourly job search platform for agriculture, simply
                                     click on the job
-                                    posting you're interested in and review the job requirements and details. If you meet
+                                    posting you're interested in and review the job
+                                     requirements and details. If you meet
                                     the requirements
                                     and are interested in the position, click the "Apply Now" button and follow the
                                     instructions to submit
                                     your application.
-                                    Some job postings may require additional documents or information, so be sure to review
+                                    Some job postings may require additional documents or
+                                     information, so be sure to review
                                     the posting
                                     carefully before applying.
                                 </div>
