@@ -11,6 +11,7 @@
             </div>
             <div class="card-body">
                 <table id="datatablesSimple">
+                    <caption>This table is listing all the applicants of the job listings.</caption>
                     <thead>
                         <tr>
                             <th>Title</th>
