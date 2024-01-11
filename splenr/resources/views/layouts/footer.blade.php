@@ -57,7 +57,7 @@ footer {
                 <a href="/contact" class="text-decoration-none text-white footer_a">Contact Us</a>
             </p>
             <p>
-                <a href="/faqs" class="footer_a text-decoration-none text-white">FAQs</a>
+                <a href="/FAQs" class="footer_a text-decoration-none text-white">FAQs</a>
             </p>
             <p>
                 <a href="/termsandcondition" class="footer_link text-decoration-none text-white">Privacy Policy</a>
@@ -87,7 +87,9 @@ footer {
         <div class="categories col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
             <h5 class="fw-semibold mb-3">For Employer</h5>
             <p>
-                <a href="{{ route('create.employer') }}" class="footer_link text-decoration-none text-white">Employer Register</a>
+                <a href="{{ route('create.employer') }}" class="footer_link text-decoration-none text-white">
+                    Employer Register
+                </a>
             </p>
             <p>
                 <a href="{{ route('dashboard') }}" class="footer_link text-decoration-none text-white">Dashboard</a>
@@ -99,7 +101,9 @@ footer {
         <div class="my_account col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
             <h5 class="fw-semibold mb-3">For Job Seeker</h5>
             <p>
-                <a href="{{ route('create.seeker') }}" class="footer_link text-decoration-none text-white">Seeker Register</a>
+                <a href="{{ route('create.seeker') }}" class="footer_link text-decoration-none text-white">
+                    Seeker Register
+                </a>
             </p>
             <p>
                 <a href="{{ route('seeker.profile') }}" class="footer_link text-decoration-none text-white">Profile</a>
@@ -112,10 +116,12 @@ footer {
         <div class="social_links col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
             <h5 class="fw-semibold mb-3">SOCIAL LINKS</h5>
             <div class="social_icons align-items-center justify-content-start">
-                <a href="https://www.facebook.com/jas.bagor/" target="_blank" class="mx-2 text-white text-decoration-none">
+                <a href="https://www.facebook.com/jas.bagor/"
+                 target="_blank" class="mx-2 text-white text-decoration-none">
                     <i class="footer_link bi bi-facebook fs-4"></i>
                 </a>
-                <a href="https://www.youtube.com/channel/UCTNYaiZxQGNiNLFg8VosSpw" target="_blank" class="mx-2 text-white text-decoration-none">
+                <a href="https://www.youtube.com/channel/UCTNYaiZxQGNiNLFg8VosSpw"
+                 target="_blank" class="mx-2 text-white text-decoration-none">
                     <i class="footer_link bi bi-youtube fs-4"></i>
                 </a>
                 <a href="https://www.tiktok.com/@jasbgr" target="_blank" class="mx-2 text-white text-decoration-none">
@@ -125,7 +131,9 @@ footer {
         </div>
     </div>
     <div class="footer_copyright container-fluid px-4 pt-4 mt-4 pb-0">
-        <p class="text-white my-auto text-center">Copyright © 2024 <span class="fw-semibold">splenr</span>. All rights reserved.</p>
+        <p class="text-white my-auto text-center">
+            Copyright © 2024 <span class="fw-semibold">splenr</span>. All rights reserved
+        </p>
     </div>
 </footer>
 <script>
