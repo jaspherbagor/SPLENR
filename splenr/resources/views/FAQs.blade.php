@@ -197,18 +197,20 @@
                                 <h5 class="mb-0 text-start">
                                     <button class="btn btn-link collapsed" data-bs-toggle="collapse"
                                         data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                        Q. How do I create a job seeker account on Splenr's job portal?
+                                        Q. How do I create a job seeker account on splenr's job portal?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapse1" class="collapse" aria-labelledby="heading1"
                                 data-bs-parent="#accordion1">
                                 <div class="card-body">
-                                    To create a job seeker account on Splenr's job portal, visit the Splenr website and
-                                    click the "Login/Register" header menu. Select "Job Seeker" and click the "Create an
-                                    account" link below the form. Provide your name, email address, and a password. Once
-                                    your account is created, you can start browsing job postings and applying for positions
-                                    that match your skills and experience.
+                                    <p class="text-start">
+                                        To create a job seeker account on Splenr's job portal, visit the Splenr website
+                                        and click the "Job Seeker" or "Login" header menu. Select "Job Seeker" and click
+                                        the "Create an account" link below the form. Provide your name, email address,
+                                        and a password. Once your account is created, you can start browsing job
+                                        postings and applying for positions that match your skills and experience.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -216,20 +218,24 @@
                         <!-- FAQ 2 -->
                         <div class="card mb-3">
                             <div class="card-header" id="heading2">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2"><span
-                                            class="text-theme-secondary me-2">Q.</span>How
-                                        do I search for job opportunities on Splenr's job portal?</button>
+                                <h5 class="mb-0 text-start">
+                                    <button class="btn btn-link collapsed text-decoration-none fw-semibold text-black"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
+                                    aria-controls="collapse2">
+                                        Q. How do I search for job opportunities on Splenr's job portal?
+                                    </button>
                                 </h5>
                             </div>
                             <div id="collapse2" class="collapse" aria-labelledby="heading2"
                                 data-bs-parent="#accordion1">
-                                <div class="card-body" style="text-align: justify;">
-                                    To search for job opportunities on Splenr's job portal, log in to your account and
-                                    select the job category and location you're interested in. You can browse through
-                                    available job postings or use filters to narrow down your search results. Once you find
-                                    a job you're interested in, you can apply directly through the platform.
+                                <div class="card-body">
+                                    <p class="text-start">
+                                        To search for job opportunities on Splenr's job portal, log in to your account
+                                        and select the job category and location you're interested in. You can browse
+                                        through available job postings or use filters to narrow down your search
+                                        results. Once you find a job you're interested in, you can apply directly
+                                        through the platform.
+                                    </p>
                                 </div>
                             </div>
                         </div>
