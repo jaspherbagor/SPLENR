@@ -74,9 +74,5 @@
   </style>
 
 <script>
-    let logout = document.getElementById('logout');
-    let form = document.getElementById('form-logout');
-    logout.addEventListener('click', function() {
-        form.submit();
-    })
+    
 </script>

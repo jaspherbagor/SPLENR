@@ -13,20 +13,21 @@
             </div>
             <div class="card-body">
                 <table id="datatablesSimple">
+                    <caption>This table contains all the information of the job listing</caption>
                     <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Created on</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th id="title">Title</th>
+                            <th id="created_on">Created on</th>
+                            <th id="edit">Edit</th>
+                            <th id="delete">Delete</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>Title</th>
-                            <th>Created on</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th id="title">Title</th>
+                            <th id="created_on">Created on</th>
+                            <th id="edit">Edit</th>
+                            <th id="delete">Delete</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -34,27 +35,46 @@
                         <tr>
                             <td>{{ $job->title }}</td>
                             <td>{{ $job->created_at->format('Y-m-d') }}</td>
-                            <td><a href="{{ route('job.edit', [$job->id]) }}">Edit</a></td>
-                            <td><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $job->id }}">Delete</a></td>
+                            <td>
+                                <a href="{{ route('job.edit', [$job->id]) }}">
+                                    Edit
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" class="text-danger" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal{{ $job->id }}">
+                                    Delete
+                                </a>
+                            </td>
                         </tr>
                         {{-- Modal --}}
-                        <div class="modal fade" id="exampleModal{{ $job->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal{{ $job->id }}"
+                        tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
                             <form action="{{ route('job.delete', [$job->id]) }}" method="POST">@csrf
                                 @method('DELETE')
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title fw-semibold text-danger" id="exampleModalLongTitle">Delete Confirmation</h5>
-                                            <button type="button" class="close p-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true"><i class="bi bi-x-lg"></i></span>
+                                            <h5 class="modal-title fw-semibold text-danger" id="exampleModalLongTitle">
+                                                Delete Confirmation
+                                            </h5>
+                                            <button type="button" class="close p-0 bg-transparent"
+                                            data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">
+                                                    <i class="bi bi-x-lg"></i>
+                                                </span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
                                             Are you sure you want to delete this job?
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">No</button>
-                                            <button type="submit" class="btn btn-danger">Yes</button>
+                                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                                                No
+                                            </button>
+                                            <button type="submit" class="btn btn-danger">
+                                                Yes
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
