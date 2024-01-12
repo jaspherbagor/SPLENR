@@ -15,7 +15,7 @@
 
         <div class="container-fluid">
             <h2 class="fw-bolder">Dashboard</h2>
-            <p class="pt-2 mb-0">
+            <p class="pt-2 mb-2">
                 Hello, <span class="fw-semibold">{{ auth()->user()->name }}</span>!
                 @if(!auth()->user()->billing_ends)
                     @if(Auth::check() && auth()->user()->user_type == 'employer')
@@ -26,8 +26,8 @@
                     @endif
                 @endif
             </p>
-            @if(Auth::check() && auth()->user()->user_type == 'employer')
-                <p>
+            @if(Auth::check() && auth()->user()->billing_ends)
+                <p class="mb-3">
                     Your membership
                     {{ now()->format('Y-m-d') > auth()->user()->billing_ends ?
                     ' was expired': ' will expire'  }} on
