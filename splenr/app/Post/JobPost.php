@@ -30,13 +30,14 @@ use Illuminate\Support\Str;
         $this->listing->requirements = $data['requirements'];
         $this->listing->job_type = $data['job_type'];
         $this->listing->address = $data['address'];
-        $this->listing->application_close_date = \Carbon\Carbon::createFromFormat('d/m/Y', $data['date'])->format('Y-m-d');
+        $this->listing->application_close_date = \Carbon\Carbon::createFromFormat('d/m/Y',
+        $data['date'])->format('Y-m-d');
         $this->listing->salary = $data['salary'];
         $this->listing->slug = Str::slug($data['title']).'.'. Str::uuid();
         $this->listing->save();
     }
 
-    public function updatePost(int $id, Request $data):void 
+    public function updatePost(int $id, Request $data):void
     {
         if($data->hasFile('feature_image')) {
             $this->listing->find($id)->update(['feature_image' => $this->getImagePath($data)]);
@@ -44,5 +45,4 @@ use Illuminate\Support\Str;
 
         $this->listing->find($id)->update($data->except('feature_image'));
     }
-
  }

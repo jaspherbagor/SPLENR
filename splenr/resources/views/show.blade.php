@@ -94,6 +94,7 @@
         </div>
     </div>
 </div>
+@include('layouts.footer')
 <script>
     // Get a reference to the file input element
     const uploadResume = document.querySelector('#uploadResumeFile');
