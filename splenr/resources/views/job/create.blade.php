@@ -39,7 +39,7 @@
                     @endif
                 </div>
                 <div class="form-group mb-4">
-                    <label for="roles">Requirements</label>
+                    <label for="requirements">Requirements</label>
                     <textarea type="text" name="requirements" id="summernote"
                     class="form-control summernote"></textarea>
                     @if($errors->has('requirements'))

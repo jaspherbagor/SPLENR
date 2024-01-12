@@ -48,9 +48,11 @@
                     @endif
                 </div>
                 <div class="form-group mb-4">
-                    <label for="roles">Requirements</label>
-                    <textarea type="text" name="requirements" id="summernote"
-                    class="form-control summernote"></textarea>
+                    <label for="requirements">Requirements</label>
+                    <textarea type="text" name="requirements" id="requirements"
+                    class="form-control summernote">
+                        {{ $listing->requirements }}
+                    </textarea>
                     @if($errors->has('requirements'))
                         <div class="text-danger fw-semibold">{{ $errors->first('requirements') }}</div>
                     @endif

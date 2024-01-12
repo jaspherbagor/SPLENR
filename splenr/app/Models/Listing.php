@@ -14,6 +14,7 @@ class Listing extends Model
         'title',
         'description',
         'roles',
+        'requirements',
         'job_type',
         'address',
         'salary',
