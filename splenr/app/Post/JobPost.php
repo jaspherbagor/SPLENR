@@ -31,7 +31,7 @@ use Carbon\Carbon;
         $this->listing->requirements = $data['requirements'];
         $this->listing->job_type = $data['job_type'];
         $this->listing->address = $data['address'];
-        $this->listing->application_close_date = Carbon::createFromFormat('m-d-Y',
+        $this->listing->application_close_date = Carbon::createFromFormat('d/m/Y',
         $data['date'])->format('Y-m-d');
         $this->listing->salary = $data['salary'];
         $this->listing->slug = Str::slug($data['title']).'.'. Str::uuid();
