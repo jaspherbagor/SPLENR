@@ -37,7 +37,11 @@
                     <h4 class="mt-4 fw-bold">Description</h4>
                     <p class="card-text">{!! $listing->description !!}</p>
                     <h4 class="fw-bold">Roles and Responsibilities</h4>
-                    {!! $listing->roles !!}
+                    <p class="card-text">
+                        {!! $listing->roles !!}
+                    </p>
+                    <h4 class="mt-4 fw-bold">Requirements</h4>
+                    <p class="card-text">{!! $listing->requirements !!}</p>
                     <p class="card-text mt-4 fw-semibold">
                         Application Closing Date:
                          <span class="fw-bold">

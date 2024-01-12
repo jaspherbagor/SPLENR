@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->text('roles');
+            $table->text('requirements');
             $table->string('job_type');
             $table->string('address');
             $table->string('salary');

@@ -39,6 +39,14 @@
                     @endif
                 </div>
                 <div class="form-group mb-4">
+                    <label for="roles">Requirements</label>
+                    <textarea type="text" name="requirements" id="summernote"
+                    class="form-control summernote"></textarea>
+                    @if($errors->has('requirements'))
+                        <div class="text-danger fw-semibold">{{ $errors->first('requirements') }}</div>
+                    @endif
+                </div>
+                <div class="form-group mb-4">
                     <label for="job_type" class="mb-2">Job Types</label>
                     <div class="form-check mb-2">
                         <input class="form-check-input" type="radio" name="job_type" id="Fulltime" value="Fulltime">

@@ -26,6 +26,7 @@ class JobEditFormRequest extends FormRequest
             'feature_image' => 'mimes:png,jpeg,jpg,webp|max:5120',
             'description' => 'required|min:10',
             'roles' => 'required|min:10',
+            'requirements' => 'required|min:15',
             'job_type' => 'required',
             'address' => 'required',
             'date' => 'required',

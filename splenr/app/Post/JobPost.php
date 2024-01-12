@@ -27,6 +27,7 @@ use Illuminate\Support\Str;
         $this->listing->title = $data['title'];
         $this->listing->description = $data['description'];
         $this->listing->roles = $data['roles'];
+        $this->listing->requirements = $data['requirements'];
         $this->listing->job_type = $data['job_type'];
         $this->listing->address = $data['address'];
         $this->listing->application_close_date = \Carbon\Carbon::createFromFormat('d/m/Y', $data['date'])->format('Y-m-d');
