@@ -116,12 +116,11 @@ class UserController extends Controller
         if(!Hash::check($request->current_password, $user->password)) {
             return back()->with('error', 'Current password is incorrect!');
         }
-
-        $user = new User();
+        
         $user->password = Hash::make($request->password);
         $user->save();
 
-        return back()->with('success', 'Your password has been updated successfully');
+        return back()->with('success', 'Your password has been updated successfully!');
     }
 
     public function uploadResume(Request $request)
