@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
   <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
   <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/jobs.css') }}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg px-3 position-fixed container-fluid" data-bs-theme="light">
