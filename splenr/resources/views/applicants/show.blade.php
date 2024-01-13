@@ -29,9 +29,17 @@
                                 class="col-md-4 d-flex align-items-center justify-content-md-end
                     justify-content-sm-center justify-content-center">
                                 <div class="container">
-                                    <p class="card-text py-0 my-1">Name: <span class="fw-bolder">{{ $user->name }}</span>
+                                    <p class="card-text py-0 my-1">
+                                        Name:
+                                        <span class="fw-bolder">
+                                            {{ $user->name }}
+                                        </span>
                                     </p>
-                                    <p class="card-text py-0 my-1">Email: <span class="fw-bolder">{{ $user->email }}</span>
+                                    <p class="card-text py-0 my-1">
+                                        Email:
+                                        <span class="fw-bolder">
+                                            {{ $user->email }}
+                                        </span>
                                     </p>
                                     <p class="card-text py-0 my-1">
                                         Applied on:
