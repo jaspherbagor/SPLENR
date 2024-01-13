@@ -13,27 +13,75 @@
 
                     <h5 class="fw-semibold mt-3 mb-2 border-bottom"><i class="bi bi-cash-stack fs-5"></i> SALARY</h5>
 
-                    <li class="ms-2 border-bottom"><a href="{{ route('listing.index', ['sort' => 'salary_high_to_low']) }}" class="text-decoration-none text-black filter-item">High to Low</a></li>
-
-                    <li class="ms-2 border-bottom"><a href="{{ route('listing.index', ['sort' => 'salary_low_to_high']) }}" class="text-decoration-none text-black filter-item">Low to High</a></li>
+                    <ul>
+                        <li class="border-bottom">
+                            <a href="{{ route('listing.index', ['sort' => 'salary_high_to_low']) }}"
+                            class="text-decoration-none text-black filter-item">
+                                High to Low
+                            </a>
+                        </li>
+    
+                        <li class="border-bottom">
+                            <a href="{{ route('listing.index', ['sort' => 'salary_low_to_high']) }}"
+                            class="text-decoration-none text-black filter-item">
+                                Low to High
+                            </a>
+                        </li>
+                    </ul>
 
 
                     <h5 class="fw-semibold mt-3 mb-2 border-bottom"><i class="bi bi-calendar fs-5"></i> DATE</h5>
 
-                    <li class="ms-2 border-bottom"><a href="{{ route('listing.index', ['date' => 'latest']) }}" class="text-decoration-none text-black filter-item">Latest</a></li>
+                    <ul>
+                        <li class="border-bottom">
+                            <a href="{{ route('listing.index', ['date' => 'latest']) }}"
+                            class="text-decoration-none text-black filter-item">
+                                Latest
+                            </a>
+                        </li>
+    
+                        <li class="border-bottom">
+                            <a href="{{ route('listing.index', ['date' => 'oldest']) }}"
+                            class="text-decoration-none text-black filter-item">
+                                Oldest
+                            </a>
+                        </li>
+                    </ul>
 
-                    <li class="ms-2 border-bottom"><a href="{{ route('listing.index', ['date' => 'oldest']) }}" class="text-decoration-none text-black filter-item">Oldest</a></li>
-
-
-                    <h5 class="fw-semibold mt-3 mb-2 border-bottom"><i class="bi bi-suitcase-lg fs-5"></i> JOB TYPE</h5>
-
-                    <li class="ms-2 border-bottom"><a href="{{ route('listing.index', ['job_type' => 'Fulltime']) }}" class="text-decoration-none text-black filter-item">Fulltime</a></li>
-
-                    <li class="ms-2 border-bottom"><a href="{{ route('listing.index', ['job_type' => 'Parttime']) }}" class="text-decoration-none text-black filter-item">Parttime</a></li>
-
-                    <li class="ms-2 border-bottom"><a href="{{ route('listing.index', ['job_type' => 'Casual']) }}" class="text-decoration-none text-black filter-item">Casual</a></li>
-
-                    <li class="ms-2 border-bottom"><a href="{{ route('listing.index', ['job_type' => 'Contract']) }}" class="text-decoration-none text-black filter-item">Contract</a></li>
+                    
+                    <h5 class="fw-semibold mt-3 mb-2 border-bottom">
+                        <i class="bi bi-suitcase-lg fs-5"></i> JOB TYPE
+                    </h5>
+                    
+                    <ul>
+                        <li class="border-bottom">
+                            <a href="{{ route('listing.index', ['job_type' => 'Fulltime']) }}"
+                            class="text-decoration-none text-black filter-item">
+                                Fulltime
+                            </a>
+                        </li>
+    
+                        <li class="border-bottom">
+                            <a href="{{ route('listing.index', ['job_type' => 'Parttime']) }}"
+                            class="text-decoration-none text-black filter-item">
+                                Parttime
+                            </a>
+                        </li>
+    
+                        <li class="border-bottom">
+                            <a href="{{ route('listing.index', ['job_type' => 'Casual']) }}"
+                            class="text-decoration-none text-black filter-item">
+                                Casual
+                            </a>
+                        </li>
+    
+                        <li class="border-bottom">
+                            <a href="{{ route('listing.index', ['job_type' => 'Contract']) }}"
+                            class="text-decoration-none text-black filter-item">
+                                Contract
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="col-lg-9 col-md-9 col-sm-8 job-listing-column">
@@ -45,7 +93,8 @@
                                 <small class="badge {{ $job->job_type }}">{{ $job->job_type }}</small>
                             </div>
                             <div class="text-center mt-2 p-3">
-                                <img src="{{ Storage::url($job->profile->profile_pic) }}" alt="logo" class="listing-company-logo rounded-circle">
+                                <img src="{{ Storage::url($job->profile->profile_pic) }}" alt="logo"
+                                class="listing-company-logo rounded-circle">
                                 <br>
                                 <p class="d-block fw-bold listing-title">{{ $job->title }}</p>
             
