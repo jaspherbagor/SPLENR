@@ -16,7 +16,7 @@
 
                             <div
                                 class="col-md-3 d-flex align-items-center justify-content-md-start
-                    justify-content-sm-center justify-content-center">
+                    justify-content-sm-center justify-content-center px-2">
                                 @if ($user->profile_pic)
                                     <img src="{{ Storage::url($user->profile_pic) }}" alt="Profile Picture"
                                         class="rounded-circle profile-image" height="100">
@@ -27,7 +27,7 @@
                             </div>
                             <div
                                 class="col-md-4 d-flex align-items-center justify-content-md-end
-                    justify-content-sm-center justify-content-center">
+                    justify-content-sm-center justify-content-center px-2">
                                 <div class="container">
                                     <p class="card-text py-0 my-1">
                                         Name:
@@ -51,7 +51,7 @@
                             </div>
                             <div
                                 class="col-md-5 d-flex align-items-center justify-content-md-start
-                    justify-content-sm-center justify-content-center">
+                    justify-content-sm-center justify-content-center px-2">
                                 <form action="{{ route('applicants.shortlist', [$listing->id, $user->id]) }}"
                                     method="post">@csrf
                                     <a href="{{ Storage::url($user->resume) }}"
