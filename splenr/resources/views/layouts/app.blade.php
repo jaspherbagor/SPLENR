@@ -54,7 +54,7 @@
                     </a>
                   </li>
                   <li class="nav-item my-0 py-0 ps-2">
-                    <a class="nav-link fw-semibold text-danger fs-6"  id="logoutAccount" href="#">
+                    <a class="nav-link fw-semibold text-danger fs-6"  id="logoutbtn" href="#">
                       <i class="bi bi-box-arrow-left fs-5"></i> LOGOUT
                     </a>
                   </li>
@@ -105,7 +105,7 @@
               </a>
             </div>
             @endif
-            <form id="logout-account-form" action="{{ route('logout') }}" method="post" >@csrf</form>
+            <form id="logout-form" action="{{ route('logout') }}" method="post" >@csrf</form>
           </div>
         </div>
     </nav>
@@ -116,14 +116,6 @@
     <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
 
     @yield('content')
-
-    <script>
-        let logout = document.getElementById('logoutAccount');
-        let form = document.getElementById('logout-account-form');
-        logout.addEventListener('click', function() {
-            form.submit();
-        })
-    </script>
     
 </body>
 </html>

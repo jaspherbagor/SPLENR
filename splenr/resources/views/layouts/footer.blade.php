@@ -31,11 +31,9 @@
             <p>
                 <a href="/blog" class="footer_link text-decoration-none text-white">Jobs</a>
             </p>
-            @if(Auth::check())
             <p>
                 <a class="footer_link text-decoration-none text-white" id="logoutbtn" href="#">Logout</a>
             </p>
-            @endif
             <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf</form>
         </div>
         <div class="categories col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
