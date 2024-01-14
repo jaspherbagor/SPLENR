@@ -11,8 +11,8 @@
             <div class="col-md-6">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $listing->title }}</h5>
-                        <p class="card-text">Applied: {{ $listing->pivot->created_at }}</p>
+                        <h5 class="card-title fw-bold">{{ $listing->title }}</h5>
+                        <p class="card-text">Applied: {{ $listing->pivot->created_at->format('F j, Y') }}</p>
                         <a href="{{ route('job.show', [$listing->slug]) }}" class="btn btn-dark">View</a>
                     </div>
                 </div>
