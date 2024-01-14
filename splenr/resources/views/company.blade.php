@@ -20,29 +20,29 @@
   </div>
   
   <div class="container-fluid mt-5">
-    <h3 class="fw-bolder text-center">ABOUT</h3>
+    <h3 class="fw-bolder mb-3">ABOUT</h3>
     {!! $company->about !!}
   </div>
 
   <h3 class="fw-bolder mt-4 text-center">JOB POSTINGS</h3>
   
   <div class="row mt-3 align-items-center justify-conten-center">
-    <div class="col-md-8">
-        @foreach($company->jobs as $job)
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">{{ $job->title }}</h5>
-                <p class="card-text">Location: {{ $job->address }}</p>
-                <p class="card-text">
-                  Salary:
-                  <span class="fw-bold">
-                    ₱{{ number_format($job->salary, 2) }} per month
-                  </span>
-                </p>
-                <a href="{{ route('job.show', [$job->slug]) }}" class="btn btn-dark">View</a>
-            </div>
-        </div>
-        @endforeach
+    <div class="col-md-6 mx-0">
+      @foreach($company->jobs as $job)
+      <div class="card mb-3">
+          <div class="card-body">
+              <h5 class="card-title">{{ $job->title }}</h5>
+              <p class="card-text">Location: {{ $job->address }}</p>
+              <p class="card-text">
+                Salary:
+                <span class="fw-bold">
+                  ₱{{ number_format($job->salary, 2) }} per month
+                </span>
+              </p>
+              <a href="{{ route('job.show', [$job->slug]) }}" class="btn btn-dark">View</a>
+          </div>
+      </div>
+      @endforeach
     </div>
   </div>
 </div>
