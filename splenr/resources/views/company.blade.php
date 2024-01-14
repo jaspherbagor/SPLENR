@@ -26,9 +26,9 @@
 
   <h3 class="fw-bolder mt-4 text-center">JOB POSTINGS</h3>
   
-  <div class="row mt-3 align-items-center justify-conten-center">
-    <div class="col-md-6 mx-0">
-      @foreach($company->jobs as $job)
+  <div class="row mt-3 align-items-center justify-content-center">
+    @foreach($company->jobs as $job)
+    <div class="col-md-6">
       <div class="card mb-3">
           <div class="card-body">
               <h5 class="card-title">{{ $job->title }}</h5>
@@ -42,8 +42,8 @@
               <a href="{{ route('job.show', [$job->slug]) }}" class="btn btn-dark">View</a>
           </div>
       </div>
-      @endforeach
     </div>
+    @endforeach
   </div>
 </div>
 <style>
