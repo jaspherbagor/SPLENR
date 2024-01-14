@@ -20,13 +20,13 @@
   </div>
   
   <div class="container-fluid mt-5">
-    <h3 class="fw-bolder">ABOUT</h3>
+    <h3 class="fw-bolder text-center">ABOUT</h3>
     {!! $company->about !!}
   </div>
 
-  <h3 class="fw-bolder mt-4">JOB POSTINGS</h3>
+  <h3 class="fw-bolder mt-4 text-center">JOB POSTINGS</h3>
   
-  <div class="row mt-3">
+  <div class="row mt-3 align-items-center justify-conten-center">
     <div class="col-md-8">
         @foreach($company->jobs as $job)
         <div class="card mb-3">
