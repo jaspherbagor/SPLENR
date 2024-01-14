@@ -19,11 +19,9 @@
     </div>
   </div>
   
-  <div class="row mt-5">
-    <div class="col">
-      <h3 class="fw-bolder">ABOUT</h3>
-      {!! $company->about !!}
-    </div>
+  <div class="container-fluid mt-5">
+    <h3 class="fw-bolder">ABOUT</h3>
+    {!! $company->about !!}
   </div>
 
   <h3 class="fw-bolder mt-4">JOB POSTINGS</h3>
