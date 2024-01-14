@@ -4,10 +4,11 @@
 
 <div class="container-fluid px-4 py-5">
     <div class="mt-5 align-items-center">
-        <h2 class="fw-bolder mb-4 text-center">APPLIED JOBS</h2>
-        <div class="container">
-            @foreach ($users as $user)
-                @foreach($user->listings as $listing )
+        <h2 class="fw-bolder mb-5 text-center">APPLIED JOBS</h2>
+        @foreach ($users as $user)
+        <div class="row">
+            @foreach($user->listings as $listing )
+            <div class="col-md-6">
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">{{ $listing->title }}</h5>
@@ -15,9 +16,10 @@
                         <a href="{{ route('job.show', [$listing->slug]) }}" class="btn btn-dark">View</a>
                     </div>
                 </div>
-                @endforeach
+            </div>
             @endforeach
         </div>
+        @endforeach
     </div>
 </div>
 
