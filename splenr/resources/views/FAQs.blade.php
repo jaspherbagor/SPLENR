@@ -33,7 +33,7 @@
 
         <!-- General Inquiry FAQ -->
         <div class="container-fluid px-4 pb-4">
-            <div class="tab-content">
+            <div class="tab-content px-md-5">
                 <div id="general" class="tab-pane fade show p-0 active">
                     <h4 class="fw-bold text-center mb-4">GENERAL INQUIRIES</h4>
                     <div id="accordion" class="accordion-style">
@@ -186,7 +186,7 @@
         </div>
         <!-- Job Seeker FAQs -->
         <div class="container-fluid px-4 pb-4">
-            <div class="tab-content">
+            <div class="tab-content px-md-5">
                 <div id="jobseekers" class="tab-pane fade show p-0">
                     <div id="accordion1" class="accordion-style">
                         <h4 class="fw-bold mb-4">JOB SEEKER FREQUENTLY ASKED QUESTIONS</h4>
@@ -317,7 +317,7 @@
 
         <!-- Employer FAQs -->
         <div class="container-fluid px-4 pb-4">
-            <div class="tab-content">
+            <div class="tab-content px-md-5">
                 <div id="employer" class="tab-pane fade show p-0">
                     <div id="accordion2" class="accordion-style">
                         <h4 class="fw-bold mb-4 mt-0">EMPLOYER FREQUENTLY ASKED QUESTIONS
