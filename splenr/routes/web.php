@@ -64,7 +64,9 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 Route::middleware('auth')->group(function () {
     Route::get('user/profile', [UserController::class, 'profile'])->name('user.profile');
     Route::post('user/profile', [UserController::class, 'update'])->name('user.update.profile');
-    Route::get('user/profile/seeker', [UserController::class, 'seekerProfile'])->name('seeker.profile');
+    Route::get('user/profile/seeker', [UserController::class, 'seekerProfile'])
+        ->name('seeker.profile')
+        ->middleware('verified');
     Route::get('user/job/applied', [UserController::class, 'jobApplied'])->name('job.applied')->middleware('verified');
     Route::post('user/changepassword', [UserController::class, 'changePassword'])->name('user.changepassword');
     Route::post('upload/resume', [UserController::class, 'uploadResume'])->name('upload.resume');
@@ -98,4 +100,6 @@ Route::delete('job/{id}/delete', [PostJobController::class, 'destroy'])->name('j
 Route::get('applicants', [ApplicantController::class, 'index'])->name('applicants.index');
 Route::get('applicants/{listing:slug}', [ApplicantController::class, 'show'])->name('applicants.show');
 Route::post('shortlist/{listingId}/{userId}', [ApplicantController::class, 'shortlist'])->name('applicants.shortlist');
-Route::post('/application/{listingId}/submit', [ApplicantController::class, 'apply'])->name('application.submit');
+Route::post('/application/{listingId}/submit', [ApplicantController::class, 'apply'])
+    ->name('application.submit')
+    ->middleware(['auth']);
