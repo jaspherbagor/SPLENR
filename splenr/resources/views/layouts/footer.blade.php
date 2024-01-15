@@ -31,6 +31,7 @@
             <p>
                 <a href="/blog" class="footer_link text-decoration-none text-white">Jobs</a>
             </p>
+            <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf</form>
         </div>
         <div class="categories col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
             <h5 class="fw-semibold mb-3">For Employer</h5>
