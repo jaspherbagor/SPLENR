@@ -3,8 +3,8 @@
 @section('content')
 
 <div class="container-fluid px-4 py-5">
-    <div class="mt-5 align-items-center">
-        <h2 class="fw-bolder mb-5 text-center">APPLIED JOBS</h2>
+    <div class="mt-5 px-1 align-items-center">
+        <h2 class="fw-bolder mb-5 mt-3 text-center">APPLIED JOBS</h2>
         @foreach ($users as $user)
         <div class="row">
             @foreach($user->listings as $listing )
