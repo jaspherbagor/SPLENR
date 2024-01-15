@@ -74,7 +74,7 @@
                     </div>
                     @if(auth()->user()->resume)
                     <a href="{{ Storage::url(auth()->user()->resume) }}"
-                        class="btn btn-warning btn-outline-dark fw-semibold my-2 me-2" target="_blank">
+                        class="btn btn-dark btn-outline-info fw-semibold my-2 me-2" target="_blank">
                         View Resume
                     </a>
                     @endif
@@ -84,6 +84,7 @@
     </div>
         
 </div>
+@include('layouts.footer')
 
 <style>
     input[type='password'], input[type=text], input[type=file] {
