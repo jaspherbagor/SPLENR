@@ -72,6 +72,12 @@
                             <span class="text-danger">{{ $errors->first('resume') }}</span>
                         @endif
                     </div>
+                    @if(auth()->user()->resume)
+                    <a href="{{ Storage::url(auth()->user()->resume) }}"
+                        class="btn btn-warning btn-outline-dark fw-semibold my-2 me-2" target="_blank">
+                        View Resume
+                    </a>
+                    @endif
                     <button type="submit" class="btn btn-success">Upload</button>
             </form>
         </div>
