@@ -86,10 +86,10 @@
 </div>
 @include('layouts.footer')
 
-<style>
+{{-- <style>
     input[type='password'], input[type=text], input[type=file] {
         border: 2px solid black
     }
-</style>
+</style> --}}
 
 @endsection
