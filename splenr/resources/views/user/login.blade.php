@@ -6,8 +6,8 @@
     <div class="g-3 needs-validation form-container p-3 mt-5 h-auto">
         <div class="text-center">
             <a href="/">
-                <img src="{{ asset('image/login-logo.svg') }}" class="logo-img"/>
-            </a>       
+                <img src="{{ asset('image/login-logo.svg') }}" class="logo-img" alt="logo"/>
+            </a>
         </div>
         <h2 class="my-4 text-center fw-bolder heading">Login Account</h2>
         @if(Session::has('error'))
@@ -33,11 +33,11 @@
                             <input type="password" name="password" class="form-control" id="password">
                             <span class="input-group-addon" id="togglePassword">
                                 <i class="bi bi-eye position-absolute fs-4 mt-1" ></i>
-                            </span>   
+                            </span>
                         </div>
                         @if($errors->has('password'))
                         <span class="text-danger">{{ $errors->first('password') }}</span>
-                        @endif             
+                        @endif
                     </div>
                 </div>
             </div>
@@ -46,7 +46,16 @@
             </div>
 
             <div class="text-center mt-4">
-                <p class="text-black">Don't have an account yet? Register as a <a href="{{ route('create.seeker') }}" class="text-decoration-none register-link fw-semibold">Job Seeker</a> or an <a href="{{ route('create.employer') }}" class="text-decoration-none register-link fw-semibold">Employer.</a> </p>
+                <p class="text-black">
+                    Don't have an account yet? Register as a
+                    <a href="{{ route('create.seeker') }}" class="text-decoration-none register-link fw-semibold">
+                        Job Seeker
+                    </a>
+                    or an
+                    <a href="{{ route('create.employer') }}" class="text-decoration-none register-link fw-semibold">
+                        Employer.
+                    </a>
+                </p>
             </div>
         </form>
         
