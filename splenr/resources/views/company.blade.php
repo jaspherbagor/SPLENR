@@ -54,9 +54,5 @@
     @endforeach
   </div>
 </div>
-{{-- <style>
-  .hero-section {
-
-  }
-</style> --}}
+@include('layouts.footer')
 @endsection
