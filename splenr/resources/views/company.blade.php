@@ -45,7 +45,7 @@
                   {{ \Carbon\Carbon::parse($job->application_close_date)->format('F j, Y') }}
                 </span>
               </p>
-              <a href="{{ route('job.show', [$job->slug]) }}" class="btn btn-success btn-outline-dark fw-semibold">
+              <a href="{{ route('job.show', [$job->slug]) }}" class="btn btn-warning btn-outline-dark fw-semibold">
                 VIEW
               </a>
           </div>
