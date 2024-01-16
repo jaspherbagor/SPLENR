@@ -65,6 +65,11 @@
                     <i class="bi bi-speedometer fs-5"></i> DASHBOARD
                   </a>
                 </li>
+                <li class="nav-item my-0 py-0 ps-2">
+                  <a class="nav-link fw-semibold text-danger fs-6"  id="logoutbtn" href="#">
+                    <i class="bi bi-box-arrow-left fs-5"></i> LOGOUT
+                  </a>
+                </li>
                 @endif
               </ul>
             </li>
