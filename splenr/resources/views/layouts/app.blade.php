@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="{{ asset('css/company.css') }}">
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
   <link rel="stylesheet" href="{{ asset('css/employer.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/seeker.css') }}">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg px-3 position-fixed container-fluid" data-bs-theme="light">
