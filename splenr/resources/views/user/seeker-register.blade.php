@@ -6,7 +6,7 @@
     <div class="g-3 needs-validation form-container p-3 mt-5 h-auto">
         <div class="text-center">
             <a href="/">
-                <img src="{{ asset('image/login-logo.svg') }}" class="logo-img"/>
+                <img src="{{ asset('image/login-logo.svg') }}" class="logo-img" alt="logo"/>
             </a>
             
         </div>
@@ -42,11 +42,11 @@
                                 <input type="password" name="password" class="form-control" id="password">
                                 <span class="input-group-addon" id="togglePassword">
                                     <i class="bi bi-eye position-absolute fs-4 mt-1" ></i>
-                                </span>   
+                                </span>
                             </div>
                             @if($errors->has('password'))
                             <span class="text-danger">{{ $errors->first('password') }}</span>
-                            @endif             
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -55,23 +55,37 @@
                         <div class="col-md-12 mb-3">
                             <label for="confirmPassword" class="form-label">Confirm Password</label>
                             <div class="d-flex">
-                                <input type="password" name="password_confirmation" class="form-control" id="confirmPassword">
+                                <input type="password" name="password_confirmation" class="form-control"
+                                id="confirmPassword">
                                 <span class="input-group-addon" id="toggleConfirmPassword">
                                     <i class="bi bi-eye position-absolute fs-4 mt-1" ></i>
-                                </span>   
+                                </span>
                             </div>
                             @if($errors->has('password_confirmation'))
                             <span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
-                            @endif            
+                            @endif
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-2 mb-2">
-                    <button class="btn fs-5 fw-semibold px-3 py-2 register-btn" type="submit" id="btnRegister">Register</button>
+                    <button class="btn fs-5 fw-semibold px-3 py-2 register-btn" type="submit"
+                    id="btnRegister">Register</button>
                 </div>
                 <div class="text-center mt-4">
-                    <p class="text-black">Not a seeker? Register as an <a href="{{ route('create.employer') }}" class="text-decoration-none my-0 register-link fw-semibold">Employer</a>.</p>
-                    <p class="text-black">Already have an account? <a href="{{ route('login') }}" class="text-decoration-none login-link fw-semibold">Login</a> instead.</p>
+                    <p class="text-black">
+                        Not a seeker? Register as an
+                        <a href="{{ route('create.employer') }}"
+                        class="text-decoration-none my-0 register-link fw-semibold">
+                            Employer
+                        </a>.
+                    </p>
+                    <p class="text-black">
+                        Already have an account?
+                        <a href="{{ route('login') }}" class="text-decoration-none login-link fw-semibold">
+                            Login
+                        </a>
+                        instead.
+                    </p>
                 </div>
             </form>
         </div>
@@ -138,7 +152,9 @@
     }).then(data => {
         button.innerHTML = 'Register'
         button.disabled = false
-        messageDiv.innerHTML = '<div class="alert alert-success">Registration was successful.Please check your email to verify it</div>'
+        messageDiv.innerHTML = '<div class="alert alert-success">
+            Registration was successful.Please check your email to verify it
+            </div>'
         formContainer.style.display = 'none'
     }).catch(error => {
         button.innerHTML = 'Register'
