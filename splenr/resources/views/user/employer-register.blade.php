@@ -72,13 +72,13 @@
                     id="btnRegister">Register</button>
                 </div>
                 <div class="text-center mt-4">
-                    <p class="text-black">
+                    <p class="text-black py-0 my-0">
                         Not an employer? Register as a
                         <a href="{{ route('create.seeker') }}"
                         class="text-decoration-none my-0 register-link fw-semibold">
                             Job Seeker</a>.
                     </p>
-                    <p class="text-black">Already have an account?
+                    <p class="text-black py-0 my-0">Already have an account?
                         <a href="{{ route('login') }}"
                         class="text-decoration-none login-link fw-semibold">
                             Login
@@ -135,7 +135,7 @@
         var formData = new FormData(form);
         var button = event.target
         button.disabled = true;
-        button.innerHTML = 'Sending email.... '
+        button.innerHTML = 'Sending email... '
         fetch(url, {
         method: "POST",
         headers:{
@@ -151,14 +151,12 @@
     }).then(data => {
         button.innerHTML = 'Register';
         button.disabled = false
-        messageDiv.innerHTML = '<div class="alert alert-success">
-            Registration was successful.Please check your email to verify it.
-            </div>'
+        messageDiv.innerHTML = '<div class="alert alert-success">Registration was successful.Please check your email to verify it.</div>'
         formContainer.style.display = 'none';
     }).catch(error => {
         button.innerHTML = 'Register'
         button.disabled = false
-        messageDiv.innerHTML = '<div class="alert alert-danger">Something went wrong. Please try again</div>'
+        messageDiv.innerHTML = '<div class="alert alert-danger">Something went wrong. Please try again.</div>'
     })
 
     }
