@@ -10,7 +10,7 @@
                 <div class="alert alert-danger">{{ Session::get('error') }}</div>
             @endif
 
-            <h2 class="fw-bolder mb-4">Update Your Profile</h2>
+            <h2 class="fw-bolder mb-4">UPDATE YOUR PROFILE</h2>
 
             <form action="{{ route('user.update.profile') }}" method="post" enctype="multipart/form-data">@csrf
                 <div class="col-md-10">
@@ -42,7 +42,7 @@
                 </div>
             </form>
 
-            <h2 class="fw-bolder mt-5 mb-4">Change Your Password</h2>
+            <h2 class="fw-bolder mt-5 mb-4">CHANGE YOUR PASSWORD</h2>
 
             <form action="{{ route('user.changepassword') }}" method="post" class="w-100">@csrf
                 <div class="form-group mb-4">
