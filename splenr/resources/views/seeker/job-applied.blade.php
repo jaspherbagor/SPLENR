@@ -19,6 +19,7 @@
                                     {{ $listing->pivot->created_at->format('F j, Y') }}
                                 </span>
                             </p>
+                            <p class="card-text">Status: <span class="fw-bold">Waiting</span></p>
                             <a href="{{ route('job.show', [$listing->slug]) }}" class="btn btn-dark">View</a>
                         </div>
                     </div>
