@@ -14,7 +14,8 @@
         <h2 class="fw-bolder mt-4 mb-4 text-center">UPDATE YOUR PROFILE</h2>
 
         <div class="container px-md-5">
-            <form action="{{ route('user.update.profile') }}" method="post" enctype="multipart/form-data">@csrf
+            <form action="{{ route('user.update.profile') }}"
+            method="post" enctype="multipart/form-data" class="px-md-5">@csrf
                 <div class="form-group mb-4">
                     <label for="profile_pic">Profile Image</label>
                     <input type="file" id="profile_pic" name="profile_pic" class="form-control">
@@ -36,7 +37,8 @@
 
         <h2 class="fw-bolder mt-5 mb-4 text-center">CHANGE YOUR PASSWORD</h2>
         <div class="container px-md-5">
-            <form action="{{ route('user.changepassword') }}" method="post">@csrf
+            <form action="{{ route('user.changepassword') }}"
+            method="post" class="px-md-5">@csrf
                 <div class="form-group mb-4">
                     <label for="name">Current Password </label>
                     <input type="password" name="current_password" class="form-control">
@@ -64,7 +66,8 @@
         </div>
         <h2 class="fw-bolder mt-5 mb-4 text-center">UPDATE YOUR RESUME</h2>
         <div class="container px-md-5">
-            <form action="{{ route('upload.resume') }}" method="post" enctype="multipart/form-data">@csrf
+            <form action="{{ route('upload.resume') }}" method="post"
+            enctype="multipart/form-data" class="px-md-5">@csrf
                     <div class="form-group mb-4">
                         <label for="resume">Upload a Resume </label>
                         <input type="file" name="resume" class="form-control" id="resume">
