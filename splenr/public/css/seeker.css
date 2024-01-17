@@ -30,6 +30,7 @@ p {
     --navbar-bg: #F5F4F2;
     --text-color-light: #ffffff;
     --text-color-dark: #202020;
+    --link-hover-bg: green;
     --font-family: sans-serif;
 }
 
@@ -75,5 +76,5 @@ color:var(--text-color-light)!important
 }
 
 .login-link:hover, .register-link:hover {
-    color: green
+    color: var(--link-hover-bg)
 }
