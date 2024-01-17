@@ -11,5 +11,5 @@ Post a Job
 </x-mail::button>
 
 Thanks,<br>
-{{ config('app.name') }}
+splenr
 </x-mail::message>
