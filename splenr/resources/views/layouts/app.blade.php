@@ -41,8 +41,13 @@
             <li class="nav-item me-4 dropdown text-decoration-none">
               <a class="btn dropdown-toggle p-0 text-decoration-none" href="#"
                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                @if(auth()->user()->profile_pic)
                 <img src="{{ Storage::url(auth()->user()->profile_pic) }}"
-                  width="40" height="40" class="rounded-circle" alt="profile_pic">
+                width="40" height="40" class="rounded-circle" alt="profile_pic">
+                @else
+                <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="
+                width="40" height="40" class="rounded-circle" alt="profile_pic">
+                @endif
               </a>
             
               <ul class="dropdown-menu text-decoration-none  p-0">
