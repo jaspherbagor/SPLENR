@@ -39,7 +39,7 @@ p {
 }
 
 .contact-text-section {
-    background: url('{{ asset('image/contact-bg.svg') }}');
+    background: url('../image/contact-bg.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
