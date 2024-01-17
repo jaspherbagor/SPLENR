@@ -145,9 +145,15 @@
                             <p class="listing-salary mt-2 fw-semibold">₱{{ number_format($listing->salary, 2) }}</p>
                             <div class="text-center mt-3">
                                 <a href="{{ route('job.show', [$listing->slug]) }}">
+                                    @if(Auth::check() && auth()->user()->user_type === "employer")
+                                    <button class="btn listing-apply-btn fw-semibold">
+                                        VIEW JOB <i class="bi bi-zoom-in"></i>
+                                    </button>
+                                    @else
                                     <button class="btn listing-apply-btn fw-semibold">
                                         APPLY NOW <i class="bi bi-arrow-right"></i>
                                     </button>
+                                    @endif
                                 </a>
                             </div>
                         </div>
