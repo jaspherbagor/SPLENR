@@ -21,7 +21,7 @@
                     @if(Auth::check() && auth()->user()->user_type == 'employer')
                     <span>Your trial
                         {{ now()->format('Y-m-d') > auth()->user()->user_trial ? ' was expired': 'will expire'  }}
-                         on {{ auth()->user()->user_trial}}
+                         on {{\Carbon\Carbon::parse(auth()->user()->user_trial )->format('F j, Y')}}
                     </span>
                     @endif
                 @endif
@@ -32,7 +32,7 @@
                     {{ now()->format('Y-m-d') > auth()->user()->billing_ends ?
                     ' was expired': ' will expire'  }} on
                     <span class="fw-semibold">
-                        {{ auth()->user()->billing_ends}}
+                        {{ \Carbon\Carbon::parse(auth()->user()->billing_ends)->format('F j, Y') }}
                     </span>
                 </p>
             @endif
@@ -131,7 +131,7 @@
                             @foreach($listings as $listing)
                             <tr>
                                 <td>{{ $listing->title }}</td>
-                                <td>{{ $listing->created_at->format('Y-m-d') }}</td>
+                                <td>{{\Carbon\Carbon::parse($listing->created_at )->format('F j, Y')}}</td>
                                 <td>{{ $listing->users_count }}</td>
                                 <td>
                                     <a href="{{ route('job.show', [$listing->slug]) }}" class="text-secondary">View</a>

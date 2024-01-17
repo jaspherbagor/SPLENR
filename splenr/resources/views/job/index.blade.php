@@ -34,7 +34,7 @@
                         @foreach($jobs as $job)
                         <tr>
                             <td>{{ $job->title }}</td>
-                            <td>{{ $job->created_at->format('Y-m-d') }}</td>
+                            <td>{{\Carbon\Carbon::parse($job->created_at )->format('F j, Y')}}</td>
                             <td>
                                 <a href="{{ route('job.edit', [$job->id]) }}">
                                     Edit
