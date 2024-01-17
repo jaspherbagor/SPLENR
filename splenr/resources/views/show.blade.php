@@ -54,6 +54,8 @@
                         <form action="{{ route('application.submit', [$listing->id]) }}" method="post">@csrf
                             <button type="submit" class="btn btn-success mt-3">EASY APPLY</button>
                         </form>
+                        @elseif(auth()->user()->user_type === "employer")
+
                         @else
                         <button type="button" class="btn btn-dark btn-outline-white fw-semibold"
                          data-bs-toggle="modal" data-bs-target="#staticBackdrop">
