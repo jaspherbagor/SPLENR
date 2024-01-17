@@ -11,7 +11,7 @@
             </div>
             <h2 class="my-4 text-center fw-bolder heading">Job Seeker Registration</h2>
             @include('message')
-            <div id="message" class="border-0"></div>
+            <div id="messageAlert" class=""></div>
             <div class="form-container-div" id="formContainer">
                 <form action="#" method="post" id="registrationForm">@csrf
                     <div class="row">
@@ -123,7 +123,7 @@
         document.getElementById("btnRegister").addEventListener("click", function(event) {
             var form = document.getElementById("registrationForm");
             var formContainer = document.getElementById("formContainer");
-            var messageDiv = document.getElementById('message')
+            var messageDiv = document.getElementById('messageAlert')
             messageDiv.innerHTML = ''
 
 
