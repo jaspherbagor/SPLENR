@@ -5,7 +5,8 @@
     <div class="row mt-5 justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <img src="{{ Storage::url($listing->feature_image) }}" alt="feature_image" class="card-img-top">
+                <img src="{{ Storage::url($listing->feature_image) }}"
+                alt="feature_image" class="card-img-top w-100 h-100">
                 <div class="card-body">
                     <a href="{{ route('company', [$listing->profile->id]) }}" class="text-decoration-none">
                         <img src="{{ Storage::url($listing->profile->profile_pic) }}" width="60" height="60"
