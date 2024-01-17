@@ -15,17 +15,17 @@
 
         <div class="container-fluid">
             <h2 class="fw-bolder">Dashboard</h2>
-            <p class="pt-2 mb-2">
+            <p class="pt-2 my-0 pb-0">
                 Hello, <span class="fw-semibold">{{ auth()->user()->name }}</span>!
-                @if(!auth()->user()->billing_ends)
-                    @if(Auth::check() && auth()->user()->user_type == 'employer')
-                    <span>Your trial
-                        {{ now()->format('Y-m-d') > auth()->user()->user_trial ? ' was expired': 'will expire'  }}
-                         on {{\Carbon\Carbon::parse(auth()->user()->user_trial )->format('F j, Y')}}
-                    </span>
-                    @endif
-                @endif
             </p>
+            @if(!auth()->user()->billing_ends)
+                @if(Auth::check() && auth()->user()->user_type == 'employer')
+                <p class="pb-4 my-0">Your trial
+                    {{ now()->format('Y-m-d') > auth()->user()->user_trial ? ' was expired': 'will expire'  }}
+                        on {{\Carbon\Carbon::parse(auth()->user()->user_trial )->format('F j, Y')}}
+                </p>
+                @endif
+            @endif
             @if(Auth::check() && auth()->user()->billing_ends)
                 <p class="mb-3">
                     Your membership
@@ -73,14 +73,14 @@
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body">
                             <h1 class="fw-bolder text-uppercase fs-1">
-                                {{ App\Models\User::where('id', auth()->id())->first()->plan }}
+                                {{ App\Models\User::where('id', auth()->id())->first()->plan ? App\Models\User::where('id', auth()->id())->first()->plan : "N/A" }}
                             </h1>
                             <div class="icon text-end"><i class="bi bi-unlock fs-2"></i></div>
                             <h6>Plan</h6>
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
                             <a class="small text-white stretched-link fw-semibold" href="{{ route('subscribe') }}">
-                                View
+                                VIEW
                             </a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
