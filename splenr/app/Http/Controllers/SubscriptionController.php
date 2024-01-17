@@ -36,21 +36,21 @@ class SubscriptionController extends Controller
         $plans = [
             'weekly' => [
                 'name' => 'weekly',
-                'description' => 'weekly payment',
+                'description' => 'Weekly Payment',
                 'price' => self::WEEKLY_PRICE,
                 'currency' => self::CURRENCY,
                 'quantity' => 1,
             ],
             'monthly' => [
                 'name' => 'monthly',
-                'description' => 'monthly payment',
+                'description' => 'Monthly Payment',
                 'price' => self::MONTHLY_PRICE,
                 'currency' => self::CURRENCY,
                 'quantity' => 1,
             ],
             'yearly' => [
                 'name' => 'yearly',
-                'description' => 'yearly payment',
+                'description' => 'Yearly Payment',
                 'price' => self::YEARLY_PRICE,
                 'currency' => self::CURRENCY,
                 'quantity' => 1,
