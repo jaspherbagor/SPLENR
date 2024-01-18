@@ -28,7 +28,7 @@ class ApplicantController extends Controller
         $listing = Listing::find($listingId);
         $user = User::find($userId);
         if($listing) {
-            $listing->users()->updateExistingPivot($userId, ['shortlisted' => true]);
+            $listing->users()->updateExistingPivot($userId, ['application_status' => 'shortlisted']);
 
             Mail::to($user->email)->send(new ShortlistMail($user->name, $listing->title));
             return back()->with('success', 'Applicant is shortlisted successfully!');
@@ -36,6 +36,35 @@ class ApplicantController extends Controller
 
         return back();
     }
+
+    public function reject($listingId, $userId)
+    {
+        $listing = Listing::find($listingId);
+        $user = User::find($userId);
+        if($listing) {
+            $listing->users()->updateExistingPivot($userId, ['application_status' => 'rejected']);
+
+            Mail::to($user->email)->send(new RejectMail($user->name, $listing->title));
+            return back()->with('success', 'Applicant is rejected successfully!');
+        }
+
+        return back();
+    }
+
+    public function hire($listingId, $userId)
+    {
+        $listing = Listing::find($listingId);
+        $user = User::find($userId);
+        if($listing) {
+            $listing->users()->updateExistingPivot($userId, ['application_status' => 'hired']);
+
+            Mail::to($user->email)->send(new HireMail($user->name, $listing->title));
+            return back()->with('success', 'Applicant is hired successfully!');
+        }
+
+        return back();
+    }
+    
 
     public function apply($listingId)
     {

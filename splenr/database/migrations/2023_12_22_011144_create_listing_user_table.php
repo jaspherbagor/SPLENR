@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('listing_id');
             $table->unsignedBigInteger('user_id');
-            $table->boolean('shortlisted')->default(false);
+            $table->string('application_status')->default('waiting')->change();
             $table->timestamps();
 
             $table->foreign('listing_id')->references('id')->on('listings')->onDelete('cascade');
