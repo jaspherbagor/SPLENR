@@ -116,7 +116,7 @@ class SubscriptionController extends Controller
         ]);
 
         try {
-            Mail::to(auth()->user())->queue(new PurchaseMail($plan,$billingEnds));
+            Mail::to(auth()->user())->send(new PurchaseMail($plan,$billingEnds));
 
         }catch (\Exception $e) {
             return response()->json($e);
