@@ -30,7 +30,7 @@ class ApplicantController extends Controller
         if($listing) {
             $listing->users()->updateExistingPivot($userId, ['shortlisted' => true]);
 
-            Mail::to($user->email)->queue(new ShortlistMail($user->name, $listing->title));
+            Mail::to($user->email)->send(new ShortlistMail($user->name, $listing->title));
             return back()->with('success', 'Applicant is shortlisted successfully!');
         }
 
