@@ -19,7 +19,7 @@ class IsEmployer
         {
             return $next($request);
         } else{
-            abort(401);
+            return response()->view('UnauthorizedPage.unauthorized');
         }
         
     }
