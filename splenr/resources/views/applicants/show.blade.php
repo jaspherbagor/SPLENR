@@ -22,7 +22,7 @@
                                         class="rounded-circle profile-image" height="100">
                                 @else
                                     <img src="https://placehold.co/400" alt="Profile Picture"
-                                        class="rounded-circle profile-image">
+                                    class="rounded-circle profile-image" height="100">
                                 @endif
                             </div>
                             <div

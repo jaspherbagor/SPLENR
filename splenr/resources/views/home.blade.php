@@ -126,7 +126,7 @@
     <div class="container-fluid px-4 py-5">
         <h2 class="fw-bolder my-5 text-center">TRENDING JOB <span>POSITIONS</span></h2>
         <div class="row px-2 align-items-center justify-content-center">
-            @foreach (\App\Models\Listing::take(8)->orderBy('id', 'DESC')->get() as $listing)
+            @foreach (\App\Models\Listing::take(4)->orderBy('id', 'DESC')->get() as $listing)
                 <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                     <div class="card job-listing-card p-1 mb-4">
                         <div class="text-end">
