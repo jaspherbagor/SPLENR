@@ -11,23 +11,22 @@
             </div>
             @if (count($listing->users) > 0)
                 @foreach ($listing->users as $user)
-                    <div class="card mt-3 py-2 my-0 {{ $user->pivot->shortlisted ? 'bg-success' : '' }}">
+                    <div class="card mt-3 py-2 my-0 {{ $user->pivot->application_status === 'shortlisted' ?
+                    'bg-success' : '' }}">
                         <div class="row g-0">
 
-                            <div
-                                class="col-md-3 d-flex align-items-center justify-content-md-start
-                    justify-content-sm-center justify-content-center px-2">
+                            <div class="col-md-3 d-flex align-items-center justify-content-md-start
+                            justify-content-sm-center justify-content-center px-2">
                                 @if ($user->profile_pic)
                                     <img src="{{ Storage::url($user->profile_pic) }}" alt="Profile Picture"
                                         class="rounded-circle profile-image" height="100">
                                 @else
                                     <img src="https://placehold.co/400" alt="Profile Picture"
-                                    class="rounded-circle profile-image" height="100">
+                                        class="rounded-circle profile-image" height="100">
                                 @endif
                             </div>
-                            <div
-                                class="col-md-4 d-flex align-items-center justify-content-md-end
-                    justify-content-sm-center justify-content-center px-2">
+                            <div class="col-md-4 d-flex align-items-center justify-content-md-end
+                            justify-content-sm-center justify-content-center px-2">
                                 <div class="container">
                                     <p class="card-text py-0 my-1">
                                         Name:
@@ -49,9 +48,8 @@
                                     </p>
                                 </div>
                             </div>
-                            <div
-                                class="col-md-5 d-flex align-items-center justify-content-md-start
-                    justify-content-sm-center justify-content-center px-2">
+                            <div class="col-md-5 d-flex align-items-center justify-content-md-start
+                            justify-content-sm-center justify-content-center px-2">
                                 <form action="{{ route('applicants.shortlist', [$listing->id, $user->id]) }}"
                                     method="post">@csrf
                                     <a href="{{ Storage::url($user->resume) }}"
@@ -59,21 +57,16 @@
                                         Download Resume
                                     </a>
                                     <button type="submit"
-                                        class="{{ $user->pivot->shortlisted
-                                            ? 'btn btn-secondary
-                                                                    btn-outline-dark'
-                                            : 'btn btn-dark' }} fw-semibold">
-                                        {{ $user->pivot->shortlisted ? 'Shortlisted' : 'Shortlist' }}
+                                    class="{{ $user->pivot->application_status === 'shortlisted' ? 'btn btn-secondary btn-outline-dark' : 'btn btn-dark' }} fw-semibold">
+                                        {{ $user->pivot->application_status === 'shortlisted' ? 'Shortlisted' : 'Shortlist' }}
                                     </button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 @endforeach
-                
             @else
-            <p class="text-center">No applicants for this position.</p>
-
+                <p class="text-center">No applicants for this position.</p>
             @endif
 
         </div>
