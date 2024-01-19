@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\HireMail;
+use App\Mail\RejectMail;
 use App\Mail\ShortlistMail;
 use App\Models\Listing;
 use App\Models\User;

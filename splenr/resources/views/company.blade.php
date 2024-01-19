@@ -20,7 +20,9 @@
       width="100" height="100" class="rounded-circle" alt="Company Logo" class="img-fluid">
       @endif
       <h3 class="fw-bolder fs-2 text-md-start text-sm-start text-center mb-0 pb-0">{{ $company->name }}</h3>
-      <h5 class="fw-semibold text-md-start text-sm-start text-center text-secondary">{{ $company->company_address }}</h5>
+      <h5 class="fw-semibold text-md-start text-sm-start text-center text-secondary">
+        {{ $company->company_address }}
+      </h5>
     </div>
   </div>
   

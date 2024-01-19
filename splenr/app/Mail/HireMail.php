@@ -16,9 +16,12 @@ class HireMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public $name;
+    public $title;
+    public function __construct($name, $title)
     {
-        //
+        $this->name = $name;
+        $this->title = $title;
     }
 
     /**
@@ -37,7 +40,7 @@ class HireMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            markdown: 'emails.hire',
         );
     }
 
