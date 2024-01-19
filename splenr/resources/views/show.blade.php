@@ -9,8 +9,13 @@
                 alt="feature_image" class="card-img-top w-100 h-100">
                 <div class="card-body">
                     <a href="{{ route('company', [$listing->profile->id]) }}" class="text-decoration-none">
+                        @if($listing->profile->profile_pic)
                         <img src="{{ Storage::url($listing->profile->profile_pic) }}" width="60" height="60"
                         alt="company profile image" class="rounded-circle">
+                        @else
+                        <img src="{{ asset('image/temporary-company-image.svg') }}" width="60" height="60"
+                        alt="company profile image" class="rounded-circle">
+                        @endif
                         <span class="fw-bold fs-5 my-auto text-black">{{ $listing->profile->name }}</span>
                     </a>
                     <h2 class="card-title fw-bold">{{ $listing->title }}</h2>

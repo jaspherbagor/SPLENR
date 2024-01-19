@@ -133,8 +133,13 @@
                             <small class="badge {{ $listing->job_type }}">{{ $listing->job_type }}</small>
                         </div>
                         <div class="text-center mt-2 p-3">
-                            <img src="{{ Storage::url($listing->profile->profile_pic) }}" alt="logo"
-                                class="listing-company-logo rounded-circle">
+                            @if($listing->profile->profile_pic)
+                            <img src="{{ Storage::url($listing->profile->profile_pic) }}"
+                            alt="logo" class="listing-company-logo rounded-circle">
+                            @else
+                            <img src="{{ asset('image/temporary-company-image.svg') }}"
+                            alt="logo" class="listing-company-logo rounded-circle">
+                            @endif
                             <br>
                             <p class="d-block fw-bold listing-title">{{ $listing->title }}</p>
                             <hr>
