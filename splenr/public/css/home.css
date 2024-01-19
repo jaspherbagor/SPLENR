@@ -104,12 +104,6 @@
           rgba(17, 17, 26, 0.1) 0px 24px 80px;
     }
 
-    .card-title, .card-subtitle, .card-text {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-
     .carousel-text i {
         font-size:60px
     }
