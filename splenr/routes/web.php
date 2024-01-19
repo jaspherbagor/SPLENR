@@ -100,6 +100,8 @@ Route::delete('job/{id}/delete', [PostJobController::class, 'destroy'])->name('j
 Route::get('applicants', [ApplicantController::class, 'index'])->name('applicants.index');
 Route::get('applicants/{listing:slug}', [ApplicantController::class, 'show'])->name('applicants.show');
 Route::post('shortlist/{listingId}/{userId}', [ApplicantController::class, 'shortlist'])->name('applicants.shortlist');
+Route::post('reject/{listingId}/{userId}', [ApplicantController::class, 'reject'])->name('applicants.reject');
+Route::post('hire/{listingId}/{userId}', [ApplicantController::class, 'hire'])->name('applicants.hire');
 Route::post('/application/{listingId}/submit', [ApplicantController::class, 'apply'])
     ->name('application.submit')
     ->middleware('verified');
