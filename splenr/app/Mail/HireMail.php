@@ -30,7 +30,7 @@ class HireMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Hire Mail',
+            subject: 'Application Status: Hired',
         );
     }
 

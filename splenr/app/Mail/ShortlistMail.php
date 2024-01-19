@@ -26,7 +26,7 @@ class ShortlistMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Shortlist Mail',
+            subject: 'Application Status: Shortlisted',
         );
     }
 
