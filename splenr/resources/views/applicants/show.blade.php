@@ -11,8 +11,7 @@
             </div>
             @if (count($listing->users) > 0)
                 @foreach ($listing->users as $user)
-                    <div class="card mt-3 py-2 my-0 {{ $user->pivot->application_status === 'shortlisted' ?
-                    'bg-success' : '' }}">
+                    <div class="card mt-3 py-2 my-0 {{ $user->pivot->application_status === 'shortlisted' ? 'bg-success' : '' }}">
                         <div class="row g-0">
 
                             <div class="col-md-3 d-flex align-items-center justify-content-md-start
@@ -21,13 +20,12 @@
                                     <img src="{{ Storage::url($user->profile_pic) }}" alt="Profile Picture"
                                         class="rounded-circle profile-image" height="100">
                                 @else
-                                    <img src="https://placehold.co/400" alt="Profile Picture"
+                                    <img src="{{ asset('image/user-icon.svg') }}" alt="Profile Picture"
                                         class="rounded-circle profile-image" height="100">
                                 @endif
                             </div>
-                            <div class="col-md-4 d-flex align-items-center justify-content-md-end
-                            justify-content-sm-center justify-content-center px-2">
-                                <div class="container">
+                            <div class="col-md-4 d-flex align-items-center justify-content-md-start justify-content-sm-center justify-content-center text-center px-2">
+                                <div class="container-fluid">
                                     <p class="card-text py-0 my-1">
                                         Name:
                                         <span class="fw-bolder">
@@ -43,24 +41,59 @@
                                     <p class="card-text py-0 my-1">
                                         Applied on:
                                         <span class="fw-bolder">
-                                            {{ $user->pivot->created_at }}
+                                            {{ \Carbon\Carbon::parse($user->pivot->created_at)->format('F j, Y')}}
                                         </span>
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-5 d-flex align-items-center justify-content-md-start
-                            justify-content-sm-center justify-content-center px-2">
-                                <form action="{{ route('applicants.shortlist', [$listing->id, $user->id]) }}"
+                            <div class="col-md-5 d-flex align-items-center justify-content-md-start justify-content-sm-center justify-content-center px-2">
+                                @if ($user->pivot->application_status === 'waiting')
+                                    <form action="{{ route('applicants.shortlist', [$listing->id, $user->id]) }}" method="post"> @csrf
+                                        <a href="{{ Storage::url($user->resume) }}"
+                                        class="btn btn-primary btn-outline-dark fw-semibold my-2 me-2" target="_blank">
+                                            View Resume
+                                        </a>
+                                        <button type="submit" class="btn btn-success btn-outline-dark fw-semibold me-2">
+                                            Shortlist
+                                        </button>
+                                    </form>
+                                    <form action="{{ route('applicants.reject', [$listing->id, $user->id]) }}"
+                                    method="post"> @csrf
+                                        <button type="submit" class="btn btn-danger btn-outline-dark fw-semibold">
+                                            Reject
+                                        </button>
+                                    </form>
+                                @elseif($user->pivot->application_status === 'shortlisted')
+                                    <form action="{{ route('applicants.reject', [$listing->id, $user->id]) }}"
                                     method="post">@csrf
+                                        <a href="{{ Storage::url($user->resume) }}"
+                                        class="btn btn-primary btn-outline-dark fw-semibold my-2 me-2" target="_blank">
+                                            View Resume
+                                        </a>
+                                        <button type="submit" class="btn btn-dark btn-outline-danger fw-semibold me-2">
+                                            Reject
+                                        </button>
+                                    </form>
+                                    <form action="{{ route('applicants.hire', [$listing->id, $user->id]) }}"
+                                    method="post"> @csrf
+                                        <button type="submit"
+                                        class="{{ $user->pivot->application_status === 'hired' ? 'btn btn-success btn-outline-dark' : 'btn btn-success btn-outline-dark' }} fw-semibold">
+                                            Hire
+                                        </button>
+                                    </form>
+                                @elseif($user->pivot->application_status === 'hired')
                                     <a href="{{ Storage::url($user->resume) }}"
-                                        class="btn btn-warning btn-outline-dark fw-semibold my-2 me-2" target="_blank">
-                                        Download Resume
+                                    class="btn btn-primary btn-outline-dark fw-semibold my-2 me-2" target="_blank">
+                                        View Resume
                                     </a>
-                                    <button type="submit"
-                                    class="{{ $user->pivot->application_status === 'shortlisted' ? 'btn btn-secondary btn-outline-dark' : 'btn btn-dark' }} fw-semibold">
-                                        {{ $user->pivot->application_status === 'shortlisted' ? 'Shortlisted' : 'Shortlist' }}
-                                    </button>
-                                </form>
+                                    <button class="btn btn-success fw-semibold px-3 py-2">HIRED</button>
+                                @else
+                                    <a href="{{ Storage::url($user->resume) }}"
+                                    class="btn btn-primary btn-outline-dark fw-semibold my-2 me-2" target="_blank">
+                                        View Resume
+                                    </a>
+                                    <button class="btn btn-danger fw-semibold px-3 py-2">REJECTED</button>
+                                @endif
                             </div>
                         </div>
                     </div>
