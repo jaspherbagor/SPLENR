@@ -30,7 +30,7 @@ class RejectMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Application Status: Rejected',
+            subject: 'Application Status: Declined',
         );
     }
 

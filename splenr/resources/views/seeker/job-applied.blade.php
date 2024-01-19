@@ -12,14 +12,18 @@
                 <div class="col-md-6">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">{{ $listing->title }}</h5>
+                            <div class="text-end py-0 my-0">
+                                <small class="badge {{ $listing->pivot->application_status }} text-uppercase">
+                                    {{ $listing->pivot->application_status }}
+                                </small>
+                            </div>
+                            <h5 class="card-title fw-bold pt-0 mt-0">{{ $listing->title }}</h5>
                             <p class="card-text">
                                 Applied:
                                 <span class="fw-bold">
                                     {{ $listing->pivot->created_at->format('F j, Y') }}
                                 </span>
                             </p>
-                            <p class="card-text">Status: <span class="fw-bold">Waiting</span></p>
                             <a href="{{ route('job.show', [$listing->slug]) }}" class="btn btn-dark">View</a>
                         </div>
                     </div>

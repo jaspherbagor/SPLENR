@@ -44,7 +44,7 @@ class ApplicantController extends Controller
         $listing = Listing::find($listingId);
         $user = User::find($userId);
         if($listing) {
-            $listing->users()->updateExistingPivot($userId, ['application_status' => 'rejected']);
+            $listing->users()->updateExistingPivot($userId, ['application_status' => 'declined']);
 
             Mail::to($user->email)->send(new RejectMail($user->name, $listing->title));
             return back()->with('success', 'Applicant is rejected successfully!');
