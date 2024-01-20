@@ -10,8 +10,8 @@
     </div>
   </div>
   
-  <div class=" mt-5">
-    <div class="container">
+  <div class="mt-5">
+    <div class="container text-md-start text-sm-start text-center">
       @if($company->profile_pic)
       <img src="{{ Storage::url($company->profile_pic) }}"
       width="100" height="100" class="rounded-circle" alt="Company Logo" class="img-fluid">
@@ -27,7 +27,7 @@
   </div>
   
   @if($company->about)
-  <div class="container-fluid mt-5">
+  <div class="container-fluid mt-5 text-md-start text-sm-start text-center">
     <h4 class="fw-bolder">ABOUT</h4>
     {!! $company->about !!}
   </div>
