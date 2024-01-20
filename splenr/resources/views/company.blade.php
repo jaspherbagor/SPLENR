@@ -34,12 +34,12 @@
   @endif
 
 
-  <h3 class="fw-bolder mt-4 text-center">JOB POSTS</h3>
+  <h3 class="fw-bolder mt-5 mb-3 text-center">JOB POSTS</h3>
   
-  <div class="row mt-3 align-items-center justify-content-center px-2">
+  <div class="row mt-5 align-items-center justify-content-center px-2">
     @foreach($company->jobs as $job)
     <div class="col-md-6">
-      <div class="card mb-3">
+      <div class="card mb-3 company-listing-card">
           <div class="card-body">
               <h5 class="card-title fw-bold text-uppercase">{{ $job->title }}</h5>
               <p class="card-text py-0 my-0">Location: <span class="fw-bold">{{ $job->address }}</span></p>
