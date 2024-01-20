@@ -47,3 +47,10 @@ html, body {
     background: var(--declined-badge);
     color:var(--text-color-light)
 }
+
+.applied-card {
+    background: url(../image/applied-job-card-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

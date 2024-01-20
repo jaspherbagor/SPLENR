@@ -10,17 +10,17 @@
             <div class="row">
                 @foreach($user->listings as $listing )
                 <div class="col-md-6">
-                    <div class="card mb-3">
+                    <div class="card mb-3 applied-card">
                         <div class="card-body">
                             <div class="text-end py-0 my-0">
                                 <small class="badge {{ $listing->pivot->application_status }} text-uppercase">
                                     {{ $listing->pivot->application_status }}
                                 </small>
                             </div>
-                            <h5 class="card-title fw-bold pt-0 mt-0 text-uppercase">{{ $listing->title }}</h5>
-                            <p class="card-text">
+                            <h5 class="card-title fw-bold pt-0 mt-0 text-uppercase text-white">{{ $listing->title }}</h5>
+                            <p class="card-text fw-semibold text-white">
                                 Applied:
-                                <span class="fw-bold">
+                                <span class="fw-bolder text-success text-uppercase">
                                     {{ $listing->pivot->created_at->format('F j, Y') }}
                                 </span>
                             </p>
