@@ -27,6 +27,11 @@ Route::get('/about', function() {
     return view('about');
 });
 
+// Privacy Policy Route
+Route::get('/privacy-policy', function() {
+    return view('privacy-policy');
+});
+
 // Route to display the contact form
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
