@@ -32,6 +32,11 @@ Route::get('/privacy-policy', function() {
     return view('privacy-policy');
 });
 
+// Terms and Conditions Page
+Route::get('/terms-and-condition', function() {
+    return view('terms-and-condition');
+});
+
 // Route to display the contact form
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
