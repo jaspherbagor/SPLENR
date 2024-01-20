@@ -17,14 +17,14 @@
                                     {{ $listing->pivot->application_status }}
                                 </small>
                             </div>
-                            <h5 class="card-title fw-bold pt-0 mt-0">{{ $listing->title }}</h5>
+                            <h5 class="card-title fw-bold pt-0 mt-0 text-uppercase">{{ $listing->title }}</h5>
                             <p class="card-text">
                                 Applied:
                                 <span class="fw-bold">
                                     {{ $listing->pivot->created_at->format('F j, Y') }}
                                 </span>
                             </p>
-                            <a href="{{ route('job.show', [$listing->slug]) }}" class="btn btn-dark">View</a>
+                            <a href="{{ route('job.show', [$listing->slug]) }}" class="btn btn-warning btn-outline-dark fw-semibold">VIEW</a>
                         </div>
                     </div>
                 </div>
