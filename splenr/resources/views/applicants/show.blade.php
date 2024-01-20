@@ -50,7 +50,7 @@
                                 @if ($user->pivot->application_status === 'waiting')
                                     <form action="{{ route('applicants.shortlist', [$listing->id, $user->id]) }}" method="post"> @csrf
                                         <a href="{{ Storage::url($user->resume) }}"
-                                        class="btn btn-primary btn-outline-dark fw-semibold my-2 me-2" target="_blank">
+                                        class="btn btn btn-dark btn-outline-info fw-semibold my-2 me-2" target="_blank">
                                             View Resume
                                         </a>
                                         <button type="submit" class="btn btn-success btn-outline-dark fw-semibold me-2">
@@ -67,7 +67,7 @@
                                     <form action="{{ route('applicants.reject', [$listing->id, $user->id]) }}"
                                     method="post">@csrf
                                         <a href="{{ Storage::url($user->resume) }}"
-                                        class="btn btn-primary btn-outline-dark fw-semibold my-2 me-2" target="_blank">
+                                        class="btn btn btn-dark btn-outline-info fw-semibold my-2 me-2" target="_blank">
                                             View Resume
                                         </a>
                                         <button type="submit" class="btn btn-dark btn-outline-danger fw-semibold me-2">
@@ -83,16 +83,16 @@
                                     </form>
                                 @elseif($user->pivot->application_status === 'hired')
                                     <a href="{{ Storage::url($user->resume) }}"
-                                    class="btn btn-primary btn-outline-dark fw-semibold my-2 me-2" target="_blank">
+                                    class="btn btn btn-dark btn-outline-info fw-semibold my-2 me-2" target="_blank">
                                         View Resume
                                     </a>
-                                    <button class="btn btn-success fw-semibold px-3 py-2">HIRED</button>
+                                    <button class="btn btn-success fw-semibold">STATUS: HIRED</button>
                                 @else
                                     <a href="{{ Storage::url($user->resume) }}"
-                                    class="btn btn-primary btn-outline-dark fw-semibold my-2 me-2" target="_blank">
+                                    class="btn btn-dark btn-outline-info fw-semibold my-2 me-2" target="_blank">
                                         View Resume
                                     </a>
-                                    <button class="btn btn-danger fw-semibold px-3 py-2">REJECTED</button>
+                                    <button class="btn btn-danger fw-semibold">STATUS: REJECTED</button>
                                 @endif
                             </div>
                         </div>
