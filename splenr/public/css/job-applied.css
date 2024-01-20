@@ -30,7 +30,7 @@ html, body {
 
 .waiting {
     background: var(--waiting-badge);
-    color:var(--text-color-dark)
+    color:var(--text-color-light)
 }
 
 .shortlisted {
