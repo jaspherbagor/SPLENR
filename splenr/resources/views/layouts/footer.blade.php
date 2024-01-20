@@ -14,10 +14,10 @@
                 <a href="/FAQs" class="footer_a text-decoration-none text-white">FAQs</a>
             </p>
             <p>
-                <a href="/termsandcondition" class="footer_link text-decoration-none text-white">Privacy Policy</a>
+                <a href="/privacy-policy" class="footer_link text-decoration-none text-white">Privacy Policy</a>
             </p>
             <p>
-                <a href="/termsandcondition" class="footer_link text-decoration-none text-white">Terms and Condition</a>
+                <a href="/terms-and-condition" class="footer_link text-decoration-none text-white">Terms and Condition</a>
             </p>
         </div>
         <div class="quick_links col-lg-2 col-md-4 col-sm-4 col-12 text-white text-start px-2 py-2">
@@ -26,10 +26,10 @@
                 <a href="/" class="footer_link text-decoration-none text-white">Home</a>
             </p>
             <p>
-                <a href="/product" class="footer_link text-decoration-none text-white">About</a>
+                <a href="/about" class="footer_link text-decoration-none text-white">About</a>
             </p>
             <p>
-                <a href="/blog" class="footer_link text-decoration-none text-white">Jobs</a>
+                <a href="/jobs" class="footer_link text-decoration-none text-white">Jobs</a>
             </p>
             <form id="form-logout" action="{{ route('logout') }}" method="post" >@csrf</form>
         </div>
