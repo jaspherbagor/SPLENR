@@ -7,6 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Dashboard - splenr</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('image/favicon.svg') }}">
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
         <link rel="stylesheet" href="{{ asset('css/subscription.css') }}"/>
