@@ -85,8 +85,10 @@
         </p>
     </div>
     {{-- Back to Top Button --}}
-    <a href="#" id="back-to-top" class="btn position-fixed text-decoration-none fs-5">
-        <i class="bi bi-arrow-up-short"></i>
+    <a href="#" id="back-to-top" class="position-fixed text-decoration-none">
+        <button class="btn btn-outline-dark">
+            <i class="bi bi-arrow-up-short text-white fs-5"></i>
+        </button>
     </a>
 </footer>
 <script>
