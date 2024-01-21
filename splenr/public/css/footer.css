@@ -42,3 +42,13 @@ footer {
         text-align: center !important;
     }
 }
+
+/* Back To Top Button Start */
+#back-to-top {
+    bottom: 20px !important;
+    right: 20px !important;
+    background:var(--text-color-dark) !important;
+    opacity:0.7 !important;
+    color:var(--text-color-light) !important;
+    border:2px solid var(--primary-color) !important;
+}

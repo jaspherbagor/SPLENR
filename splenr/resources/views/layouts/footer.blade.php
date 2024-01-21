@@ -84,6 +84,10 @@
             Copyright © 2024 <span class="fw-semibold">splenr</span>. All rights reserved
         </p>
     </div>
+    {{-- Back to Top Button --}}
+    <a href="#" id="back-to-top" class="btn position-fixed text-decoration-none fs-5">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
 </footer>
 <script>
     let logout = document.getElementById('logoutbtn');
