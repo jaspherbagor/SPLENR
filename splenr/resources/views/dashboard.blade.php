@@ -14,7 +14,7 @@
         @endif
 
         <div class="container-fluid">
-            <h2 class="fw-bolder">Dashboard</h2>
+            <h2 class="fw-bolder">DASHBOARD</h2>
             <p class="pt-2 my-0 pb-0">
                 Hello, <span class="fw-semibold">{{ auth()->user()->name }}</span>!
             </p>
@@ -22,7 +22,7 @@
                 @if(Auth::check() && auth()->user()->user_type == 'employer')
                 <p class="pb-4 my-0">Your trial
                     {{ now()->format('Y-m-d') > auth()->user()->user_trial ? ' was expired': 'will expire'  }}
-                        on {{\Carbon\Carbon::parse(auth()->user()->user_trial )->format('F j, Y')}}
+                        on <span class="fw-bold">{{\Carbon\Carbon::parse(auth()->user()->user_trial )->format('F j, Y')}}</span>.
                 </p>
                 @endif
             @endif
