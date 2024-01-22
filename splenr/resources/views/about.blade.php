@@ -12,9 +12,10 @@
             <h3 class="fw-bolder mb-3">WHO ARE WE</h3>
             <p>At splenr, we are passionate about connecting job seekers with rewarding opportunities and helping employers find the right talent to drive their businesses forward. Our mission is to simplify and streamline the job search process, making it efficient, transparent, and tailored to the needs of both employers and job seekers.</p>
         </div>
-        <div class="col-md-6">
-            <h3 class="fw-bolder text-center">OUR VISION</h3>
-            <p class="text-center">We envision a world where every individual can discover and pursue their dream career, and every employer can easily access the skills and expertise they need to thrive. Splenr is committed to creating a platform that fosters meaningful connections, empowers careers, and contributes to the growth of businesses.</p>
+        <div class="col-md-6 text-center">
+            <i class="bi bi-eye display-1"></i>
+            <h3 class="fw-bolder">OUR VISION</h3>
+            <p>We envision a world where every individual can discover and pursue their dream career, and every employer can easily access the skills and expertise they need to thrive. Splenr is committed to creating a platform that fosters meaningful connections, empowers careers, and contributes to the growth of businesses.</p>
         </div>
     </div>
 
