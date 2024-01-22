@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container px-4 py-5">
+<div class="container px-md-4 px-sm-4 px-3 py-5">
   <div class="row justify-content-center mt-5">
     <div class="col">
       <div class="company-hero-section w-100">
@@ -27,7 +27,7 @@
   </div>
   
   @if($company->about)
-  <div class="container-fluid mt-5 text-md-start text-sm-start text-center">
+  <div class="container-fluid mt-5 text-start">
     <h4 class="fw-bolder">ABOUT</h4>
     {!! $company->about !!}
   </div>
