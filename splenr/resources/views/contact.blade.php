@@ -79,7 +79,7 @@
                 EMAIL:
                  <span class="d-inline">
                     <a href="mailto:jbagor96@gmail.com" target="_blank" class="text-decoration-none text-white">
-                         jbagor96@gmail.com
+                        contact@splenr.com
                     </a>
                 </span>
             </p>
