@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="privacy-policy mt-5 px-4 py-5 h-auto">
+<section class="privacy-policy mt-5 px-md-4 px-sm-4 px-3 py-5 h-auto">
     <h2 class="fw-bolder text-center mt-4">PRIVACY POLICY</h2>
     <div class="container-fluid mt-4">
-        <p>Welcome to splenr! This Privacy Policy governs the manner in which splenr ("we," "our," or "us") collects, uses, maintains, and discloses information collected from users (each, a "User") of the splenr website (the "Site"). This privacy policy applies to the Site and all products and services offered by splenr.</p>
+        <p>Welcome to splenr! This Privacy Policy governs the manner in which splenr ("we", "our", or "us") collects, uses, maintains, and discloses information collected from users (each, a "User") of the splenr website (the "Site"). This privacy policy applies to the Site and all products and services offered by splenr.</p>
 
         <h3 class="fw-bolder mt-4 mb-2">Information We Collect</h3>
         <p>We collect several types of information from and about Users in various ways, including when Users visit our Site, register on the Site, post a job, apply for a job, and in connection with other activities, services, features, or resources we make available on our Site. This may include, but is not limited to, name, email address, phone number, job preferences, and other relevant details.</p>
