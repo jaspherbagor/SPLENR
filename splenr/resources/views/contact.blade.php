@@ -8,7 +8,7 @@
     </div>
 </section>
 {{-- Contact Form Start --}}
-<section class="form_section container-fluid px-4 py-5">
+<section class="form_section container-fluid col-8 px-4 py-5">
     @if(Session::has('success'))
     <div class="alert alert-success">{{ Session::get('success') }}</div>
     @endif
@@ -79,7 +79,7 @@
                 EMAIL:
                  <span class="d-inline">
                     <a href="mailto:jbagor96@gmail.com" target="_blank" class="text-decoration-none text-white">
-                        contact@splenr.com
+                        support@splenr.com
                     </a>
                 </span>
             </p>

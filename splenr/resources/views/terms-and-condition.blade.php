@@ -32,7 +32,7 @@
         <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. By continuing to access or use the Site after those revisions become effective, you agree to be bound by the revised terms.</p>
 
         <h3 class="fw-bolder mt-4 mb-2">10. Contact Us</h3>
-        <p>If you have any questions or concerns about these Terms, please contact us at <span class="fw-semibold">contact@splenr.com</span>.</p>
+        <p>If you have any questions or concerns about these Terms, please contact us at <span class="fw-semibold">support@splenr.com</span>.</p>
     </div>
 </section>
 @include('layouts.footer')

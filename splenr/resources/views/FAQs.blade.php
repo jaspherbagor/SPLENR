@@ -55,7 +55,7 @@
                              data-bs-parent="#accordion">
                                 <div class="card-body">
                                     <p class="text-start my-0 py-0">
-                                    splenr's job portal connects employers and job seekers by
+                                    Splenr's job portal connects employers and job seekers by
                                     allowing employers to post job vacancies and job seekers to
                                     search for available job opportunities. This platform
                                     simplifies the hiring process for employers and provides job
@@ -142,7 +142,7 @@
                                 data-bs-parent="#accordion">
                                 <div class="card-body">
                                     <p class="text-start">
-                                        splenr's job portal ensures the quality of job postings and
+                                        Splenr's job portal ensures the quality of job postings and
                                         candidates by verifying each employer and job seeker account
                                         and reviewing each job posting before it goes live on
                                         the platform.
@@ -167,7 +167,7 @@
                                 data-bs-parent="#accordion">
                                 <div class="card-body">
                                    <p class="text-start">
-                                        splenr's job portal offers a straightforward and efficient way
+                                        Splenr's job portal offers a straightforward and efficient way
                                         for employers and job seekers to connect, build relationships,
                                         and enhance their recruitment and career growth. By actively
                                         using the platform and providing valuable contributions, employers

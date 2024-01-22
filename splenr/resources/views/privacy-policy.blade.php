@@ -31,7 +31,7 @@
         <p>We may update this Privacy Policy from time to time to reflect changes to our practices or for other operational, legal, or regulatory reasons. The most current version will be posted on the Site with the effective date of the update. Users are encouraged to check this page regularly for any changes. Your continued use of the Site constitutes your acceptance of the updated Privacy Policy.</p>
 
         <h3 class="fw-bolder mt-4 mb-2">Contact Us</h3>
-        <p>If you have any questions or concerns about this Privacy Policy, please contact us at <span class="fw-semibold">contact@splenr.com</span>.</p>
+        <p>If you have any questions or concerns about this Privacy Policy, please contact us at <span class="fw-semibold">support@splenr.com</span>.</p>
     </div>
 </section>
 
