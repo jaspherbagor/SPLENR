@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
   <link rel="stylesheet" href="{{ asset('css/unauthorized.css') }}">
   <link rel="stylesheet" href="{{ asset('css/job-applied.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/abbout.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/about.css') }}">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg px-3 position-fixed container-fluid" data-bs-theme="light">

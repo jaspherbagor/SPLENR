@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="py-5 mt-5 about-text-div container-fluid">
+<div class="py-5 mt-5 about-text-div container-fluid text-white">
     <h2 class="fw-bolder text-center mt-5">ABOUT</h2>
-    <h5 class="text-center">Welcome to splenr - Your Gateway to Empowering Careers!</h5>
+    <h5 class="text-center mb-2">Welcome to splenr - Your Gateway to Empowering Careers!</h5>
 </div>
 <section class="about-text-section mt-5">
     <div class="row mt-5 px-4">
