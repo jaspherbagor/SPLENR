@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div class="row mt-5 bg-warning px-4 py-5">
+    <div class="row mt-5 bg-warning px-4 py-5 text-white">
         <h3 class="fw-bolder text-center mb-5">WHAT SETS US APART</h3>
         <div class="col-md-3 col-sm-6 mb-4">
             <h4 class="fw-bolder text-center">TAILORED JOB MATCHING</h4>
@@ -39,7 +39,7 @@
 
     <h3 class="fw-bolder text-center mt-5 mb-4">HOW WE WORK</h3>
     <h4 class="text-center fw-bold mt-5 mb-4">FOR JOB SEEKER</h4>
-    <div class="row">
+    <div class="row px-4 pt-3">
         <div class="col-md-4">
             <h5 class="fw-bolder text-center">Create Your Profile</h5>
             <p class="text-center">Build a comprehensive profile that highlights your skills, experience, and career goals.</p>
@@ -54,7 +54,7 @@
         </div>
     </div>
     <h4 class="text-center fw-bold mt-5 mb-4">FOR EMPLOYER</h4>
-    <div class="row">
+    <div class="row px-4 pt-3">
         <div class="col-md-4">
             <h5 class="fw-bolder text-center">Post Job Listings</h5>
             <p class="text-center">Create detailed and engaging job listings to attract the right candidates.</p>
@@ -70,7 +70,7 @@
     </div>
 
     <h3 class="fw-bolder text-center mt-5 mb-4">OUR COMMITMENT</h3>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center pb-5">
         <div class="col-10">
             <p class="text-center">Splenr is dedicated to fostering a thriving job market by facilitating connections that matter. We value transparency, diversity, and innovation. Join us in shaping the future of work and let Splenr be your trusted partner in career growth and business success.</p>
             <p class="text-center">Ready to embark on your career journey or find the perfect candidate? Explore splenr today!</p>
