@@ -7,9 +7,10 @@
 </div>
 <section class="about-text-section mt-5">
     <div class="row mt-5 px-4">
-        <div class="col-md-6">
-            <h3 class="fw-bolder text-center mb-3">WHO ARE WE</h3>
-            <p class="text-center">At splenr, we are passionate about connecting job seekers with rewarding opportunities and helping employers find the right talent to drive their businesses forward. Our mission is to simplify and streamline the job search process, making it efficient, transparent, and tailored to the needs of both employers and job seekers.</p>
+        <div class="col-md-6 text-center">
+            <i class="bi bi-people display-1"></i>
+            <h3 class="fw-bolder mb-3">WHO ARE WE</h3>
+            <p>At splenr, we are passionate about connecting job seekers with rewarding opportunities and helping employers find the right talent to drive their businesses forward. Our mission is to simplify and streamline the job search process, making it efficient, transparent, and tailored to the needs of both employers and job seekers.</p>
         </div>
         <div class="col-md-6">
             <h3 class="fw-bolder text-center">OUR VISION</h3>
