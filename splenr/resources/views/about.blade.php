@@ -8,12 +8,12 @@
 <section class="about-text-section mt-5">
     <div class="row mt-5 px-4">
         <div class="col-md-6 text-center">
-            <i class="bi bi-people display-1"></i>
+            <i class="bi bi-people display-1 about-icon"></i>
             <h3 class="fw-bolder mb-3">WHO ARE WE</h3>
             <p>At splenr, we are passionate about connecting job seekers with rewarding opportunities and helping employers find the right talent to drive their businesses forward. Our mission is to simplify and streamline the job search process, making it efficient, transparent, and tailored to the needs of both employers and job seekers.</p>
         </div>
         <div class="col-md-6 text-center">
-            <i class="bi bi-eye display-1"></i>
+            <i class="bi bi-eye display-1 about-icon"></i>
             <h3 class="fw-bolder">OUR VISION</h3>
             <p>We envision a world where every individual can discover and pursue their dream career, and every employer can easily access the skills and expertise they need to thrive. Splenr is committed to creating a platform that fosters meaningful connections, empowers careers, and contributes to the growth of businesses.</p>
         </div>
@@ -48,34 +48,37 @@
         <h4 class="text-center fw-bold mt-5 mb-4">FOR JOB SEEKER</h4>
         <div class="row px-4 pt-3">
             <div class="col-md-4 text-center">
-                <i class="bi bi-person-plus display-3"></i>
+                <i class="bi bi-person-plus display-3 about-icon"></i>
                 <h5 class="fw-bolder">Create Your Profile</h5>
                 <p>Build a comprehensive profile that highlights your skills, experience, and career goals.</p>
             </div>
             <div class="col-md-4 text-center">
-                <i class="bi bi-journal-bookmark display-3"></i>
+                <i class="bi bi-journal-bookmark display-3 about-icon"></i>
                 <h5 class="fw-bolder">Explore Job Listings</h5>
                 <p>Browse through a vast array of job listings tailored to your preferences.</p>
             </div>
             <div class="col-md-4 text-center">
-                <i class="bi bi-file-earmark-arrow-up display-3"></i>
+                <i class="bi bi-file-earmark-arrow-up display-3 about-icon"></i>
                 <h5 class="fw-bolder">Apply with Ease</h5>
                 <p>Submit applications directly through our platform, making job hunting a breeze.</p>
             </div>
         </div>
         <h4 class="text-center fw-bold mt-5 mb-4">FOR EMPLOYER</h4>
         <div class="row px-4 pt-3">
-            <div class="col-md-4">
-                <h5 class="fw-bolder text-center">Post Job Listings</h5>
-                <p class="text-center">Create detailed and engaging job listings to attract the right candidates.</p>
+            <div class="col-md-4 text-center">
+                <i class="bi bi-file-earmark-text display-3 about-icon"></i>
+                <h5 class="fw-bolder">Post Job Listings</h5>
+                <p>Create detailed and engaging job listings to attract the right candidates.</p>
             </div>
-            <div class="col-md-4">
-                <h5 class="fw-bolder text-center">Efficient Recruitment</h5>
-                <p class="text-center"> Streamline your hiring process by accessing a pool of qualified and interested candidates.</p>
+            <div class="col-md-4 text-center">
+                <i class="bi bi-people display-4 about-icon"></i>
+                <h5 class="fw-bolder">Efficient Recruitment</h5>
+                <p> Streamline your hiring process by accessing a pool of qualified and interested candidates.</p>
             </div>
-            <div class="col-md-4">
-                <h5 class="fw-bolder text-center">Build Your Brand</h5>
-                <p class="text-center">Showcase your company culture and values to stand out as an employer of choice.</p>
+            <div class="col-md-4 text-center">
+                <i class="bi bi-building display-3 about-icon"></i>
+                <h5 class="fw-bolder">Build Your Brand</h5>
+                <p>Showcase your company culture and values to stand out as an employer of choice.</p>
             </div>
         </div>
     </div>

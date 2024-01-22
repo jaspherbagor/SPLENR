@@ -28,3 +28,7 @@ html, body {
     background-size: cover;
     background-position: center;
 }
+
+.about-icon {
+    color: var(--primary-color)
+}
