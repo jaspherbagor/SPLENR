@@ -6,9 +6,9 @@
         <div class="row mt-5 align-items-center">
             <div class="col-lg-6 col-md-6 px-4 mx-auto mt-5 align-items-center d-flex justify-content-center">
                 <div class="hero-text">
-                    <h1 class="fw-bolder">Land the Perfect Electrician Position</h1>
-                    <p class="fw-medium mt-2 fs-6">Assisting electricians to find their perfect fit in the industry.</p>
-                    <a href="/jobs" class="btn browse-jobs-btn p-3 fw-semibold">BROWSE JOBS</a>
+                    <h2 class="fw-bolder">Apply for Electrician Positions</h2>
+                    <h3 class="fw-medium mt-4 mb-3">Your Next Opportunity is Here</h3>
+                    <a href="/jobs" class="btn browse-jobs-btn px-2 py-3 fw-semibold">BROWSE JOBS</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
