@@ -20,7 +20,7 @@ class ApplicantController extends Controller
     public function show(Listing $listing)
     {
         $this->authorize('view', $listing);
-        $listing =  Listing::with('users')->where('slug', $listing->slug)->first();
+        $listing =  Listing::with('users')->where('slug', $listing->slug)->orderBy('updated_at', 'desc')->first();
 
         return view('applicants.show', compact('listing'));
     }
