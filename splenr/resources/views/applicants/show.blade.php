@@ -51,7 +51,7 @@
                                     <form action="{{ route('applicants.shortlist', [$listing->id, $user->id]) }}" method="post"> @csrf
                                         <a href="{{ Storage::url($user->resume) }}"
                                         class="btn btn btn-dark btn-outline-info fw-semibold my-2 me-2" target="_blank">
-                                            View Resume
+                                            Resume <i class="bi bi-eye"></i>
                                         </a>
                                         <button type="submit" class="btn btn-success btn-outline-dark fw-semibold me-2">
                                             Shortlist
@@ -68,7 +68,7 @@
                                     method="post">@csrf
                                         <a href="{{ Storage::url($user->resume) }}"
                                         class="btn btn btn-dark btn-outline-info fw-semibold my-2 me-2" target="_blank">
-                                            View Resume
+                                            Resume <i class="bi bi-eye"></i>
                                         </a>
                                         <button type="submit" class="btn btn-dark btn-outline-danger fw-semibold me-2">
                                             Reject
@@ -84,13 +84,13 @@
                                 @elseif($user->pivot->application_status === 'hired')
                                     <a href="{{ Storage::url($user->resume) }}"
                                     class="btn btn btn-dark btn-outline-info fw-semibold my-2 me-2" target="_blank">
-                                        View Resume
+                                        Resume <i class="bi bi-eye"></i>
                                     </a>
                                     <button class="btn btn-success fw-semibold">STATUS: HIRED</button>
                                 @else
                                     <a href="{{ Storage::url($user->resume) }}"
                                     class="btn btn-dark btn-outline-info fw-semibold my-2 me-2" target="_blank">
-                                        View Resume
+                                        Resume <i class="bi bi-eye"></i>
                                     </a>
                                     <button class="btn btn-danger fw-semibold">STATUS: REJECTED</button>
                                 @endif
