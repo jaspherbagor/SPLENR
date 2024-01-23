@@ -16,39 +16,60 @@
         <div class="row">
             <div class="col-md-6 px-4 py-3">
                 <label for="firstname" class="form-label">First Name: </label>
-                <input type="text" name="first_name" id="firstname" class="form-control" required autoComplete="off"/>
+                <input type="text" name="first_name" id="firstname" class="form-control" autoComplete="off"/>
+                @if($errors->has('first_name'))
+                <span class="text-danger">{{ $errors->first('first_name') }}</span>
+                @endif
             </div>
             <div class="col-md-6 px-4 py-3">
                 <label for="lastname" class="form-label">Last Name: </label>
-                <input type="text" name="last_name" id="lastname" class="form-control" required autoComplete="off"/>
+                <input type="text" name="last_name" id="lastname" class="form-control"  autoComplete="off"/>
+                @if($errors->has('last_name'))
+                <span class="text-danger">{{ $errors->first('last_name') }}</span>
+                @endif
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 px-4 py-3">
-            <label for="contactnumber" class="form-label">Contact Number: </label>
-            <input type="tel" name="contact_number" id="contactnumber"
-             class="form-control" required autoComplete="off"/>
+                <label for="contactnumber" class="form-label">Contact Number: </label>
+                <input type="tel" name="contact_number" id="contactnumber"
+                class="form-control"  autoComplete="off"/>
+                @if($errors->has('contact_number'))
+                <span class="text-danger">{{ $errors->first('contact_number') }}</span>
+                @endif
             </div>
             <div class="col-md-6 px-4 py-3">
                 <label for="zipcode" class="form-label">Zip/Postal Code: </label>
-                <input type="number" name="zip_code" id="zipcode" class="form-control" required autoComplete="off"/>
+                <input type="number" name="zip_code" id="zipcode" class="form-control"  autoComplete="off"/>
+                @if($errors->has('zip_code'))
+                <span class="text-danger">{{ $errors->first('zip_code') }}</span>
+                @endif
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 px-4 py-3">
                 <label for="email" class="form-label">Email: </label>
-                <input type="email" id="email" name="email" class="form-control" required autoComplete="off"/>
+                <input type="email" id="email" name="email" class="form-control"  autoComplete="off"/>
+                @if($errors->has('email'))
+                <span class="text-danger">{{ $errors->first('email') }}</span>
+                @endif
             </div>
             <div class="col-md-6 px-4 py-3">
                 <label for="address" class="form-label">Address: </label>
-                <input type="text" name="address" id="address" class="form-control" required autoComplete="off"/>
+                <input type="text" name="address" id="address" class="form-control"  autoComplete="off"/>
+                @if($errors->has('address'))
+                <span class="text-danger">{{ $errors->first('address') }}</span>
+                @endif
             </div>
         </div>
         <div class="row">
             <div class="col-12 px-4 py-3">
                 <label for="message" class="form-label">Your Message: </label>
                 <textarea name="message" id="message"
-                 class="form-control message-text-area" required autoComplete="off"></textarea>
+                class="form-control message-text-area" autoComplete="off"></textarea>
+                @if($errors->has('message'))
+                <span class="text-danger">{{ $errors->first('message') }}</span>
+                @endif
             </div>
         </div>
         <div class="mt-3 px-2">
