@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "prod": "npm run production"
+        "production": "npm run production"
     },
     "devDependencies": {
         "axios": "^1.6.1",
