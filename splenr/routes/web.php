@@ -51,7 +51,6 @@ Route::get('/jobs/{listing:slug}', [JoblistingController::class, 'show'])->name(
 // File upload route
 Route::post('/resume/upload', [FileUploadController::class, 'store'])->middleware('auth');
 
-
 // Email verification route
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
