@@ -171,7 +171,7 @@ class UserController extends Controller
     {
         // Validate profile update request
         $this->validate($request, [
-            'profile_pic' => 'mimes:png,jpeg,webp|max:5120',
+            'profile_pic' => 'mimes:png,jpeg,webp,svg|max:5120',
         ]);
 
         // If a profile picture is provided, store it and update the user's record
