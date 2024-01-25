@@ -83,15 +83,15 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Upload Resume</h1>
-                                    <button type="button" class="btn-close"
-                                     data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Upload Resume</h1>
+                                        <button type="button" class="btn-close"
+                                        data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                    <input type="file" id="uploadResumeFile">
+                                        <input type="file" id="uploadResumeFile">
                                     </div>
                                     <div class="modal-footer">
-                                    <button type="submit" disabled class="btn btn-primary" id="btnApply">Apply</button>
+                                        <button type="submit" disabled class="btn btn-primary" id="btnApply">Apply</button>
                                     </div>
                                 </div>
                             </div>
