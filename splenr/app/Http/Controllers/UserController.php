@@ -61,7 +61,7 @@ class UserController extends Controller
 
         // Log in the new user
         Auth::login($user);
-
+        
         // Send email verification notification
         $user->sendEmailVerificationNotification();
 
